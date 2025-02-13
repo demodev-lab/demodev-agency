@@ -15,8 +15,8 @@ export default function Home() {
                   <Image
                     src="/logo.png"
                     alt="Exceed IT 로고"
-                    width={100} // 로고의 너비를 설정하세요
-                    height={34} // 로고의 높이를 설정하세요
+                    width={100} // 347x82
+                    height={30}
                   />
                 </div>
               </div>
@@ -70,11 +70,12 @@ export default function Home() {
               <h2 className="section-subtitle">신뢰할 수 있는 파트너</h2>
               <p className="section-title">기업들이 선택한 개발 파트너</p>
             </div>
-            <div className="flex justify-center items-center gap-4">
-              <img
-                src="https://image-resource.creatie.ai/136504214518617/136504214518619/dc58fe37bd40e8ab3dc82183f962e6b9.png"
-                className="h-12 md:h-16"
-                alt="곰표 로고"
+            <div className="flex justify-center items-center gap-16">
+              <Image
+                src="/jab-training.png"
+                alt="JAB TRAINING 로고"
+                width={92}
+                height={49}
               />
               <span className="text-xl md:text-2xl font-bold text-gray-900">
                 (주)곰표
@@ -95,7 +96,12 @@ export default function Home() {
               {/* Service Cards */}
               <div className="service-card">
                 <div className="flex justify-center items-center h-20 w-20 bg-gray-100 rounded-3xl mb-10 mx-auto">
-                  <img src="/web-icon.png" alt="웹 개발 아이콘" />
+                  <Image
+                    src="/web-icon.png"
+                    alt="웹 개발 아이콘"
+                    width={25}
+                    height={20}
+                  />
                 </div>
                 <h3 className="card-title">웹 개발</h3>
                 <p className="card-text">
@@ -106,7 +112,12 @@ export default function Home() {
 
               <div className="service-card">
                 <div className="flex justify-center items-center h-20 w-20 bg-gray-100 rounded-3xl mb-10 mx-auto">
-                  <img src="/mobile-icon.png" alt="앱 개발 아이콘" />
+                  <Image
+                    src="/mobile-icon.png"
+                    alt="앱 개발 아이콘"
+                    width={14}
+                    height={20}
+                  />
                 </div>
                 <h3 className="card-title">앱 개발</h3>
                 <p className="card-text">
@@ -117,7 +128,12 @@ export default function Home() {
 
               <div className="service-card">
                 <div className="flex justify-center items-center h-20 w-20 bg-gray-100 rounded-3xl mb-10 mx-auto">
-                  <img src="/design-icon.png" alt="UI/UX 디자인 아이콘" />
+                  <Image
+                    src="/design-icon.png"
+                    alt="UI/UX 디자인 아이콘"
+                    width={22}
+                    height={20}
+                  />
                 </div>
                 <h3 className="card-title">UI/UX 디자인</h3>
                 <p className="card-text">
@@ -165,10 +181,12 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Portfolio Cards */}
               <div className="portfolio-card">
-                <img
+                <Image
                   src="/almo.png"
                   className="w-full h-48 object-cover"
                   alt="알바들 모여라 프로젝트"
+                  width={384}
+                  height={192}
                 />
                 <div className="p-8">
                   <h3 className="card-title">알바들 모여라</h3>
@@ -185,10 +203,12 @@ export default function Home() {
               </div>
 
               <div className="portfolio-card">
-                <img
-                  src="/jab-training.png"
+                <Image
+                  src="/jab-training-phone.png"
                   className="w-full h-48 object-cover"
                   alt="JAB TRAINING 프로젝트"
+                  width={384}
+                  height={192}
                 />
                 <div className="p-8">
                   <h3 className="card-title">JAB TRAINING</h3>
@@ -205,10 +225,12 @@ export default function Home() {
               </div>
 
               <div className="portfolio-card">
-                <img
+                <Image
                   src="/first-snow.png"
                   className="w-full h-48 object-cover"
                   alt="첫눈 프로젝트"
+                  width={384}
+                  height={192}
                 />
                 <div className="p-8">
                   <h3 className="card-title">첫눈</h3>
@@ -243,7 +265,12 @@ export default function Home() {
               {/* Process Steps */}
               <div className="process-step">
                 <div className="flex justify-center items-center h-20 w-20 bg-gray-100 rounded-full mb-6 mx-auto">
-                  <img src="/bulb-icon.png" alt="기획 및 분석 아이콘" />
+                  <Image
+                    src="/bulb-icon.png"
+                    alt="기획 및 분석 아이콘"
+                    width={17}
+                    height={24}
+                  />
                 </div>
                 <h3 className="step-title">1. 기획 및 분석</h3>
                 <p className="step-text">
@@ -255,7 +282,12 @@ export default function Home() {
 
               <div className="process-step">
                 <div className="flex justify-center items-center h-20 w-20 bg-gray-100 rounded-full mb-6 mx-auto">
-                  <img src="/pencil-icon.png" alt="디자인 아이콘" />
+                  <Image
+                    src="/pencil-icon.png"
+                    alt="디자인 아이콘"
+                    width={24}
+                    height={24}
+                  />
                 </div>
                 <h3 className="step-title">2. 디자인</h3>
                 <p className="step-text">
@@ -267,7 +299,12 @@ export default function Home() {
 
               <div className="process-step">
                 <div className="flex justify-center items-center h-20 w-20 bg-gray-100 rounded-full mb-6 mx-auto">
-                  <img src="/code-icon.png" alt="개발 아이콘" />
+                  <Image
+                    src="/code-icon.png"
+                    alt="개발 아이콘"
+                    width={30}
+                    height={24}
+                  />
                 </div>
                 <h3 className="step-title">3. 개발</h3>
                 <p className="step-text">
@@ -279,7 +316,12 @@ export default function Home() {
 
               <div className="process-step">
                 <div className="flex justify-center items-center h-20 w-20 bg-gray-100 rounded-full mb-6 mx-auto">
-                  <img src="/rocket-icon.png" alt="배포 아이콘" />
+                  <Image
+                    src="/rocket-icon.png"
+                    alt="배포 아이콘"
+                    width={24}
+                    height={24}
+                  />
                 </div>
                 <h3 className="step-title">4. 배포</h3>
                 <p className="step-text">
@@ -357,7 +399,7 @@ export default function Home() {
                     src="/logo.png"
                     alt="Exceed IT 로고"
                     width={100} // 로고의 너비를 설정하세요
-                    height={34} // 로고의 높이를 설정하세요
+                    height={30} // 로고의 높이를 설정하세요
                   />
                 </div>
                 <p className="text-gray-400">
