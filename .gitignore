@@ -37,6 +37,9 @@ yarn-error.log*
 .env.production*
 .env.local*
 
+# package manager
+pnpm-lock.yaml
+
 # vercel
 .vercel
 
