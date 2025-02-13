@@ -2,20 +2,112 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+
+  /* @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #0a0a0a;
+      --foreground: #ededed;
+    }
+  } */
+
+  body {
+    @apply text-gray-900 bg-background font-sans;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Navigation */
+  .nav-link {
+    @apply h-16 flex items-center text-gray-500 hover:text-gray-900 transition-colors text-sm font-medium;
+  }
+  .nav-link.active {
+    @apply text-foreground;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply rounded font-medium transition-colors;
+  }
+  .btn-primary {
+    @apply btn px-4 py-2 bg-primary-700 hover:bg-primary-800 text-white text-sm;
+  }
+  .btn-primary-lg {
+    @apply btn px-8 py-4 bg-primary-700 hover:bg-primary-800 text-white text-lg;
+  }
+  .btn-secondary-lg {
+    @apply btn px-8 py-4 bg-white hover:bg-gray-50 border border-gray-300 text-gray-700 text-lg;
+  }
+
+  /* Section Headers */
+  .section-subtitle {
+    @apply text-base font-semibold tracking-wider mb-2;
+  }
+  .section-title {
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900;
+  }
+
+  /* Cards */
+  .service-card {
+    @apply bg-white rounded shadow-sm p-8 hover:shadow-md transition-shadow;
+  }
+  .portfolio-card {
+    @apply bg-white rounded shadow-sm overflow-hidden hover:shadow-md transition-shadow;
+  }
+  .card-title {
+    @apply text-xl font-bold text-gray-900 mb-4;
+  }
+  .card-text {
+    @apply text-gray-600 text-base leading-7;
+  }
+
+  /* Tags */
+  .tech-tag {
+    @apply px-3 py-1 bg-primary-50 text-primary-600 rounded text-sm;
+  }
+
+  /* Process Steps */
+  .process-step {
+    @apply text-center relative;
+  }
+  .step-title {
+    @apply text-xl font-bold text-gray-900 mb-2;
+  }
+  .step-text {
+    @apply text-gray-600;
+  }
+
+  /* Forms */
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+  .form-input {
+    @apply w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-shadow;
+  }
+
+  /* Contact */
+  .contact-link {
+    @apply flex items-center gap-3 text-gray-600 hover:text-gray-900 transition-colors;
+  }
+
+  /* Footer */
+  .footer-heading {
+    @apply text-lg font-bold mb-4;
+  }
+  .footer-links {
+    @apply space-y-2;
+  }
+  .footer-links a {
+    @apply text-gray-400 hover:text-white transition-colors;
+  }
+  .footer-info {
+    @apply space-y-2 text-gray-400;
+  }
+  .footer-info li {
+    @apply flex items-center gap-2;
+  }
 }
