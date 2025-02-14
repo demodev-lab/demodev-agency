@@ -159,7 +159,7 @@ chmod +x .husky/*
 ```shell
 . "$(dirname -- "$0")/_/husky.sh"
 
-npx lint-staged
+pnpm dlx lint-staged
 ```
 
 ## NextJS Naming Convention
