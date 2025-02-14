@@ -3,11 +3,11 @@
 ## Installation
 
 ```bash
-pnpm run dev
+pnpm install
 ```
 
 ## Usage
 
 ```bash
-pnpm start
+pnpm run dev
 ```

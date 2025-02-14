@@ -329,8 +329,84 @@ export default async function Home() {
         </div>
       </div>
 
-      {/* Contact Section */}
+      {/* Testimonials Section */}
       <div className="w-full bg-gray-50 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="section-subtitle">고객 후기</h2>
+            <p className="section-title">고객들의 생생한 이야기</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-lg">
+              <div className="flex items-center mb-6">
+                <div className="mr-4">
+                  <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
+                    <span className="text-primary-700 font-bold text-xl">
+                      J
+                    </span>
+                  </div>
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900">JAB TRAINING</h4>
+                  <p className="text-gray-600 text-sm">복싱 트레이닝 센터</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-6">
+                &quot;예약 시스템 도입 후 업무 효율이 200% 향상되었습니다.
+                고객들도 편리하게 이용하고 있어 매우 만족스럽습니다.&quot;
+              </p>
+              <div className="flex text-yellow-400">{'★'.repeat(5)}</div>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg">
+              <div className="flex items-center mb-6">
+                <div className="mr-4">
+                  <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
+                    <span className="text-primary-700 font-bold text-xl">
+                      G
+                    </span>
+                  </div>
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900">(주)곰표</h4>
+                  <p className="text-gray-600 text-sm">식품 제조 기업</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-6">
+                &quot;프로젝트 기획부터 개발까지 모든 과정이 체계적이었고,
+                결과물도 기대 이상이었습니다. 특히 소통이 원활했던 점이
+                인상적이었습니다.&quot;
+              </p>
+              <div className="flex text-yellow-400">{'★'.repeat(5)}</div>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg">
+              <div className="flex items-center mb-6">
+                <div className="mr-4">
+                  <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
+                    <span className="text-primary-700 font-bold text-xl">
+                      A
+                    </span>
+                  </div>
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900">알바들 모여라</h4>
+                  <p className="text-gray-600 text-sm">커뮤니티 플랫폼</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-6">
+                &quot;사용자 경험을 최우선으로 고려한 디자인과 안정적인 개발로
+                서비스 런칭 후 사용자 유입이 꾸준히 증가하고 있습니다.&quot;
+              </p>
+              <div className="flex text-yellow-400">{'★'.repeat(5)}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Contact Section */}
+      <div className="w-full bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="flex flex-col justify-between">
