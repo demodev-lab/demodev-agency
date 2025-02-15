@@ -2,6 +2,20 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import {
+  ClockIcon,
+  UserGroupIcon,
+  RocketLaunchIcon,
+  LightBulbIcon,
+  PencilIcon,
+  CodeBracketIcon,
+  PhoneIcon,
+  EnvelopeIcon,
+  MapPinIcon,
+  GlobeAltIcon,
+  DevicePhoneMobileIcon,
+  SwatchIcon,
+} from '@heroicons/react/24/outline';
 
 export default async function Home() {
   return (
@@ -40,15 +54,20 @@ export default async function Home() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-80">
           <div className="relative z-10 max-w-2xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              혁신적인 웹/앱 개발로
-              <br />
-              비즈니스의 성장을 이끕니다.
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              <div className="mb-2 md:mb-4">퀄리티에 대한 확신,</div>
+              <div>
+                불만족시{' '}
+                <span className="bg-primary-500 text-white px-2 py-1 rounded-md">
+                  100% 환불 보장
+                </span>
+              </div>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8">
-              10년 이상의 경험을 바탕으로 최신 기술과 트렌드를 접목한
-              <br className="hidden md:block" />
-              맞춤형 디지털 솔루션을 제공합니다.
+              자신감의 이유,{' '}
+              <span className="font-bold border-b-2 border-gray-600 text-gray-600">
+                3분이면 확인 가능합니다
+              </span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button className="btn-primary-lg">프로젝트 문의하기</button>
@@ -58,23 +77,297 @@ export default async function Home() {
         </div>
       </div>
 
-      {/* Partners Section */}
-      <div className="w-full bg-white py-16">
+      {/* Outsourcing Problems Section */}
+      <div className="w-full bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="section-subtitle">신뢰할 수 있는 파트너</h2>
-            <p className="section-title">기업들이 선택한 개발 파트너</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
+              많은 개발사가 외부 하청에 의존한다는 사실
+              <br className="mb-4" />
+              <span className="text-gray-500 block mt-3">알고 계신가요?</span>
+            </h2>
           </div>
-          <div className="flex justify-center items-center gap-16">
-            <Image
-              src="/jab-training.png"
-              alt="JAB TRAINING 로고"
-              width={92}
-              height={49}
-            />
-            <span className="text-xl md:text-2xl font-bold text-gray-900">
-              (주)곰표
-            </span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Problem Card 1 */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="mb-6">
+                <h3 className="text-xl md:text-2xl font-bold text-primary-600 mb-4">
+                  기대했던 일정은 물거품이 되었어요
+                </h3>
+                <p className="text-gray-600 leading-relaxed max-w-[400px] break-keep">
+                  &ldquo;처음엔 빠른 개발을 약속했지만, 시간이 지날수록 일정은
+                  계속 미뤄졌어요. 원래 개발팀이 아닌 하청업체가 작업을 맡고
+                  있었더라고요. 상황은 복잡해졌고, 결국 프로젝트는 기약 없이
+                  지연되었습니다.&rdquo;
+                </p>
+              </div>
+              <div className="text-sm font-medium text-gray-500">
+                예비창업패키지 창업가
+              </div>
+            </div>
+
+            {/* Problem Card 2 */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="mb-6">
+                <h3 className="text-xl md:text-2xl font-bold text-primary-600 mb-4">
+                  완성된 결과물이 쓸 수 없는 상태였습니다
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  &ldquo;몇 개월을 기다려 개발이 끝났다고 들었지만, 결과물은 제
+                  요구사항과 전혀 달랐어요. 그때서야 알게 되었죠. 외주업체가
+                  중간에 다른 개발사에 하청을 준 사실을요.&rdquo;
+                </p>
+              </div>
+              <div className="text-sm font-medium text-gray-500">
+                초기 라운드 창업가
+              </div>
+            </div>
+
+            {/* Problem Card 3 */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="mb-6">
+                <h3 className="text-xl md:text-2xl font-bold text-primary-600 mb-4">
+                  이틀이 지나도 아무 소식이 없었습니다
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  &ldquo;문제가 발생해 바로 수정이 필요했어요. 하지만 아무리
+                  연락해도 답이 없었습니다. 이유는 간단했죠. 하청업체가 응답하지
+                  않고 있었던 겁니다. 외주사도 어찌할 바를 몰라 답변만
+                  지연되었죠.&rdquo;
+                </p>
+              </div>
+              <div className="text-sm font-medium text-gray-500">
+                중소 무역회사 대표님
+              </div>
+            </div>
+
+            {/* Problem Card 4 */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="mb-6">
+                <h3 className="text-xl md:text-2xl font-bold text-primary-600 mb-4">
+                  생각지 못한 비용이 눈덩이처럼 불어났어요
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  &ldquo;계약 당시엔 기본 포함이라고 했던 기능들이 없다고
+                  하더군요. 하청업체에서 추가 개발이 필요하다며 새로 견적을
+                  제시했어요. 계획했던 예산을 훨씬 초과해버렸습니다.&rdquo;
+                </p>
+              </div>
+              <div className="text-sm font-medium text-gray-500">
+                무역 솔루션 회사 대표님
+              </div>
+            </div>
+          </div>
+
+          {/* Solution Message */}
+          <div className="text-center mt-16">
+            <p className="text-xl md:text-2xl font-bold text-primary-600">
+              Exceed IT는 100% 자체 인력으로 개발합니다
+            </p>
+            <p className="text-lg md:text-xl text-gray-600 mt-4">
+              모든 과정을 직접 관리하고 소통하여 이러한 문제들을 원천 차단합니다
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Why Us Section */}
+      <div className="w-full bg-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="section-subtitle">우리가 특별한 이유</h2>
+            <p className="section-title">Why Us?</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center p-6">
+              <div className="flex justify-center items-center h-20 w-20 bg-primary-50 rounded-2xl mb-6 mx-auto">
+                <ClockIcon className="h-10 w-10 text-primary-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                24/7 피드백
+              </h3>
+              <p className="text-gray-600">
+                언제든지 답답한 기다림 없이. 주 7일 24시간 즉각 응대 약속합니다.
+              </p>
+            </div>
+
+            <div className="text-center p-6">
+              <div className="flex justify-center items-center h-20 w-20 bg-primary-50 rounded-2xl mb-6 mx-auto">
+                <UserGroupIcon className="h-10 w-10 text-primary-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                젊은 열정
+              </h3>
+              <p className="text-gray-600">
+                트렌드를 아는 젊은 개발팀이 최신 기술과 신선한 아이디어로
+                프로젝트를 실행합니다.
+              </p>
+            </div>
+
+            <div className="text-center p-6">
+              <div className="flex justify-center items-center h-20 w-20 bg-primary-50 rounded-2xl mb-6 mx-auto">
+                <RocketLaunchIcon className="h-10 w-10 text-primary-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                빠른 결과물
+              </h3>
+              <p className="text-gray-600">
+                스타트업 마인드로 효율을 중시하며, 짧은 개발 주기로 최적의
+                결과를 제공합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Partners Section */}
+      <div className="w-full bg-white py-16 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="section-title">Our Experience</p>
+          </div>
+
+          <div className="relative">
+            <div className="flex animate-scroll space-x-16 whitespace-nowrap">
+              {/* 첫 번째 세트 */}
+              <div className="flex items-center shrink-0">
+                <Image
+                  src="/jab-training.png"
+                  alt="JAB TRAINING 로고"
+                  width={92}
+                  height={49}
+                  className="h-12 w-auto object-contain"
+                />
+              </div>
+              <div className="flex items-center shrink-0">
+                <Image
+                  src="/inno.png"
+                  alt="이노베이션 아카데미 로고"
+                  width={92}
+                  height={49}
+                  className="h-12 w-auto object-contain"
+                />
+              </div>
+              <div className="flex items-center shrink-0">
+                <Image
+                  src="/sogang.png"
+                  alt="서강대학교 로고"
+                  width={160}
+                  height={160}
+                  className="h-12 w-auto object-contain"
+                />
+              </div>
+              <div className="flex items-center shrink-0">
+                <Image
+                  src="/sejong.png"
+                  alt="세종대학교 로고"
+                  width={160}
+                  height={160}
+                  className="h-12 w-auto object-contain"
+                />
+              </div>
+              <div className="flex items-center shrink-0">
+                <Image
+                  src="/gom.png"
+                  alt="곰표 로고"
+                  width={160}
+                  height={160}
+                  className="h-12 w-auto object-contain"
+                />
+              </div>
+              <div className="flex items-center shrink-0">
+                <Image
+                  src="/42.png"
+                  alt="42 로고"
+                  width={160}
+                  height={160}
+                  className="h-12 w-auto object-contain"
+                />
+              </div>
+              <div className="flex items-center shrink-0">
+                <Image
+                  src="/twig.png"
+                  alt="twig 로고"
+                  width={160}
+                  height={160}
+                  className="h-12 w-auto object-contain"
+                />
+              </div>
+              <div className="flex items-center shrink-0">
+                <Image
+                  src="/life.png"
+                  alt="라해스 로고"
+                  width={160}
+                  height={160}
+                  className="h-12 w-auto object-contain"
+                />
+              </div>
+              <div className="flex items-center shrink-0">
+                <Image
+                  src="/next.png"
+                  alt="넥스트 로고"
+                  width={160}
+                  height={160}
+                  className="h-12 w-auto object-contain"
+                />
+              </div>
+              {/* 두 번째 세트 (무한 스크롤을 위한 복제) */}
+              <div className="flex items-center shrink-0">
+                <Image
+                  src="/jab-training.png"
+                  alt="JAB TRAINING 로고"
+                  width={92}
+                  height={49}
+                  className="h-12 w-auto object-contain"
+                />
+              </div>
+              <div className="flex items-center shrink-0">
+                <Image
+                  src="/inno.png"
+                  alt="이노베이션 아카데미 로고"
+                  width={92}
+                  height={49}
+                  className="h-12 w-auto object-contain"
+                />
+              </div>
+              <div className="flex items-center shrink-0">
+                <Image
+                  src="/sogang.png"
+                  alt="서강대학교 로고"
+                  width={160}
+                  height={160}
+                  className="h-12 w-auto object-contain"
+                />
+              </div>
+              <div className="flex items-center shrink-0">
+                <Image
+                  src="/sejong.png"
+                  alt="세종대학교 로고"
+                  width={160}
+                  height={160}
+                  className="h-12 w-auto object-contain"
+                />
+              </div>
+              <div className="flex items-center shrink-0">
+                <Image
+                  src="/gom.png"
+                  alt="곰표 로고"
+                  width={160}
+                  height={160}
+                  className="h-12 w-auto object-contain"
+                />
+              </div>
+              <div className="flex items-center shrink-0">
+                <Image
+                  src="/42.png"
+                  alt="42 로고"
+                  width={160}
+                  height={160}
+                  className="h-12 w-auto object-contain"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -91,12 +384,7 @@ export default async function Home() {
             {/* Service Cards */}
             <div className="service-card">
               <div className="flex justify-center items-center h-20 w-20 bg-gray-100 rounded-3xl mb-10 mx-auto">
-                <Image
-                  src="/web-icon.png"
-                  alt="웹 개발 아이콘"
-                  width={25}
-                  height={20}
-                />
+                <GlobeAltIcon className="h-10 w-10 text-gray-600" />
               </div>
               <h3 className="card-title">웹 개발</h3>
               <p className="card-text">
@@ -107,12 +395,7 @@ export default async function Home() {
 
             <div className="service-card">
               <div className="flex justify-center items-center h-20 w-20 bg-gray-100 rounded-3xl mb-10 mx-auto">
-                <Image
-                  src="/mobile-icon.png"
-                  alt="앱 개발 아이콘"
-                  width={14}
-                  height={20}
-                />
+                <DevicePhoneMobileIcon className="h-10 w-10 text-gray-600" />
               </div>
               <h3 className="card-title">앱 개발</h3>
               <p className="card-text">
@@ -123,12 +406,7 @@ export default async function Home() {
 
             <div className="service-card">
               <div className="flex justify-center items-center h-20 w-20 bg-gray-100 rounded-3xl mb-10 mx-auto">
-                <Image
-                  src="/design-icon.png"
-                  alt="UI/UX 디자인 아이콘"
-                  width={22}
-                  height={20}
-                />
+                <SwatchIcon className="h-10 w-10 text-gray-600" />
               </div>
               <h3 className="card-title">UI/UX 디자인</h3>
               <p className="card-text">
@@ -260,12 +538,7 @@ export default async function Home() {
             {/* Process Steps */}
             <div className="process-step">
               <div className="flex justify-center items-center h-20 w-20 bg-gray-100 rounded-full mb-6 mx-auto">
-                <Image
-                  src="/bulb-icon.png"
-                  alt="기획 및 분석 아이콘"
-                  width={17}
-                  height={24}
-                />
+                <LightBulbIcon className="h-10 w-10 text-gray-600" />
               </div>
               <h3 className="step-title">1. 기획 및 분석</h3>
               <p className="step-text">
@@ -277,12 +550,7 @@ export default async function Home() {
 
             <div className="process-step">
               <div className="flex justify-center items-center h-20 w-20 bg-gray-100 rounded-full mb-6 mx-auto">
-                <Image
-                  src="/pencil-icon.png"
-                  alt="디자인 아이콘"
-                  width={24}
-                  height={24}
-                />
+                <PencilIcon className="h-10 w-10 text-gray-600" />
               </div>
               <h3 className="step-title">2. 디자인</h3>
               <p className="step-text">
@@ -294,12 +562,7 @@ export default async function Home() {
 
             <div className="process-step">
               <div className="flex justify-center items-center h-20 w-20 bg-gray-100 rounded-full mb-6 mx-auto">
-                <Image
-                  src="/code-icon.png"
-                  alt="개발 아이콘"
-                  width={30}
-                  height={24}
-                />
+                <CodeBracketIcon className="h-10 w-10 text-gray-600" />
               </div>
               <h3 className="step-title">3. 개발</h3>
               <p className="step-text">
@@ -311,12 +574,7 @@ export default async function Home() {
 
             <div className="process-step">
               <div className="flex justify-center items-center h-20 w-20 bg-gray-100 rounded-full mb-6 mx-auto">
-                <Image
-                  src="/rocket-icon.png"
-                  alt="배포 아이콘"
-                  width={24}
-                  height={24}
-                />
+                <RocketLaunchIcon className="h-10 w-10 text-gray-600" />
               </div>
               <h3 className="step-title">4. 배포</h3>
               <p className="step-text">
@@ -370,7 +628,7 @@ export default async function Home() {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900">(주)곰표</h4>
-                  <p className="text-gray-600 text-sm">식품 제조 기업</p>
+                  <p className="text-gray-600 text-sm">식품 유통 기업</p>
                 </div>
               </div>
               <p className="text-gray-600 mb-6">
@@ -422,23 +680,13 @@ export default async function Home() {
               <div className="flex gap-4">
                 <Link href="tel:010-7662-0146" legacyBehavior>
                   <a className="flex items-center gap-3 bg-primary-700 text-white px-4 py-2 rounded">
-                    <Image
-                      src="/call-icon.png"
-                      alt="전화 아이콘"
-                      width={16}
-                      height={16}
-                    />
+                    <PhoneIcon className="h-4 w-4" />
                     010-7662-0146
                   </a>
                 </Link>
                 <Link href="mailto:aiden.pren@gmail.com" legacyBehavior>
                   <a className="flex items-center gap-3 bg-white text-primary-600 px-4 py-2 rounded border-primary-600 border">
-                    <Image
-                      src="/email-icon.png"
-                      alt="이메일 아이콘"
-                      width={16}
-                      height={16}
-                    />
+                    <EnvelopeIcon className="h-4 w-4" />
                     aiden.pren@gmail.com
                   </a>
                 </Link>
@@ -517,30 +765,15 @@ export default async function Home() {
               <h3 className="footer-heading">연락처</h3>
               <ul className="footer-info">
                 <li>
-                  <Image
-                    src="/footer-call-icon.png"
-                    alt="전화 아이콘"
-                    width={16}
-                    height={16}
-                  />
+                  <PhoneIcon className="h-4 w-4 text-gray-400" />
                   010-7662-0146
                 </li>
                 <li>
-                  <Image
-                    src="/footer-email-icon.png"
-                    alt="이메일 아이콘"
-                    width={16}
-                    height={16}
-                  />
+                  <EnvelopeIcon className="h-4 w-4 text-gray-400" />
                   aiden.pren@gmail.com
                 </li>
                 <li>
-                  <Image
-                    src="/footer-location-icon.png"
-                    alt="위치 아이콘"
-                    width={12}
-                    height={16}
-                  />
+                  <MapPinIcon className="h-4 w-4 text-gray-400" />
                   서울특별시 강남구 개포로 416
                 </li>
               </ul>
