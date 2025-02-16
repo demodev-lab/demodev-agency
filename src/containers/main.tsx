@@ -42,8 +42,12 @@ export default async function Main() {
               </span>
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
-              <button className="btn-primary-lg">프로젝트 문의하기</button>
-              <button className="btn-secondary-lg">포트폴리오 보기</button>
+              <Link href={'/contact'} className="btn-primary-lg">
+                프로젝트 문의하기
+              </Link>
+              <Link href={'/portfolio'} className="btn-secondary-lg">
+                포트폴리오 보기
+              </Link>
             </div>
           </div>
         </div>
@@ -386,7 +390,9 @@ export default async function Main() {
           </div>
 
           <div className="mt-12 text-center">
-            <button className="btn-primary-lg">더 많은 프로젝트 보기</button>
+            <Link className="btn-primary-lg" href="/portfolio">
+              더 많은 프로젝트 보기
+            </Link>
           </div>
         </div>
       </div>
@@ -488,17 +494,19 @@ export default async function Main() {
                 </p>
               </div>
               <div className="flex gap-4">
-                <Link href="tel:010-4718-8591" legacyBehavior>
-                  <a className="flex items-center gap-3 px-4 py-2 text-white rounded bg-primary-700">
-                    <PhoneIcon className="w-4 h-4" />
-                    010-4718-8591
-                  </a>
+                <Link
+                  href="tel:010-4718-8591"
+                  className="flex items-center gap-3 px-4 py-2 text-white rounded bg-primary-700"
+                >
+                  <PhoneIcon className="w-4 h-4" />
+                  010-4718-8591
                 </Link>
-                <Link href="mailto:sunghyun4718@gmail.com" legacyBehavior>
-                  <a className="flex items-center gap-3 px-4 py-2 bg-white border rounded text-primary-600 border-primary-600">
-                    <EnvelopeIcon className="w-4 h-4" />
-                    sunghyun4718@gmail.com
-                  </a>
+                <Link
+                  href="mailto:sunghyun4718@gmail.com"
+                  className="flex items-center gap-3 px-4 py-2 bg-white border rounded text-primary-600 border-primary-600"
+                >
+                  <EnvelopeIcon className="w-4 h-4" />
+                  sunghyun4718@gmail.com
                 </Link>
               </div>
             </div>
