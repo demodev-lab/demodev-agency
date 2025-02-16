@@ -1,7 +1,7 @@
 'use server';
 
-import Main from '@/containers/main';
+import Index from '@/containers';
 
 export default async function Home() {
-  return <Main />;
+  return <Index />;
 }

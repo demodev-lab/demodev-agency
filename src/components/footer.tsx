@@ -1,8 +1,16 @@
+'use client';
+
 import Image from 'next/image';
-import Link from 'next/link';
 import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/solid';
 
 export default async function Footer() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="py-12 text-white bg-gray-900">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -26,10 +34,10 @@ export default async function Footer() {
             <h3 className="footer-heading">바로가기</h3>
             <ul className="footer-links">
               <li>
-                <Link href="/portfolio">포트폴리오</Link>
+                <a onClick={() => scrollToSection('portfolio')}>포트폴리오</a>
               </li>
               <li>
-                <Link href="/contact">문의하기</Link>
+                <a onClick={() => scrollToSection('contact')}>문의하기</a>
               </li>
             </ul>
           </div>
