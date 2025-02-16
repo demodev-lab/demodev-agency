@@ -14,6 +14,7 @@ import {
   CurrencyDollarIcon,
   ReceiptPercentIcon,
 } from '@heroicons/react/24/outline';
+import ScrollContainer from './scroll-container';
 import Footer from '@/components/footer';
 
 export default async function Main() {
@@ -239,7 +240,6 @@ export default async function Main() {
         </div>
       </div>
 
-      {/* Why Us & Experience Section - 회색 */}
       <div className="w-full py-20 bg-gray-50">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
@@ -304,154 +304,7 @@ export default async function Main() {
               </p>
             </div>
           </div>
-
-          <div className="pt-16 mt-16">
-            <div className="mb-12 text-center">
-              <p className="section-title">Our Experience</p>
-            </div>
-
-            <div className="relative">
-              <div className="flex space-x-16 animate-scroll whitespace-nowrap">
-                {/* 첫 번째 세트 */}
-                <div className="flex items-center shrink-0">
-                  <Image
-                    src="/jab-training.png"
-                    alt="JAB TRAINING 로고"
-                    width={92}
-                    height={49}
-                    className="object-contain w-auto h-12"
-                  />
-                </div>
-                <div className="flex items-center shrink-0">
-                  <Image
-                    src="/inno.png"
-                    alt="이노베이션 아카데미 로고"
-                    width={92}
-                    height={49}
-                    className="object-contain w-auto h-12"
-                  />
-                </div>
-                <div className="flex items-center shrink-0">
-                  <Image
-                    src="/sogang.png"
-                    alt="서강대학교 로고"
-                    width={160}
-                    height={160}
-                    className="object-contain w-auto h-12"
-                  />
-                </div>
-                <div className="flex items-center shrink-0">
-                  <Image
-                    src="/sejong.png"
-                    alt="세종대학교 로고"
-                    width={160}
-                    height={160}
-                    className="object-contain w-auto h-12"
-                  />
-                </div>
-                <div className="flex items-center shrink-0">
-                  <Image
-                    src="/gom.png"
-                    alt="곰표 로고"
-                    width={160}
-                    height={160}
-                    className="object-contain w-auto h-12"
-                  />
-                </div>
-                <div className="flex items-center shrink-0">
-                  <Image
-                    src="/42.png"
-                    alt="42 로고"
-                    width={160}
-                    height={160}
-                    className="object-contain w-auto h-12"
-                  />
-                </div>
-                <div className="flex items-center shrink-0">
-                  <Image
-                    src="/twig.png"
-                    alt="twig 로고"
-                    width={160}
-                    height={160}
-                    className="object-contain w-auto h-12"
-                  />
-                </div>
-                <div className="flex items-center shrink-0">
-                  <Image
-                    src="/life.png"
-                    alt="라해스 로고"
-                    width={160}
-                    height={160}
-                    className="object-contain w-auto h-12"
-                  />
-                </div>
-                <div className="flex items-center shrink-0">
-                  <Image
-                    src="/next.png"
-                    alt="넥스트 로고"
-                    width={160}
-                    height={160}
-                    className="object-contain w-auto h-12"
-                  />
-                </div>
-                {/* 두 번째 세트 (무한 스크롤을 위한 복제) */}
-                <div className="flex items-center shrink-0">
-                  <Image
-                    src="/jab-training.png"
-                    alt="JAB TRAINING 로고"
-                    width={92}
-                    height={49}
-                    className="object-contain w-auto h-12"
-                  />
-                </div>
-                <div className="flex items-center shrink-0">
-                  <Image
-                    src="/inno.png"
-                    alt="이노베이션 아카데미 로고"
-                    width={92}
-                    height={49}
-                    className="object-contain w-auto h-12"
-                  />
-                </div>
-                <div className="flex items-center shrink-0">
-                  <Image
-                    src="/sogang.png"
-                    alt="서강대학교 로고"
-                    width={160}
-                    height={160}
-                    className="object-contain w-auto h-12"
-                  />
-                </div>
-                <div className="flex items-center shrink-0">
-                  <Image
-                    src="/sejong.png"
-                    alt="세종대학교 로고"
-                    width={160}
-                    height={160}
-                    className="object-contain w-auto h-12"
-                  />
-                </div>
-                <div className="flex items-center shrink-0">
-                  <Image
-                    src="/gom.png"
-                    alt="곰표 로고"
-                    width={160}
-                    height={160}
-                    className="object-contain w-auto h-12"
-                  />
-                </div>
-                <div className="flex items-center shrink-0">
-                  <Image
-                    src="/42.png"
-                    alt="42 로고"
-                    width={160}
-                    height={160}
-                    className="object-contain w-auto h-12"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+          <ScrollContainer />
         </div>
       </div>
 
