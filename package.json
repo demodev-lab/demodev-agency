@@ -22,6 +22,7 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@notionhq/client": "^2.2.15",
+    "@vercel/analytics": "^1.5.0",
     "framer-motion": "^12.4.3",
     "next": "15.1.7",
     "react": "^19.0.0",

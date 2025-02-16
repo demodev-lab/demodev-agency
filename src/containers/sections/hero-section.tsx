@@ -1,6 +1,13 @@
-import Link from 'next/link';
+'use client';
 
-export default async function HeroSection() {
+export default function HeroSection() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div
       className="relative w-full bg-center bg-cover"
@@ -24,12 +31,18 @@ export default async function HeroSection() {
             </span>
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
-            <Link href={'/contact'} className="btn-primary-lg">
+            <a
+              onClick={() => scrollToSection('contact')}
+              className="btn-primary-lg"
+            >
               프로젝트 문의하기
-            </Link>
-            <Link href={'/portfolio'} className="btn-secondary-lg">
+            </a>
+            <a
+              onClick={() => scrollToSection('portfolio')}
+              className="btn-secondary-lg"
+            >
               포트폴리오 보기
-            </Link>
+            </a>
           </div>
         </div>
       </div>
