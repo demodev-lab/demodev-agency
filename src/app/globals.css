@@ -51,20 +51,6 @@
     @apply text-3xl md:text-4xl font-bold text-gray-900;
   }
 
-  /* Cards */
-  .service-card {
-    @apply bg-white rounded shadow-sm p-8 hover:shadow-md transition-shadow;
-  }
-  .portfolio-card {
-    @apply bg-white rounded shadow-sm overflow-hidden hover:shadow-md transition-shadow;
-  }
-  .card-title {
-    @apply text-xl font-bold text-gray-900 mb-4;
-  }
-  .card-text {
-    @apply text-gray-600;
-  }
-
   /* Tags */
   .tech-tag {
     @apply bg-primary-50 text-primary-600 px-3 py-1 rounded-full text-sm;
