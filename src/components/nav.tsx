@@ -5,12 +5,13 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 export default function Nav() {
-  const pathname = usePathname(); // 현재 경로 가져오기
+  const pathname = usePathname();
 
-  // 활성 링크 확인 함수
-  const isActive = (href: string) => {
-    if (href === '/') return pathname === href;
-    return pathname.startsWith(href);
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -32,27 +33,30 @@ export default function Nav() {
           <div className="md:flex gap-8">
             <Link
               href="/"
-              className={`nav-link ${isActive('/') ? 'text-primary-700 font-bold' : 'text-gray-500'}`}
+              className={`nav-link ${pathname === '/' ? 'text-primary-700 font-bold' : 'text-gray-500'}`}
             >
               홈
             </Link>
-            <Link
-              href="/portfolio"
-              className={`nav-link ${isActive('/portfolio') ? 'text-primary-700 font-bold' : 'text-gray-500'}`}
+            <button
+              onClick={() => scrollToSection('portfolio')}
+              className="nav-link text-gray-500 hover:text-primary-700"
             >
               포트폴리오
-            </Link>
-            <Link
-              href="/contact"
-              className={`nav-link ${isActive('/contact') ? 'text-primary-700 font-bold' : 'text-gray-500'}`}
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="nav-link text-gray-500 hover:text-primary-700"
             >
               문의하기
-            </Link>
+            </button>
           </div>
         </div>
-        <Link href={'/contact'} className="btn-primary">
+        <button
+          onClick={() => scrollToSection('contact')}
+          className="btn-primary"
+        >
           무료 상담
-        </Link>
+        </button>
       </div>
     </nav>
   );

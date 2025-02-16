@@ -313,7 +313,7 @@ export default async function Main() {
       </div>
 
       {/* Portfolio Section */}
-      <div className="w-full py-20 bg-white">
+      <div id="portfolio" className="w-full py-20 bg-white">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="section-subtitle">포트폴리오</h2>
@@ -387,12 +387,6 @@ export default async function Main() {
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="mt-12 text-center">
-            <Link className="btn-primary-lg" href="/portfolio">
-              더 많은 프로젝트 보기
-            </Link>
           </div>
         </div>
       </div>
@@ -473,8 +467,8 @@ export default async function Main() {
         </div>
       </div>
 
-      {/* Contact Section - 회색 */}
-      <div className="w-full py-20 bg-white">
+      {/* Contact Section */}
+      <div id="contact" className="w-full py-20 bg-white">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
             <div className="flex flex-col justify-between">
