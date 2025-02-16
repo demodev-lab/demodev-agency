@@ -14,6 +14,14 @@ export default function HeroSection() {
       style={{ backgroundImage: "url('/banner.png')" }}
     >
       <div className="px-4 py-32 mx-auto max-w-7xl sm:px-6 lg:px-8 md:py-80">
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background:
+              'linear-gradient(to top, white, rgba(255, 255, 255, 0.8))',
+          }}
+        ></div>
         <div className="relative z-10 max-w-2xl">
           <h1 className="mb-6 text-3xl font-bold leading-tight text-gray-900 sm:text-4xl md:text-5xl lg:text-6xl">
             <div className="mb-2 md:mb-4">퀄리티에 대한 확신,</div>

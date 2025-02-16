@@ -92,14 +92,14 @@ export default function ContactSection() {
             <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
               <Link
                 href="tel:010-4718-8591"
-                className="flex items-center justify-center gap-3 px-4 py-2 text-white rounded bg-primary-700 hover:bg-primary-800 transition-colors"
+                className="flex items-center justify-center gap-3 px-4 py-2 btn-primary-lg"
               >
                 <PhoneIcon className="w-4 h-4" />
                 <span className="text-sm sm:text-base">010-4718-8591</span>
               </Link>
               <Link
                 href="mailto:sunghyun4718@gmail.com"
-                className="flex items-center justify-center gap-3 px-4 py-2 bg-white border rounded text-primary-600 border-primary-600 hover:bg-primary-50 transition-colors"
+                className="flex items-center justify-center gap-3 px-4 py-2 btn-secondary-lg"
               >
                 <EnvelopeIcon className="w-4 h-4" />
                 <span className="text-sm sm:text-base truncate">

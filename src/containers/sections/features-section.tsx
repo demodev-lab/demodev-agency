@@ -4,7 +4,6 @@ import {
   CurrencyDollarIcon,
   ReceiptPercentIcon,
 } from '@heroicons/react/24/outline';
-import ScrollContainer from '@/containers/sections/scroll-container-section';
 
 export default async function FeatureSection() {
   return (
@@ -70,7 +69,6 @@ export default async function FeatureSection() {
             </p>
           </div>
         </div>
-        <ScrollContainer />
       </div>
     </div>
   );
