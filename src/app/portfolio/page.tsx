@@ -1,5 +1,7 @@
 'use server';
 
-export default async function Portfolio() {
-  return <h1>Portfolio</h1>;
+import Portfolio from '@/containers/portfolio';
+
+export default async function PortfolioPage() {
+  return <Portfolio />;
 }
