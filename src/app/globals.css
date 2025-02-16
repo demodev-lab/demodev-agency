@@ -98,7 +98,9 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-250px * 9)); /* 이미지 개수에 맞게 조정 */
+      transform: translateX(
+        calc(-250px * 9)
+      ); /* NOTE: 이미지 개수에 맞게 조정 */
     }
   }
 
@@ -123,6 +125,6 @@
   }
 
   .logo-item {
-    @apply w-[250px] px-5 flex-shrink-0 transition-transform duration-300 hover:scale-110;
+    @apply w-[250px] flex justify-center transition-transform duration-300 hover:scale-110;
   }
 }
