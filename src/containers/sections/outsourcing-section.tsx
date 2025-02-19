@@ -3,12 +3,13 @@ export default async function OutsourcingSection() {
     <div className="w-full py-20 bg-gray-50">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-2xl font-semibold sm:text-3xl md:text-4xl lg:text-5xl">
-            많은 개발사는{' '}
-            <span className="px-2 py-1 text-white rounded-md bg-primary-700">
-              외부 하청에 일을 넘깁니다
-            </span>
-            <br className="mb-4" />
+          <h2 className="mb-4 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl lg:text-5xl">
+            <div className="inline-block sm:block">
+              많은 개발사는{' '}
+              <span className="inline-block px-2 py-1 text-white rounded-md bg-primary-700">
+                외부 하청에 일을 넘깁니다
+              </span>
+            </div>
             <span className="block mt-3 text-black">알고 계신가요?</span>
           </h2>
         </div>
