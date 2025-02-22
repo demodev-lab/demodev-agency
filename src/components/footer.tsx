@@ -55,17 +55,23 @@ export default function Footer() {
               </li>
               <li>
                 <MapPinIcon className="w-4 h-4 text-gray-400" />
-                서울특별시 강남구 개포로 416
+                서울특별시 강남구 선릉로 8
               </li>
             </ul>
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-800">
-          <p className="text-gray-400 text-sm">
-            © 2025 Company. All rights reserved.
-          </p>
-          <div className="flex gap-4 mt-4 md:mt-0">
+          <div className="text-gray-500 text-sm space-y-2">
+            <p>상호명: 대모산개발단</p>
+            <p>대표자: 고성현</p>
+            <p>사업자 등록 번호: 259-52-00902</p>
+            <p>주소: 서울특별시 강남구 선릉로 8</p>
+            <p className="text-gray-500 mt-4">
+              © 2025 Company. All rights reserved.
+            </p>
+          </div>
+          <div className="flex gap-4 mt-6 md:mt-0">
             {/* Social media icons */}
           </div>
         </div>
