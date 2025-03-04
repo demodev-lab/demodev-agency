@@ -18,10 +18,11 @@ export default function Footer() {
           <div className="col-span-1 lg:col-span-2">
             <div className="mb-6">
               <Image
-                src="/logo.png"
-                alt="Exceed IT 로고"
+                src="/demodev.png"
+                alt="DemoDev 로고"
                 width={100}
                 height={30}
+                className="object-contain"
               />
             </div>
             <p className="text-gray-400">

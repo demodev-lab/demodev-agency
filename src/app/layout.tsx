@@ -16,17 +16,17 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://exceedit.vercel.app/'),
-  title: 'ExceedIT',
-  description: '퀄리티에 대한 확신, ExceedIT',
+  title: 'DemoDev',
+  description: '퀄리티에 대한 확신, DemoDev',
   openGraph: {
-    title: 'ExceedIT',
-    description: '퀄리티에 대한 확신, ExceedIT',
+    title: 'DemoDev',
+    description: '퀄리티에 대한 확신, DemoDev',
     images: [
       {
-        url: '/thumbnail.png',
+        url: '/demodev.png',
         width: 1200,
         height: 600,
-        alt: 'ExceedIT',
+        alt: 'DemoDev',
       },
     ],
   },

@@ -88,7 +88,7 @@ export default async function OutsourcingSection() {
         {/* Solution Message */}
         <div className="mt-16 text-center">
           <p className="text-xl font-bold md:text-2xl text-primary-600">
-            Exceed IT는 자체 인력으로만 개발합니다
+            DemoDev는 자체 인력으로만 개발합니다
           </p>
           <p className="mt-4 text-lg text-gray-600 md:text-xl">
             모든 과정을 직접 관리하고 소통하여 이러한 문제들을 원천 차단합니다

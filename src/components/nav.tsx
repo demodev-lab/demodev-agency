@@ -25,12 +25,13 @@ export default function Nav() {
         <div className="flex items-center gap-16">
           <div className="h-16 flex items-center">
             <Link href="/">
-              <div className="relative h-[2.13rem]">
+              <div className="flex items-center gap-2">
                 <Image
-                  src="/logo.png"
-                  alt="Exceed IT 로고"
+                  src="/demodev.png"
+                  alt="DemoDev 텍스트"
                   width={100}
-                  height={30}
+                  height={24}
+                  className="object-contain"
                 />
               </div>
             </Link>
