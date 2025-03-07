@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://exceedit.vercel.app/'),
+  metadataBase: new URL('https://demodev.io'),
   title: 'DemoDev',
   description: '퀄리티에 대한 확신, DemoDev',
   openGraph: {

@@ -9,10 +9,12 @@ import TestimonialSection from '@/containers/sections/testimonials-section';
 import ContactSection from '@/containers/sections/contact-section';
 import ScrollContainerSection from '@/containers/sections/scroll-container-section';
 import Footer from '@/components/footer';
+import PopupNoticeWrapper from '@/containers/PopupNoticeWrapper';
 
 export default async function Index() {
   return (
     <div className="flex flex-col w-full min-h-screen overflow-x-hidden">
+      <PopupNoticeWrapper />
       <HeroSection />
       <OutsourcingSection />
       <GuaranteeSection />
