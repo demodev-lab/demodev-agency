@@ -6,37 +6,55 @@ import {
   UserGroupIcon,
   AcademicCapIcon,
   RocketLaunchIcon,
+  SparklesIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default async function Challenge() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <main className="flex-grow">
+    <div className="min-h-screen bg-white overflow-hidden">
+      <main>
         {/* Hero Section */}
-        <div className="relative py-24 overflow-hidden bg-gray-50">
-          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="relative py-24 overflow-hidden bg-gradient-to-b from-gray-50 to-white">
+          {/* 백그라운드 패턴 */}
+          <div className="absolute inset-0 z-0 opacity-10">
+            <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-primary-300 blur-3xl"></div>
+            <div className="absolute top-1/2 -left-24 w-80 h-80 rounded-full bg-blue-300 blur-3xl"></div>
+          </div>
+
+          <div className="relative z-10 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
+              <div className="flex justify-center gap-8 mb-8">
+                <div className="flex items-center justify-center">
+                  <SparklesIcon className="w-8 h-8 text-primary-500" />
+                </div>
+              </div>
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-                <span className="block mb-3">V0와 Cursor로</span>
+                <span className="block mb-3">v0와 Cursor로</span>
                 <span className="block mb-3">
-                  <span className="text-primary-600">나만의 웹사이트</span>를
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-blue-600">
+                    나만의 웹사이트
+                  </span>
+                  를
                 </span>
                 <span className="block">만들어보세요</span>
               </h1>
+
               <p className="mt-8 mb-12 text-xl leading-8 text-gray-600">
                 코딩 경험이 없어도 괜찮습니다.
                 <br className="hidden sm:block" />
                 웹사이트 완성까지{' '}
-                <span className="font-semibold text-primary-600">
+                <span className="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-blue-600">
                   1:1 책임 케어
                 </span>
                 로 도와드립니다.
               </p>
+
               <div className="flex justify-center gap-4">
                 <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white transition-colors rounded-lg bg-primary-600 hover:bg-primary-700"
+                  href="https://forms.gle/wEK2zqgnSS4GgzVG7"
+                  className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white rounded-lg shadow-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all duration-300 transform hover:scale-105"
                 >
                   신청하기 <ArrowRightIcon className="w-5 h-5 ml-2" />
                 </Link>
@@ -48,12 +66,19 @@ export default async function Challenge() {
         {/* Features */}
         <div className="py-24 bg-white">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12 sm:text-4xl">
+              이런{' '}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-blue-600">
+                특별한 혜택
+              </span>
+              이 있어요
+            </h2>
             <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
-              <div className="p-10 transition-all duration-300 bg-gray-50 rounded-2xl hover:shadow-lg">
-                <div className="flex items-center justify-center w-16 h-16 mb-8 bg-primary-100 rounded-xl">
+              <div className="p-8 transition-all duration-300 bg-gray-50 rounded-2xl hover:shadow-xl border border-gray-100 group">
+                <div className="flex items-center justify-center w-16 h-16 mb-8 rounded-xl bg-gradient-to-br from-primary-100 to-primary-200 group-hover:from-primary-200 group-hover:to-primary-300 transition-all duration-300">
                   <AcademicCapIcon className="w-8 h-8 text-primary-600" />
                 </div>
-                <h3 className="mb-4 text-2xl font-bold text-gray-900">
+                <h3 className="mb-4 text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
                   오프라인 맞춤형 교육
                 </h3>
                 <p className="text-lg leading-relaxed text-gray-600">
@@ -63,59 +88,210 @@ export default async function Challenge() {
                 </p>
               </div>
 
-              <div className="p-10 transition-all duration-300 bg-gray-50 rounded-2xl hover:shadow-lg">
-                <div className="flex items-center justify-center w-16 h-16 mb-8 bg-primary-100 rounded-xl">
+              <div className="p-8 transition-all duration-300 bg-gray-50 rounded-2xl hover:shadow-xl border border-gray-100 group">
+                <div className="flex items-center justify-center w-16 h-16 mb-8 rounded-xl bg-gradient-to-br from-primary-100 to-primary-200 group-hover:from-primary-200 group-hover:to-primary-300 transition-all duration-300">
                   <UserGroupIcon className="w-8 h-8 text-primary-600" />
                 </div>
-                <h3 className="mb-4 text-2xl font-bold text-gray-900">
+                <h3 className="mb-4 text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
                   한정된 인원
                 </h3>
                 <p className="text-lg leading-relaxed text-gray-600">
                   책임감 있는 케어를 위해{' '}
-                  <span className="font-semibold text-primary-600">5명만</span>{' '}
-                  모집합니다.
-                  <br className="hidden lg:block" />
-                  빠른 신청은 기회를 잡을 수 있는 가장 확실한 방법입니다.
+                  <span className="font-semibold text-primary-600">4명만</span>{' '}
+                  모집
                 </p>
               </div>
 
-              <div className="p-10 transition-all duration-300 bg-gray-50 rounded-2xl hover:shadow-lg">
-                <div className="flex items-center justify-center w-16 h-16 mb-8 bg-primary-100 rounded-xl">
+              <div className="p-8 transition-all duration-300 bg-gray-50 rounded-2xl hover:shadow-xl border border-gray-100 group">
+                <div className="flex items-center justify-center w-16 h-16 mb-8 rounded-xl bg-gradient-to-br from-primary-100 to-primary-200 group-hover:from-primary-200 group-hover:to-primary-300 transition-all duration-300">
                   <RocketLaunchIcon className="w-8 h-8 text-primary-600" />
                 </div>
-                <h3 className="mb-4 text-2xl font-bold text-gray-900">
+                <h3 className="mb-4 text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
                   1:1 책임 케어
                 </h3>
                 <p className="text-lg leading-relaxed text-gray-600">
-                  웹사이트 완성까지 포기하지 않도록 도와드립니다.
-                  <br className="hidden lg:block" />
-                  실시간 피드백과 코드 리뷰로 막히는 부분을 해결해드립니다.
+                  웹사이트 완성까지 교육이 이어집니다.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
+        {/* Tools Section */}
+        <div className="py-20 bg-gray-50">
+          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              혁신적인 도구로{' '}
+              <span className="text-primary-600">쉽게 배우세요</span>
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div className="p-8">
+                  <div className="relative w-32 h-16 mb-6 mx-auto">
+                    <Image
+                      src="/v0-logo.png"
+                      alt="v0 로고"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <h3 className="text-2xl font-bold text-center mb-4">
+                    AI 웹 디자인 도구
+                  </h3>
+                  <p className="text-gray-600 mb-6 text-center">
+                    디자인 경험 없이도 AI가 도와주는 웹 디자인 도구.
+                    <br className="hidden lg:block" />
+                    프롬프트만 입력하면 멋진 웹사이트를 자동 생성해줍니다.
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <svg
+                        className="h-6 w-6 text-green-500 mr-2"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <span>원하는 디자인을 텍스트로 설명하기만 하세요</span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg
+                        className="h-6 w-6 text-green-500 mr-2"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <span>AI가 실시간으로 웹사이트를 디자인합니다</span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg
+                        className="h-6 w-6 text-green-500 mr-2"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <span>코드를 자동 생성하여 시간을 절약해줍니다</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div className="p-8">
+                  <div className="relative w-32 h-16 mb-6 mx-auto">
+                    <Image
+                      src="/cursor-logo.png"
+                      alt="Cursor 로고"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <h3 className="text-2xl font-bold text-center mb-4">
+                    AI 코딩 도우미
+                  </h3>
+                  <p className="text-gray-600 mb-6 text-center">
+                    프로그래밍 지식이 없어도 AI가 코드를 작성해주는 혁신적인
+                    IDE.
+                    <br className="hidden lg:block" />
+                    한국어로 명령하면 코드가 완성됩니다.
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <svg
+                        className="h-6 w-6 text-green-500 mr-2"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <span>한국어로 코드 작성 명령을 내릴 수 있습니다</span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg
+                        className="h-6 w-6 text-green-500 mr-2"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <span>AI가 자동으로 코드를 작성하고 수정합니다</span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg
+                        className="h-6 w-6 text-green-500 mr-2"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <span>코드 오류도 AI가 자동으로 해결해줍니다</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* CTA Section */}
-        <div className="py-20 bg-primary-50">
+        <div className="py-20 bg-gradient-to-r from-primary-50 to-blue-50">
           <div className="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
             <h2 className="mb-6 text-3xl font-bold text-gray-900 sm:text-4xl">
               지금 바로 시작하세요
             </h2>
             <p className="mb-10 text-xl leading-relaxed text-gray-600">
-              나만의 웹사이트를 만들 수 있는 기회,
+              단돈 2만원으로 웹사이트를 만들 수 있는 기회
               <br className="hidden sm:block" />
-              <span className="font-semibold text-primary-600">
-                5자리 중 2자리
-              </span>
-              가 남았습니다.
+              <span className="font-semibold text-primary-600">딱 4자리</span>가
+              남았습니다.
             </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white transition-colors rounded-lg bg-primary-600 hover:bg-primary-700"
-            >
-              신청하기
-            </Link>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link
+                href="https://forms.gle/wEK2zqgnSS4GgzVG7"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white rounded-lg shadow-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all duration-300 transform hover:scale-105"
+              >
+                신청하기 <ArrowRightIcon className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
           </div>
         </div>
       </main>
