@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: '퀄리티에 대한 확신, DemoDev',
     images: [
       {
-        url: '/demodev.png',
+        url: '/thumbnail.png',
         width: 1200,
         height: 600,
         alt: 'DemoDev',

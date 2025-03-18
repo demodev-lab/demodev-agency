@@ -38,7 +38,7 @@ export default async function Challenge() {
                   </span>
                   를
                 </span>
-                <span className="block">만들어보세요</span>
+                <span className="block">가져가세요.</span>
               </h1>
 
               <p className="mt-8 mb-12 text-xl leading-8 text-gray-600">
@@ -281,7 +281,7 @@ export default async function Challenge() {
               지금 바로 시작하세요
             </h2>
             <p className="mb-10 text-xl leading-relaxed text-gray-600">
-              단돈 2만원으로 웹사이트를 만들 수 있는 기회
+              단돈 3만원으로 웹사이트를 만들 수 있는 기회
               <br className="hidden sm:block" />
               <span className="font-semibold text-primary-600">딱 4자리</span>가
               남았습니다.
