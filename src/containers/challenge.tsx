@@ -55,6 +55,8 @@ export default async function Challenge() {
                 <Link
                   href="https://forms.gle/wEK2zqgnSS4GgzVG7"
                   className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white rounded-lg shadow-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all duration-300 transform hover:scale-105"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   신청하기 <ArrowRightIcon className="w-5 h-5 ml-2" />
                 </Link>
@@ -288,6 +290,8 @@ export default async function Challenge() {
               <Link
                 href="https://forms.gle/wEK2zqgnSS4GgzVG7"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white rounded-lg shadow-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all duration-300 transform hover:scale-105"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 신청하기 <ArrowRightIcon className="w-5 h-5 ml-2" />
               </Link>

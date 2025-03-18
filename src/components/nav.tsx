@@ -10,6 +10,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 export default function Nav() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isHomePage = pathname === '/';
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -45,29 +46,35 @@ export default function Nav() {
             >
               홈
             </Link>
-            <button
-              onClick={() => scrollToSection('portfolio')}
-              className="nav-link text-gray-500 hover:text-primary-700"
-            >
-              포트폴리오
-            </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="nav-link text-gray-500 hover:text-primary-700"
-            >
-              문의하기
-            </button>
+            {isHomePage && (
+              <>
+                <button
+                  onClick={() => scrollToSection('portfolio')}
+                  className="nav-link text-gray-500 hover:text-primary-700"
+                >
+                  포트폴리오
+                </button>
+                <button
+                  onClick={() => scrollToSection('contact')}
+                  className="nav-link text-gray-500 hover:text-primary-700"
+                >
+                  문의하기
+                </button>
+              </>
+            )}
           </div>
         </div>
 
         {/* 무료 상담 버튼 */}
         <div className="flex items-center gap-4">
-          <button
-            onClick={() => scrollToSection('contact')}
-            className="hidden md:block btn-primary"
-          >
-            무료 상담
-          </button>
+          {isHomePage && (
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="hidden md:block btn-primary"
+            >
+              무료 상담
+            </button>
+          )}
 
           {/* 모바일 메뉴 토글 버튼 */}
           <button
@@ -111,30 +118,34 @@ export default function Nav() {
               >
                 홈
               </Link>
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={() => scrollToSection('portfolio')}
-                className="px-4 py-2 text-left text-gray-500 hover:bg-primary-50 hover:text-primary-700 rounded-lg"
-              >
-                포트폴리오
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={() => scrollToSection('contact')}
-                className="px-4 py-2 text-left text-gray-500 hover:bg-primary-50 hover:text-primary-700 rounded-lg"
-              >
-                문의하기
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={() => scrollToSection('contact')}
-                className="btn-primary mt-4"
-              >
-                무료 상담
-              </motion.button>
+              {isHomePage && (
+                <>
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    onClick={() => scrollToSection('portfolio')}
+                    className="px-4 py-2 text-left text-gray-500 hover:bg-primary-50 hover:text-primary-700 rounded-lg"
+                  >
+                    포트폴리오
+                  </motion.button>
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    onClick={() => scrollToSection('contact')}
+                    className="px-4 py-2 text-left text-gray-500 hover:bg-primary-50 hover:text-primary-700 rounded-lg"
+                  >
+                    문의하기
+                  </motion.button>
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    onClick={() => scrollToSection('contact')}
+                    className="btn-primary mt-4"
+                  >
+                    무료 상담
+                  </motion.button>
+                </>
+              )}
             </motion.div>
           </motion.div>
         )}
