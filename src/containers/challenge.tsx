@@ -10,8 +10,17 @@ import {
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import Image from 'next/image';
+import ScheduleCard from '@/components/ScheduleCard';
 
 export default async function Challenge() {
+  // 교육 일정 데이터
+  const schedules = [
+    { date: '3월 23일', remaining: 2, isFull: false },
+    { date: '3월 30일', remaining: 1, isFull: false },
+    { date: '4월 6일', remaining: 4, isFull: false },
+    { date: '4월 13일', remaining: 0, isFull: true },
+  ];
+
   return (
     <div className="min-h-screen bg-white overflow-hidden">
       <main>
@@ -46,7 +55,7 @@ export default async function Challenge() {
                 <br className="hidden sm:block" />
                 웹사이트 완성까지{' '}
                 <span className="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-blue-600">
-                  1:1 책임 케어
+                  책임 케어
                 </span>
                 로 도와드립니다.
               </p>
@@ -61,6 +70,29 @@ export default async function Challenge() {
                   신청하기 <ArrowRightIcon className="w-5 h-5 ml-2" />
                 </Link>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Schedule Section */}
+        <div className="py-20 bg-gray-50">
+          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-4 sm:text-4xl">
+              교육 일정
+            </h2>
+            <p className="text-xl text-center text-gray-600 mb-12">
+              매주 토요일마다 진행되는 교육 일정과 남은 자리를 확인하세요
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {schedules.map((schedule, index) => (
+                <ScheduleCard
+                  key={index}
+                  date={schedule.date}
+                  remaining={schedule.remaining}
+                  isFull={schedule.isFull}
+                />
+              ))}
             </div>
           </div>
         </div>
@@ -84,7 +116,7 @@ export default async function Challenge() {
                   오프라인 맞춤형 교육
                 </h3>
                 <p className="text-lg leading-relaxed text-gray-600">
-                  1:1 오프라인 교육으로
+                  오프라인 교육으로
                   <br className="hidden lg:block" />
                   개인의 속도에 맞춰 진행됩니다.
                 </p>
@@ -99,7 +131,7 @@ export default async function Challenge() {
                 </h3>
                 <p className="text-lg leading-relaxed text-gray-600">
                   책임감 있는 케어를 위해{' '}
-                  <span className="font-semibold text-primary-600">4명만</span>{' '}
+                  <span className="font-semibold text-primary-600">소수만</span>{' '}
                   모집
                 </p>
               </div>
@@ -281,7 +313,7 @@ export default async function Challenge() {
               지금 바로 시작하세요
             </h2>
             <p className="mb-10 text-xl leading-relaxed text-gray-600">
-              단돈 3만원으로 웹사이트를 만들 수 있는 기회
+              단돈 만원으로 웹사이트를 만들 수 있는 기회
               <br className="hidden sm:block" />
               <span className="font-semibold text-primary-600">딱 4자리</span>가
               남았습니다.
