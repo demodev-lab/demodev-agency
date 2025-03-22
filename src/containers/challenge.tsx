@@ -73,7 +73,7 @@ export default async function Challenge() {
                 <br className="hidden sm:block" />
                 웹사이트 완성까지{' '}
                 <span className="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-blue-600">
-                  1:1 책임 케어
+                  책임 케어
                 </span>
                 로 도와드립니다.
               </p>
@@ -111,7 +111,7 @@ export default async function Challenge() {
                   오프라인 맞춤형 교육
                 </h3>
                 <p className="text-lg leading-relaxed text-gray-600">
-                  1:1 오프라인 교육으로
+                  오프라인 교육으로
                   <br className="hidden lg:block" />
                   개인의 속도에 맞춰 진행됩니다.
                 </p>
