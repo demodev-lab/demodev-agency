@@ -136,7 +136,7 @@ export default async function Challenge() {
                   <RocketLaunchIcon className="w-8 h-8 text-primary-600" />
                 </div>
                 <h3 className="mb-4 text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
-                  1:1 책임 케어
+                  책임 케어
                 </h3>
                 <p className="text-lg leading-relaxed text-gray-600">
                   웹사이트 완성까지 교육이 이어집니다.
