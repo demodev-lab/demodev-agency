@@ -7,11 +7,38 @@ import {
   AcademicCapIcon,
   RocketLaunchIcon,
   SparklesIcon,
+  QuestionMarkCircleIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import Image from 'next/image';
+import FaqItem from '@/components/FaqItem';
 
 export default async function Challenge() {
+  const faqs = [
+    {
+      question: '교육 장소는 어디인가요?',
+      answer: '서울 강남구 개포동역 인근에서 진행합니다.',
+    },
+    {
+      question: '코딩을 몰라도 정말 웹사이트를 만들 수 있나요?',
+      answer: '네, 현재까지 많은 수강생들이 100% 성공했습니다.',
+    },
+    {
+      question: '수업시간은 얼마나 걸리나요?',
+      answer:
+        '웹사이트 완성까지 책임지고 완성시켜드립니다. 평균 3시간 잡고 진행하는데 연장 수업 가능합니다.',
+    },
+    {
+      question: '배포까지 가능한가요?',
+      answer: '네, 가능합니다. 배포까지 단 3시간이면 충분히 가능합니다.',
+    },
+    {
+      question: '수업 일자는 언제인가요?',
+      answer:
+        '매주 토요일 오후 2시에 진행됩니다. 날짜는 구글 폼을 통해서 선택해주세요.',
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-white overflow-hidden">
       <main>
@@ -274,14 +301,56 @@ export default async function Challenge() {
           </div>
         </div>
 
+        {/* FAQ Section */}
+        <div className="py-20 bg-white">
+          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <div className="flex justify-center gap-8 mb-6">
+                <div className="flex items-center justify-center">
+                  <QuestionMarkCircleIcon className="w-8 h-8 text-primary-500" />
+                </div>
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4 sm:text-4xl">
+                자주 묻는 질문
+              </h2>
+              <p className="max-w-2xl mx-auto text-xl text-gray-600 mb-12">
+                궁금한 점이 있으신가요? 아래에서 답을 찾아보세요.
+              </p>
+            </div>
+
+            <div className="max-w-3xl mx-auto space-y-4">
+              {faqs.map((faq, index) => (
+                <FaqItem
+                  key={index}
+                  question={faq.question}
+                  answer={faq.answer}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* CTA Section */}
         <div className="py-20 bg-gradient-to-r from-primary-50 to-blue-50">
           <div className="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
             <h2 className="mb-6 text-3xl font-bold text-gray-900 sm:text-4xl">
               지금 바로 시작하세요
             </h2>
+            <div className="mb-6 flex justify-center items-center">
+              <div className="inline-flex items-center bg-white px-6 py-3 rounded-xl shadow-sm">
+                <span className="text-xl font-bold line-through text-gray-400 mr-3">
+                  10만원
+                </span>
+                <div className="bg-red-100 text-red-600 font-bold px-3 py-1 rounded-md mr-3">
+                  50% 할인
+                </div>
+                <span className="text-2xl font-bold text-primary-600">
+                  5만원
+                </span>
+              </div>
+            </div>
             <p className="mb-10 text-xl leading-relaxed text-gray-600">
-              단돈 3만원으로 웹사이트를 만들 수 있는 기회
+              특별 할인가로 웹사이트를 만들 수 있는 기회
               <br className="hidden sm:block" />
               <span className="font-semibold text-primary-600">딱 4자리</span>가
               남았습니다.
@@ -293,7 +362,7 @@ export default async function Challenge() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                신청하기 <ArrowRightIcon className="w-5 h-5 ml-2" />
+                할인가로 신청하기 <ArrowRightIcon className="w-5 h-5 ml-2" />
               </Link>
             </div>
           </div>
