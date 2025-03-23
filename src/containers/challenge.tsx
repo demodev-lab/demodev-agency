@@ -301,6 +301,116 @@ export default async function Challenge() {
           </div>
         </div>
 
+        {/* 포트폴리오 Section */}
+        <div className="py-20 bg-white">
+          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-4 sm:text-4xl">
+              교육생 <span className="text-primary-600">포트폴리오</span>
+            </h2>
+            <p className="max-w-2xl mx-auto text-xl text-center text-gray-600 mb-12">
+              단 3시간만에 직접 만든 실제 교육생들의 웹사이트입니다
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl">
+                <div className="relative aspect-[16/9]">
+                  <Image
+                    src="/20250322-landing.png"
+                    alt="교육생 포트폴리오 - 랜딩 페이지 1"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6 bg-white">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    비즈니스 컨설팅 웹사이트
+                  </h3>
+                  <p className="text-gray-600">
+                    코딩 경험이 없는 교육생이 만든 첫 번째 웹사이트입니다.
+                    프로페셔널한 디자인과 반응형 레이아웃으로 구성되었습니다.
+                  </p>
+                </div>
+              </div>
+
+              <div className="overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl">
+                <div className="relative aspect-[16/9]">
+                  <Image
+                    src="/20250323-1-landing.png"
+                    alt="교육생 포트폴리오 - 랜딩 페이지 2"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6 bg-white">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    온라인 코스 플랫폼
+                  </h3>
+                  <p className="text-gray-600">
+                    디자인 전공자가 처음으로 코딩에 도전해 만든 교육
+                    플랫폼입니다. 직관적인 UI와 모던한 디자인이 특징입니다.
+                  </p>
+                </div>
+              </div>
+
+              <div className="overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl">
+                <div className="relative aspect-[16/9]">
+                  <Image
+                    src="/20250323-2-landing.png"
+                    alt="교육생 포트폴리오 - 랜딩 페이지 3"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6 bg-white">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    제품 소개 웹사이트
+                  </h3>
+                  <p className="text-gray-600">
+                    마케팅 담당자가 제품 홍보를 위해 직접 만든 웹사이트입니다.
+                    세련된 디자인과 명확한 CTA 구성이 돋보입니다.
+                  </p>
+                </div>
+              </div>
+
+              <div className="overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl">
+                <div className="relative aspect-[16/9]">
+                  <Image
+                    src="/20250323-3-landing.png"
+                    alt="교육생 포트폴리오 - 랜딩 페이지 4"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6 bg-white">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    크리에이티브 스튜디오
+                  </h3>
+                  <p className="text-gray-600">
+                    디자인 에이전시 대표가 자신의 비즈니스를 위해 제작한
+                    웹사이트입니다. 창의적인 레이아웃과 인터랙티브한 요소가
+                    특징입니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-12 text-center">
+              <p className="text-lg text-gray-700 mb-6">
+                이 모든 웹사이트는 코딩 경험이 없는 교육생들이{' '}
+                <strong>단 한 번의 수업</strong>으로 만든 결과물입니다
+              </p>
+              <Link
+                href="https://forms.gle/wEK2zqgnSS4GgzVG7"
+                className="inline-flex items-center px-6 py-3 text-base font-medium text-white rounded-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                나도 만들어보기 <ArrowRightIcon className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </div>
+        </div>
+
         {/* FAQ Section */}
         <div className="py-20 bg-white">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
