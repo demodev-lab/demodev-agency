@@ -8,11 +8,13 @@ import {
   RocketLaunchIcon,
   SparklesIcon,
   QuestionMarkCircleIcon,
+  ChatBubbleBottomCenterIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import Image from 'next/image';
 import FaqItem from '@/components/FaqItem';
 import PortfolioGallery from '@/components/PortfolioGallery';
+import ReviewCarousel from '@/components/ReviewCarousel';
 
 export default async function Challenge() {
   const faqs = [
@@ -313,6 +315,52 @@ export default async function Challenge() {
             </p>
 
             <PortfolioGallery />
+          </div>
+        </div>
+
+        {/* 후기 Section */}
+        <div className="py-20 bg-gray-50">
+          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <div className="flex justify-center gap-8 mb-6">
+                <div className="flex items-center justify-center">
+                  <ChatBubbleBottomCenterIcon className="w-8 h-8 text-primary-500" />
+                </div>
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4 sm:text-4xl">
+                교육생들의 <span className="text-primary-600">생생한 후기</span>
+              </h2>
+              <p className="max-w-2xl mx-auto text-xl text-center text-gray-600 mb-8">
+                수강생들이 직접 남긴 진솔한 후기를 확인해보세요
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto">
+              <ReviewCarousel />
+
+              <div className="mt-10 bg-white p-8 rounded-xl shadow-md">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <svg
+                      className="h-12 w-12 text-primary-300"
+                      fill="currentColor"
+                      viewBox="0 0 32 32"
+                      aria-hidden="true"
+                    >
+                      <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-lg text-gray-600 italic mb-4">
+                      강의가 너무 유익해서 현기증 올 정도에요.
+                    </p>
+                    <p className="font-medium text-gray-900">
+                      황OO님, 마케팅 회사 대표
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
