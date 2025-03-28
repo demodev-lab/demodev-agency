@@ -46,6 +46,18 @@ export default function Nav() {
             >
               홈
             </Link>
+            <Link
+              href="/challenge"
+              className={`nav-link ${pathname === '/challenge' ? 'text-primary-700 font-bold' : 'text-gray-500'}`}
+            >
+              원데이 클래스
+            </Link>
+            <Link
+              href="/workshop"
+              className={`nav-link ${pathname === '/workshop' ? 'text-primary-700 font-bold' : 'text-gray-500'}`}
+            >
+              결제모듈 워크샵
+            </Link>
             {isHomePage && (
               <>
                 <button
@@ -117,6 +129,28 @@ export default function Nav() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 홈
+              </Link>
+              <Link
+                href="/challenge"
+                className={`px-4 py-2 rounded-lg ${
+                  pathname === '/challenge'
+                    ? 'bg-primary-50 text-primary-700 font-bold'
+                    : 'text-gray-500'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                원데이 클래스
+              </Link>
+              <Link
+                href="/workshop"
+                className={`px-4 py-2 rounded-lg ${
+                  pathname === '/workshop'
+                    ? 'bg-primary-50 text-primary-700 font-bold'
+                    : 'text-gray-500'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                결제모듈 워크샵
               </Link>
               {isHomePage && (
                 <>
