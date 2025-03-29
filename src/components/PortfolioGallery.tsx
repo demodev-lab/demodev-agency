@@ -98,6 +98,9 @@ const ImageModal = memo(
     onMouseDown,
     onMouseMove,
     onMouseUp,
+    onTouchStart,
+    onTouchMove,
+    onTouchEnd,
     onZoomIn,
     onZoomOut,
     onReset,
@@ -110,6 +113,9 @@ const ImageModal = memo(
     onMouseDown: (e: React.MouseEvent) => void;
     onMouseMove: (e: React.MouseEvent) => void;
     onMouseUp: () => void;
+    onTouchStart: (e: React.TouchEvent) => void;
+    onTouchMove: (e: React.TouchEvent) => void;
+    onTouchEnd: () => void;
     onZoomIn: (e: React.MouseEvent) => void;
     onZoomOut: (e: React.MouseEvent) => void;
     onReset: (e: React.MouseEvent) => void;
@@ -119,9 +125,10 @@ const ImageModal = memo(
       onClick={onClose}
       onMouseUp={onMouseUp}
       onMouseLeave={onMouseUp}
+      onTouchEnd={onTouchEnd}
     >
       <div
-        className="relative max-w-6xl w-full h-auto max-h-[90vh] flex flex-col overflow-auto"
+        className="relative max-w-6xl w-full h-auto max-h-[90vh] flex flex-col overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* 컨트롤 버튼 */}
@@ -172,26 +179,36 @@ const ImageModal = memo(
           </button>
         </div>
 
-        {/* 안내 메시지 */}
-        <div className="sticky bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-full text-sm w-fit mx-auto">
-          이미지를 드래그하여 자세히 살펴보세요
+        {/* 안내 메시지 - 모바일에서도 잘 보이도록 수정 */}
+        <div className="fixed bottom-6 left-0 right-0 mx-auto text-center z-10">
+          <div className="bg-black bg-opacity-70 text-white px-4 py-2 rounded-full text-sm inline-block max-w-[90%]">
+            이미지를 드래그하여 자세히 살펴보세요
+          </div>
         </div>
 
         <div
-          className="relative w-full h-full overflow-visible rounded-lg bg-black flex items-start justify-center cursor-move mt-16"
+          className="relative w-full h-full overflow-hidden rounded-lg bg-black flex items-center justify-center cursor-move mt-16"
           onMouseDown={onMouseDown}
           onMouseMove={onMouseMove}
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
           style={{
             cursor: isDragging ? 'grabbing' : 'grab',
+            minHeight: zoom > 1 ? '60vh' : 'auto',
+            maxHeight: '70vh',
           }}
         >
           <div
             className="transition-transform duration-100 ease-out"
             style={{
               transform: `translate(${position.x}px, ${position.y}px) scale(${zoom})`,
-              transformOrigin: 'top center',
+              transformOrigin: 'center center',
               maxWidth: '100%',
               maxHeight: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
             }}
           >
             <Image
@@ -200,8 +217,8 @@ const ImageModal = memo(
               width={1200}
               height={675}
               priority
-              quality={100}
-              className="w-full h-auto object-contain object-top pointer-events-none"
+              quality={90}
+              className="w-full h-auto object-contain pointer-events-none"
             />
           </div>
         </div>
@@ -228,7 +245,21 @@ export default function PortfolioGallery() {
     if (selectedImage) {
       setZoom(1);
       setPosition({ x: 0, y: 0 });
+
+      // 모달이 열릴 때 body에 overflow: hidden 추가하여 배경 스크롤 방지
+      document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
+    } else {
+      // 모달이 닫힐 때 원래대로 복원
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
     }
+
+    // 컴포넌트 언마운트 시 스타일 초기화
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
+    };
   }, [selectedImage]);
 
   // 드래그 시작 핸들러
@@ -254,6 +285,32 @@ export default function PortfolioGallery() {
 
   // 드래그 종료 핸들러
   const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  // 터치 이벤트 핸들러 추가
+  const handleTouchStart = (e: React.TouchEvent) => {
+    e.preventDefault(); // 모바일에서 스크롤 방지
+    const touch = e.touches[0];
+    setIsDragging(true);
+    setDragStart({ x: touch.clientX, y: touch.clientY });
+    setDragStartPosition({ x: position.x, y: position.y });
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDragging) return;
+
+    const touch = e.touches[0];
+    const dx = touch.clientX - dragStart.x;
+    const dy = touch.clientY - dragStart.y;
+
+    setPosition({
+      x: dragStartPosition.x + dx,
+      y: dragStartPosition.y + dy,
+    });
+  };
+
+  const handleTouchEnd = () => {
     setIsDragging(false);
   };
 
@@ -313,6 +370,9 @@ export default function PortfolioGallery() {
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
           onZoomIn={handleZoomIn}
           onZoomOut={handleZoomOut}
           onReset={handleReset}
