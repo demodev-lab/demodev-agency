@@ -26,7 +26,7 @@ const reviews = [
   },
   {
     id: 4,
-    image: '/20250322-review.png',
+    image: '/20250322-review.webp',
     alt: '교육생 후기 메시지 4',
   },
 ] as const;
