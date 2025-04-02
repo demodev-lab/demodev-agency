@@ -26,31 +26,71 @@ const reviews = [
   },
   {
     id: 4,
-    image: '/20250322-review.png',
+    image: '/20250322-review.webp',
     alt: '교육생 후기 메시지 4',
   },
+] as const;
+
+// 무한 롤링을 위해 앞뒤로 하나씩 복제
+const clonedReviews = [
+  { ...reviews[reviews.length - 1], id: 0 }, // 마지막 요소를 맨 앞에 복제
+  ...reviews,
+  { ...reviews[0], id: reviews.length + 1 }, // 첫 요소를 맨 뒤에 복제
 ];
 
 export default function ReviewCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState<number>(1); // 원본 배열의 시작 인덱스
   const [isPlaying, setIsPlaying] = useState(true);
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const nextSlide = useCallback(() => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === reviews.length - 1 ? 0 : prevIndex + 1,
-    );
-  }, []);
+    if (isTransitioning) return;
+
+    setIsTransitioning(true);
+    setCurrentIndex((prevIndex) => {
+      const nextIndex = prevIndex + 1;
+      // 마지막 복제 슬라이드(복제된 첫 요소)에 도달했을 때
+      if (nextIndex >= clonedReviews.length - 1) {
+        setTimeout(() => {
+          setIsTransitioning(false);
+          setCurrentIndex(1); // 실제 첫 슬라이드로 즉시 이동
+        }, 500);
+      } else {
+        setTimeout(() => {
+          setIsTransitioning(false);
+        }, 500);
+      }
+      return nextIndex;
+    });
+  }, [isTransitioning]);
 
   const prevSlide = useCallback(() => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? reviews.length - 1 : prevIndex - 1,
-    );
-  }, []);
+    if (isTransitioning) return;
+
+    setIsTransitioning(true);
+    setCurrentIndex((prevIndex) => {
+      const nextIndex = prevIndex - 1;
+      // 첫 번째 복제 슬라이드(복제된 마지막 요소)에 도달했을 때
+      if (nextIndex <= 0) {
+        setTimeout(() => {
+          setIsTransitioning(false);
+          setCurrentIndex(reviews.length); // 실제 마지막 슬라이드로 즉시 이동
+        }, 500);
+      } else {
+        setTimeout(() => {
+          setIsTransitioning(false);
+        }, 500);
+      }
+      return nextIndex;
+    });
+  }, [isTransitioning]);
 
   const goToSlide = (index: number) => {
-    setCurrentIndex(index);
+    // 실제 슬라이드 인덱스에 1을 더해 클론 오프셋 고려
+    setCurrentIndex(index + 1);
+    setIsPlaying(false);
   };
 
   // 자동 슬라이드
@@ -106,9 +146,12 @@ export default function ReviewCarousel() {
 
         <div
           className="flex transition-transform duration-500 ease-out"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          style={{
+            transform: `translateX(-${currentIndex * 100}%)`,
+            transition: isTransitioning ? 'transform 500ms ease-out' : 'none',
+          }}
         >
-          {reviews.map((review) => (
+          {clonedReviews.map((review) => (
             <div key={review.id} className="w-full flex-shrink-0">
               <div className="relative aspect-[16/9] bg-gray-100">
                 <Image
@@ -116,6 +159,7 @@ export default function ReviewCarousel() {
                   alt={review.alt}
                   fill
                   className="object-contain"
+                  priority
                 />
               </div>
             </div>
@@ -152,10 +196,9 @@ export default function ReviewCarousel() {
               key={index}
               onClick={() => {
                 goToSlide(index);
-                setIsPlaying(false);
               }}
               className={`w-3 h-3 rounded-full ${
-                currentIndex === index ? 'bg-primary-500' : 'bg-white/70'
+                currentIndex - 1 === index ? 'bg-primary-500' : 'bg-white/70'
               }`}
               aria-label={`${index + 1}번 후기로 이동`}
             />
