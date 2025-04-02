@@ -129,7 +129,7 @@ export default async function Challenge() {
                 </h3>
                 <p className="text-lg leading-relaxed text-gray-600">
                   책임감 있는 케어를 위해{' '}
-                  <span className="font-semibold text-primary-600">4명만</span>{' '}
+                  <span className="font-semibold text-primary-600">소수만</span>{' '}
                   모집
                 </p>
               </div>
@@ -402,21 +402,20 @@ export default async function Challenge() {
             <div className="mb-6 flex justify-center items-center">
               <div className="inline-flex items-center bg-white px-6 py-3 rounded-xl shadow-sm">
                 <span className="text-xl font-bold line-through text-gray-400 mr-3">
-                  10만원
+                  20만원
                 </span>
                 <div className="bg-red-100 text-red-600 font-bold px-3 py-1 rounded-md mr-3">
                   50% 할인
                 </div>
                 <span className="text-2xl font-bold text-primary-600">
-                  5만원
+                  10만원
                 </span>
               </div>
             </div>
             <p className="mb-10 text-xl leading-relaxed text-gray-600">
-              특별 할인가로 웹사이트를 만들 수 있는 기회
+              단 10만원으로 웹사이트를 만들 수 있는 기회
               <br className="hidden sm:block" />
-              <span className="font-semibold text-primary-600">딱 4자리</span>가
-              남았습니다.
+              지금이 유일합니다.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
