@@ -83,7 +83,7 @@ export default async function Challenge() {
 
               <div className="flex justify-center gap-4">
                 <Link
-                  href="https://forms.gle/wEK2zqgnSS4GgzVG7"
+                  href="https://forms.gle/i1XmuRoUQuTMAVBJ9"
                   className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white rounded-lg shadow-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all duration-300 transform hover:scale-105"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -401,12 +401,6 @@ export default async function Challenge() {
             </h2>
             <div className="mb-6 flex justify-center items-center">
               <div className="inline-flex items-center bg-white px-6 py-3 rounded-xl shadow-sm">
-                <span className="text-xl font-bold line-through text-gray-400 mr-3">
-                  20만원
-                </span>
-                <div className="bg-red-100 text-red-600 font-bold px-3 py-1 rounded-md mr-3">
-                  50% 할인
-                </div>
                 <span className="text-2xl font-bold text-primary-600">
                   10만원
                 </span>
@@ -419,12 +413,12 @@ export default async function Challenge() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
-                href="https://forms.gle/wEK2zqgnSS4GgzVG7"
+                href="https://forms.gle/i1XmuRoUQuTMAVBJ9"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white rounded-lg shadow-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all duration-300 transform hover:scale-105"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                할인가로 신청하기 <ArrowRightIcon className="w-5 h-5 ml-2" />
+                신청하기 <ArrowRightIcon className="w-5 h-5 ml-2" />
               </Link>
             </div>
           </div>
