@@ -10,7 +10,6 @@ import {
   ShieldCheckIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-import Image from 'next/image';
 import FaqItem from '@/components/FaqItem';
 
 export default async function Workshop() {
@@ -120,8 +119,10 @@ export default async function Workshop() {
 
               <div className="flex justify-center gap-4">
                 <Link
-                  href="#signup"
+                  href="https://forms.gle/FEFBzqkmK2uipF2C6"
                   className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white rounded-lg shadow-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all duration-300 transform hover:scale-105"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   신청하기 <ArrowRightIcon className="w-5 h-5 ml-2" />
                 </Link>
@@ -280,7 +281,7 @@ export default async function Workshop() {
           </div>
         </div>
 
-        {/* 구현 예시 Section */}
+        {/* 구현 예시 Section
         <div className="py-20 bg-gray-50">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-6 sm:text-4xl">
@@ -333,7 +334,7 @@ export default async function Workshop() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* FAQ Section */}
         <div className="py-20 bg-white">
@@ -376,13 +377,13 @@ export default async function Workshop() {
             <div className="mb-6 flex justify-center items-center">
               <div className="inline-flex items-center bg-white px-6 py-3 rounded-xl shadow-sm">
                 <span className="text-xl font-bold line-through text-gray-400 mr-3">
-                  40만원
+                  100만원
                 </span>
                 <div className="bg-red-100 text-red-600 font-bold px-3 py-1 rounded-md mr-3">
                   25% 할인
                 </div>
                 <span className="text-2xl font-bold text-primary-600">
-                  30만원
+                  75만원
                 </span>
               </div>
             </div>
@@ -393,7 +394,7 @@ export default async function Workshop() {
               만 모집합니다.
             </p>
 
-            {/* 결제 폼 */}
+            {/* 결제 폼
             <div className="max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-xl mb-10">
               <h3 className="text-2xl font-bold mb-6 text-gray-900">
                 신청 및 결제
@@ -483,9 +484,9 @@ export default async function Workshop() {
                   결제 시 토스페이먼츠의 안전한 결제창으로 연결됩니다.
                 </p>
               </form>
-            </div>
+            </div> */}
 
-            <div className="flex items-center justify-center space-x-4">
+            {/* <div className="flex items-center justify-center space-x-4">
               <Image
                 src="/toss.png"
                 alt="토스페이먼츠"
@@ -500,6 +501,16 @@ export default async function Workshop() {
                 height={32}
                 className="h-8 w-auto"
               />
+            </div> */}
+            <div className="mt-8 flex justify-center">
+              <Link
+                href="https://forms.gle/FEFBzqkmK2uipF2C6"
+                className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white rounded-lg shadow-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all duration-300 transform hover:scale-105"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                신청하기 <ArrowRightIcon className="w-5 h-5 ml-2" />
+              </Link>
             </div>
           </div>
         </div>
