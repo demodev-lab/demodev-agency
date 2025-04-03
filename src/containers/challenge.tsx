@@ -7,43 +7,18 @@ import {
   AcademicCapIcon,
   RocketLaunchIcon,
   SparklesIcon,
-  QuestionMarkCircleIcon,
   ChatBubbleBottomCenterIcon,
   DocumentTextIcon,
   CheckIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import Image from 'next/image';
-import FaqItem from '@/components/faq-item';
+import FaqSection from '@/components/faq-section';
 import PortfolioGallery from '@/components/portfolio-gallery';
+import { challengeFaqs } from '@/constants/faq';
 import ReviewCarousel from '@/components/review-carousel';
 
 export default async function Challenge() {
-  const faqs = [
-    {
-      question: '교육 장소는 어디인가요?',
-      answer: '서울 강남구 개포동역 인근에서 진행합니다.',
-    },
-    {
-      question: '코딩을 몰라도 정말 웹사이트를 만들 수 있나요?',
-      answer: '네, 현재까지 많은 수강생들이 100% 성공했습니다.',
-    },
-    {
-      question: '수업시간은 얼마나 걸리나요?',
-      answer:
-        '웹사이트 완성까지 책임지고 완성시켜드립니다. 평균 4시간 잡고 진행하는데 연장 수업 가능합니다.',
-    },
-    {
-      question: '배포까지 가능한가요?',
-      answer: '네, 가능합니다. 배포까지 단 4시간이면 충분히 가능합니다.',
-    },
-    {
-      question: '수업 일자는 언제인가요?',
-      answer:
-        '매주 토요일 오후 2시에 진행됩니다. 날짜는 구글 폼을 통해서 선택해주세요.',
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-white overflow-hidden">
       <main>
@@ -344,33 +319,7 @@ export default async function Challenge() {
         </div>
 
         {/* FAQ Section */}
-        <div className="py-20 bg-white">
-          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <div className="flex justify-center gap-8 mb-6">
-                <div className="flex items-center justify-center">
-                  <QuestionMarkCircleIcon className="w-8 h-8 text-primary-500" />
-                </div>
-              </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4 sm:text-4xl">
-                자주 묻는 질문
-              </h2>
-              <p className="max-w-2xl mx-auto text-xl text-gray-600 mb-12">
-                궁금한 점이 있으신가요? 아래에서 답을 찾아보세요.
-              </p>
-            </div>
-
-            <div className="max-w-3xl mx-auto space-y-4">
-              {faqs.map((faq, index) => (
-                <FaqItem
-                  key={index}
-                  question={faq.question}
-                  answer={faq.answer}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
+        <FaqSection faqs={challengeFaqs} />
 
         {/* CTA Section */}
         <div className="py-20 bg-gradient-to-r from-primary-50 to-blue-50">

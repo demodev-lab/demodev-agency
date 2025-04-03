@@ -3,42 +3,16 @@
 import Footer from '@/components/footer';
 import {
   ArrowRightIcon,
-  QuestionMarkCircleIcon,
   CalendarIcon,
   CheckCircleIcon,
   CreditCardIcon,
   ShieldCheckIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-import FaqItem from '@/components/faq-item';
+import FaqSection from '@/components/faq-section';
+import { workshopFaqs } from '@/constants/faq';
 
 export default async function Workshop() {
-  const faqs = [
-    {
-      question: '교육 장소는 어디인가요?',
-      answer: '서울 강남구 개포동역 인근에서 진행합니다.',
-    },
-    {
-      question: '코딩을 몰라도 정말 결제 모듈까지 만들 수 있나요?',
-      answer:
-        '네, 현재까지 많은 수강생들이 성공적으로 결제 모듈을 구현했습니다.',
-    },
-    {
-      question: '수업시간은 얼마나 걸리나요?',
-      answer: '매주 토요일 오후 2시부터 5시까지, 총 4주 동안 진행됩니다.',
-    },
-    {
-      question: '실제 결제까지 테스트 가능한가요?',
-      answer:
-        '네, 가능합니다. 테스트 모드로 결제 프로세스 전체를 구현하고 테스트합니다.',
-    },
-    {
-      question: '수업 일자는 언제인가요?',
-      answer:
-        '매주 토요일 오후 2시에 진행됩니다. 날짜는 아래 신청 폼을 통해서 선택해주세요.',
-    },
-  ];
-
   const curriculum = [
     {
       week: 1,
@@ -337,33 +311,7 @@ export default async function Workshop() {
         </div> */}
 
         {/* FAQ Section */}
-        <div className="py-20 bg-white">
-          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <div className="flex justify-center gap-8 mb-6">
-                <div className="flex items-center justify-center">
-                  <QuestionMarkCircleIcon className="w-8 h-8 text-primary-500" />
-                </div>
-              </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4 sm:text-4xl">
-                자주 묻는 질문
-              </h2>
-              <p className="max-w-2xl mx-auto text-xl text-gray-600 mb-12">
-                궁금한 점이 있으신가요? 아래에서 답을 찾아보세요.
-              </p>
-            </div>
-
-            <div className="max-w-3xl mx-auto space-y-4">
-              {faqs.map((faq, index) => (
-                <FaqItem
-                  key={index}
-                  question={faq.question}
-                  answer={faq.answer}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
+        <FaqSection faqs={workshopFaqs} />
 
         {/* CTA Section with Payment */}
         <div
