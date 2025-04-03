@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/20/solid';
+import { ArrowPathIcon } from '@heroicons/react/24/outline';
 import createNotionPage from '@/libs/notion';
 import Modal from 'react-modal';
 
@@ -28,6 +29,7 @@ const customStyles = {
 export default function ContactSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalMessage, setModalMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     // Modal root element 설정
@@ -35,6 +37,9 @@ export default function ContactSection() {
   }, []);
 
   const handleSubmit = async (formData: FormData) => {
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
     const name = formData.get('name') as string;
     const email = formData.get('email') as string;
     const content = formData.get('content') as string;
@@ -50,6 +55,8 @@ export default function ContactSection() {
       setModalMessage('문의 접수 중 오류가 발생했습니다.');
       setIsModalOpen(true);
       console.error(err);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -118,6 +125,7 @@ export default function ContactSection() {
                 placeholder="홍길동"
                 className="form-input"
                 required
+                disabled={isSubmitting}
               />
             </div>
             <div>
@@ -128,6 +136,7 @@ export default function ContactSection() {
                 placeholder="example@email.com"
                 className="form-input"
                 required
+                disabled={isSubmitting}
               />
             </div>
             <div>
@@ -138,9 +147,25 @@ export default function ContactSection() {
                 rows={4}
                 className="form-input"
                 required
+                disabled={isSubmitting}
               ></textarea>
             </div>
-            <button className="w-full btn-primary">문의하기</button>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className={`w-full btn-primary flex items-center justify-center gap-2 ${
+                isSubmitting ? 'opacity-75 cursor-not-allowed' : ''
+              }`}
+            >
+              {isSubmitting ? (
+                <>
+                  <ArrowPathIcon className="w-5 h-5 animate-spin" />
+                  <span>처리중...</span>
+                </>
+              ) : (
+                '문의하기'
+              )}
+            </button>
           </form>
         </div>
       </div>
