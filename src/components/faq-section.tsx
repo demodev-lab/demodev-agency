@@ -1,5 +1,8 @@
+'use client';
+
 import { QuestionMarkCircleIcon } from '@heroicons/react/24/outline';
 import FaqItem from '@/components/faq-item';
+import { useState } from 'react';
 
 interface FaqType {
   question: string;
@@ -11,6 +14,12 @@ interface FaqSectionProps {
 }
 
 export default function FaqSection({ faqs }: FaqSectionProps) {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const handleToggle = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <div className="py-20 bg-white">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -28,10 +37,20 @@ export default function FaqSection({ faqs }: FaqSectionProps) {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto space-y-4">
-          {faqs.map((faq, index) => (
-            <FaqItem key={index} question={faq.question} answer={faq.answer} />
-          ))}
+        <div className="max-w-3xl mx-auto">
+          <div className="relative min-h-[400px]">
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <FaqItem
+                  key={index}
+                  question={faq.question}
+                  answer={faq.answer}
+                  isOpen={openIndex === index}
+                  onToggle={() => handleToggle(index)}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
