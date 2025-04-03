@@ -12,9 +12,9 @@ import {
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import Image from 'next/image';
-import FaqItem from '@/components/FaqItem';
-import PortfolioGallery from '@/components/PortfolioGallery';
-import ReviewCarousel from '@/components/ReviewCarousel';
+import FaqItem from '@/components/faq-item';
+import PortfolioGallery from '@/components/portfolio-gallery';
+import ReviewCarousel from '@/components/review-carousel';
 
 export default async function Challenge() {
   const faqs = [

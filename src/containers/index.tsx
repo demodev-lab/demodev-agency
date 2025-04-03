@@ -9,7 +9,7 @@ import TestimonialSection from '@/containers/sections/testimonials-section';
 import ContactSection from '@/containers/sections/contact-section';
 import ScrollContainerSection from '@/containers/sections/scroll-container-section';
 import Footer from '@/components/footer';
-import PopupNoticeWrapper from '@/containers/PopupNoticeWrapper';
+import PopupNoticeWrapper from '@/containers/popup-notice-wrapper';
 
 export default async function Index() {
   return (

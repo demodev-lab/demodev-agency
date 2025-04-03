@@ -10,7 +10,7 @@ import {
   ShieldCheckIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-import FaqItem from '@/components/FaqItem';
+import FaqItem from '@/components/faq-item';
 
 export default async function Workshop() {
   const faqs = [
