@@ -34,15 +34,8 @@ export default function ContactSection() {
   const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  useEffect(() => {
-    console.log('isSubmitting 상태 변경:', isSubmitting);
-  }, [isSubmitting]);
-
-  useEffect(() => {
     Modal.setAppElement(document.body);
+    setIsMounted(true);
   }, []);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
