@@ -112,12 +112,12 @@ export default async function Challenge() {
                   <AcademicCapIcon className="w-8 h-8 text-primary-600" />
                 </div>
                 <h3 className="mb-4 text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
-                  오프라인 맞춤형 교육
+                  실전 중심 오프라인 교육
                 </h3>
                 <p className="text-lg leading-relaxed text-gray-600">
-                  오프라인 교육으로
+                  기획부터 배포까지 실제 웹사이트를 만들어보며
                   <br className="hidden lg:block" />
-                  개인의 속도에 맞춰 진행됩니다.
+                  AI 도구 활용법을 익힙니다.
                 </p>
               </div>
 
@@ -140,10 +140,12 @@ export default async function Challenge() {
                   <RocketLaunchIcon className="w-8 h-8 text-primary-600" />
                 </div>
                 <h3 className="mb-4 text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
-                  책임 케어
+                  실용적인 자동화
                 </h3>
                 <p className="text-lg leading-relaxed text-gray-600">
-                  웹사이트 완성까지 교육이 이어집니다.
+                  웹사이트 제작뿐만 아니라
+                  <br className="hidden lg:block" />
+                  사용자 관리와 메일 발송까지 자동화합니다.
                 </p>
               </div>
 
@@ -152,10 +154,10 @@ export default async function Challenge() {
                   <DocumentTextIcon className="w-8 h-8 text-primary-600" />
                 </div>
                 <h3 className="mb-4 text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
-                  강의 자료 제공
+                  강의 자료 평생 제공
                 </h3>
                 <p className="text-lg leading-relaxed text-gray-600">
-                  강의 자료는 계속해서 업데이트 됩니다.
+                  강의 자료는 평생 제공되며 계속해서 업데이트 됩니다.
                 </p>
               </div>
             </div>
@@ -256,8 +258,8 @@ export default async function Challenge() {
                     AI 코딩 도우미
                   </h3>
                   <p className="text-gray-600 mb-6 text-center">
-                    프로그래밍 지식이 없어도 AI가 코드를 작성해주는 혁신적인
-                    IDE.
+                    프로그래밍 지식이 없어도 AI가 코드를 대신 작성해주는 코딩
+                    도구.
                     <br className="hidden lg:block" />
                     한국어로 명령하면 코드가 완성됩니다.
                   </p>
