@@ -473,12 +473,12 @@ export default async function Challenge() {
             <div className="mb-6 flex justify-center items-center">
               <div className="inline-flex items-center bg-white px-6 py-3 rounded-xl shadow-sm">
                 <span className="text-2xl font-bold text-primary-600">
-                  10만원
+                  15만원
                 </span>
               </div>
             </div>
             <p className="mb-10 text-xl leading-relaxed text-gray-600">
-              단 10만원으로 웹사이트를 만들 수 있는 기회
+              단 15만원으로 웹사이트를 만들 수 있는 기회
               <br className="hidden sm:block" />
               지금이 유일합니다.
             </p>
