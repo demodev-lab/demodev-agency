@@ -162,7 +162,7 @@ export default async function Challenge() {
                 <div className="p-8">
                   <div className="relative w-32 h-16 mb-6 mx-auto">
                     <Image
-                      src="/v0-logo.png"
+                      src="/logo-v0.png"
                       alt="v0 로고"
                       fill
                       className="object-contain"
@@ -233,7 +233,7 @@ export default async function Challenge() {
                 <div className="p-8">
                   <div className="relative w-32 h-16 mb-6 mx-auto">
                     <Image
-                      src="/cursor-logo.png"
+                      src="/logo-cursor.png"
                       alt="Cursor 로고"
                       fill
                       className="object-contain"

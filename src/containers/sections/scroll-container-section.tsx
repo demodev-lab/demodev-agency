@@ -12,7 +12,7 @@ export default async function ScrollContainerSection() {
             {/* First set */}
             <div className="logo-item">
               <Image
-                src="/seogang.png"
+                src="/experience-seogang.png"
                 alt="서강대학교 로고"
                 width={160}
                 height={160}
@@ -21,7 +21,7 @@ export default async function ScrollContainerSection() {
             </div>
             <div className="logo-item">
               <Image
-                src="/sejong.png"
+                src="/experience-sejong.png"
                 alt="세종대학교 로고"
                 width={160}
                 height={160}
@@ -30,7 +30,7 @@ export default async function ScrollContainerSection() {
             </div>
             <div className="logo-item">
               <Image
-                src="/inno.png"
+                src="/experience-inno.png"
                 alt="이노베이션 아카데미 로고"
                 width={160}
                 height={160}
@@ -39,7 +39,7 @@ export default async function ScrollContainerSection() {
             </div>
             <div className="logo-item">
               <Image
-                src="/42.png"
+                src="/experience-42.png"
                 alt="42 로고"
                 width={160}
                 height={160}
@@ -48,7 +48,7 @@ export default async function ScrollContainerSection() {
             </div>
             <div className="logo-item">
               <Image
-                src="/twig.png"
+                src="/experience-twig.png"
                 alt="twig 로고"
                 width={160}
                 height={160}
@@ -57,7 +57,7 @@ export default async function ScrollContainerSection() {
             </div>
             <div className="logo-item">
               <Image
-                src="/life.png"
+                src="/experience-life.png"
                 alt="라해스 로고"
                 width={160}
                 height={160}
@@ -66,7 +66,7 @@ export default async function ScrollContainerSection() {
             </div>
             <div className="logo-item">
               <Image
-                src="/next.png"
+                src="/experience-nxr.png"
                 alt="넥스트 로고"
                 width={160}
                 height={160}
@@ -75,7 +75,7 @@ export default async function ScrollContainerSection() {
             </div>
             <div className="logo-item">
               <Image
-                src="/gom.png"
+                src="/experience-gompyo.png"
                 alt="곰표 로고"
                 width={160}
                 height={160}
@@ -84,7 +84,7 @@ export default async function ScrollContainerSection() {
             </div>
             <div className="logo-item">
               <Image
-                src="/jab-training.png"
+                src="/experience-jab-training.png"
                 alt="JAB TRAINING 로고"
                 width={160}
                 height={160}
@@ -94,7 +94,7 @@ export default async function ScrollContainerSection() {
             {/* Duplicate set for seamless scroll */}
             <div className="logo-item">
               <Image
-                src="/seogang.png"
+                src="/experience-seogang.png"
                 alt="서강대학교 로고"
                 width={160}
                 height={160}
@@ -103,7 +103,7 @@ export default async function ScrollContainerSection() {
             </div>
             <div className="logo-item">
               <Image
-                src="/sejong.png"
+                src="/experience-sejong.png"
                 alt="세종대학교 로고"
                 width={160}
                 height={160}
@@ -112,7 +112,7 @@ export default async function ScrollContainerSection() {
             </div>
             <div className="logo-item">
               <Image
-                src="/inno.png"
+                src="/experiinno.png"
                 alt="이노베이션 아카데미 로고"
                 width={160}
                 height={160}
@@ -121,7 +121,7 @@ export default async function ScrollContainerSection() {
             </div>
             <div className="logo-item">
               <Image
-                src="/42.png"
+                src="/experience-42.png"
                 alt="42 로고"
                 width={160}
                 height={160}
@@ -130,7 +130,7 @@ export default async function ScrollContainerSection() {
             </div>
             <div className="logo-item">
               <Image
-                src="/twig.png"
+                src="/experience-twig.png"
                 alt="twig 로고"
                 width={160}
                 height={160}
@@ -139,7 +139,7 @@ export default async function ScrollContainerSection() {
             </div>
             <div className="logo-item">
               <Image
-                src="/life.png"
+                src="/experience-life.png"
                 alt="라해스 로고"
                 width={160}
                 height={160}
@@ -148,7 +148,7 @@ export default async function ScrollContainerSection() {
             </div>
             <div className="logo-item">
               <Image
-                src="/next.png"
+                src="/experience-nxr.png"
                 alt="넥스트 로고"
                 width={160}
                 height={160}
@@ -157,7 +157,7 @@ export default async function ScrollContainerSection() {
             </div>
             <div className="logo-item">
               <Image
-                src="/gom.png"
+                src="/experience-gompyo.png"
                 alt="곰표 로고"
                 width={160}
                 height={160}
@@ -166,7 +166,7 @@ export default async function ScrollContainerSection() {
             </div>
             <div className="logo-item">
               <Image
-                src="/jab-training.png"
+                src="/experience-jab-training.png"
                 alt="JAB TRAINING 로고"
                 width={160}
                 height={160}
