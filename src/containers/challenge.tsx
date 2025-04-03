@@ -10,6 +10,7 @@ import {
   QuestionMarkCircleIcon,
   ChatBubbleBottomCenterIcon,
   DocumentTextIcon,
+  CheckIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -193,51 +194,15 @@ export default async function Challenge() {
                   </p>
                   <ul className="space-y-3 mt-auto">
                     <li className="flex items-start">
-                      <svg
-                        className="h-6 w-6 text-green-500 mr-2 flex-shrink-0"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
+                      <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
                       <span>원하는 디자인을 텍스트로 설명하기만 하세요</span>
                     </li>
                     <li className="flex items-start">
-                      <svg
-                        className="h-6 w-6 text-green-500 mr-2 flex-shrink-0"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
+                      <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
                       <span>AI가 실시간으로 웹사이트를 디자인합니다</span>
                     </li>
                     <li className="flex items-start">
-                      <svg
-                        className="h-6 w-6 text-green-500 mr-2 flex-shrink-0"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
+                      <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
                       <span>코드를 자동 생성하여 시간을 절약해줍니다</span>
                     </li>
                   </ul>
@@ -265,51 +230,15 @@ export default async function Challenge() {
                   </p>
                   <ul className="space-y-3 mt-auto">
                     <li className="flex items-start">
-                      <svg
-                        className="h-6 w-6 text-green-500 mr-2 flex-shrink-0"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
+                      <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
                       <span>한국어로 코드 작성 명령을 내릴 수 있습니다</span>
                     </li>
                     <li className="flex items-start">
-                      <svg
-                        className="h-6 w-6 text-green-500 mr-2 flex-shrink-0"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
+                      <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
                       <span>AI가 자동으로 코드를 작성하고 수정합니다</span>
                     </li>
                     <li className="flex items-start">
-                      <svg
-                        className="h-6 w-6 text-green-500 mr-2 flex-shrink-0"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
+                      <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
                       <span>코드 오류도 AI가 자동으로 해결해줍니다</span>
                     </li>
                   </ul>
@@ -336,51 +265,15 @@ export default async function Challenge() {
                   </p>
                   <ul className="space-y-3 mt-auto">
                     <li className="flex items-start">
-                      <svg
-                        className="h-6 w-6 text-green-500 mr-2 flex-shrink-0"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
+                      <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
                       <span>드래그 앤 드롭으로 자동화를 구축합니다</span>
                     </li>
                     <li className="flex items-start">
-                      <svg
-                        className="h-6 w-6 text-green-500 mr-2 flex-shrink-0"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
+                      <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
                       <span>수천 개의 앱을 연동할 수 있습니다</span>
                     </li>
                     <li className="flex items-start">
-                      <svg
-                        className="h-6 w-6 text-green-500 mr-2 flex-shrink-0"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
+                      <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
                       <span>반복 작업을 자동으로 처리해줍니다</span>
                     </li>
                   </ul>
