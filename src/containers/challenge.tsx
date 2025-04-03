@@ -9,6 +9,7 @@ import {
   SparklesIcon,
   QuestionMarkCircleIcon,
   ChatBubbleBottomCenterIcon,
+  DocumentTextIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -29,11 +30,11 @@ export default async function Challenge() {
     {
       question: '수업시간은 얼마나 걸리나요?',
       answer:
-        '웹사이트 완성까지 책임지고 완성시켜드립니다. 평균 3시간 잡고 진행하는데 연장 수업 가능합니다.',
+        '웹사이트 완성까지 책임지고 완성시켜드립니다. 평균 4시간 잡고 진행하는데 연장 수업 가능합니다.',
     },
     {
       question: '배포까지 가능한가요?',
-      answer: '네, 가능합니다. 배포까지 단 3시간이면 충분히 가능합니다.',
+      answer: '네, 가능합니다. 배포까지 단 4시간이면 충분히 가능합니다.',
     },
     {
       question: '수업 일자는 언제인가요?',
@@ -61,7 +62,7 @@ export default async function Challenge() {
                 </div>
               </div>
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-                <span className="block mb-3">v0와 Cursor로</span>
+                <span className="block mb-3">v0와 Cursor, Make로</span>
                 <span className="block mb-3">
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-blue-600">
                     나만의 웹사이트
@@ -105,7 +106,7 @@ export default async function Challenge() {
               </span>
               이 있어요
             </h2>
-            <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
               <div className="p-8 transition-all duration-300 bg-gray-50 rounded-2xl hover:shadow-xl border border-gray-100 group">
                 <div className="flex items-center justify-center w-16 h-16 mb-8 rounded-xl bg-gradient-to-br from-primary-100 to-primary-200 group-hover:from-primary-200 group-hover:to-primary-300 transition-all duration-300">
                   <AcademicCapIcon className="w-8 h-8 text-primary-600" />
@@ -143,6 +144,18 @@ export default async function Challenge() {
                 </h3>
                 <p className="text-lg leading-relaxed text-gray-600">
                   웹사이트 완성까지 교육이 이어집니다.
+                </p>
+              </div>
+
+              <div className="p-8 transition-all duration-300 bg-gray-50 rounded-2xl hover:shadow-xl border border-gray-100 group">
+                <div className="flex items-center justify-center w-16 h-16 mb-8 rounded-xl bg-gradient-to-br from-primary-100 to-primary-200 group-hover:from-primary-200 group-hover:to-primary-300 transition-all duration-300">
+                  <DocumentTextIcon className="w-8 h-8 text-primary-600" />
+                </div>
+                <h3 className="mb-4 text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
+                  강의 자료 제공
+                </h3>
+                <p className="text-lg leading-relaxed text-gray-600">
+                  강의 자료는 계속해서 업데이트 됩니다.
                 </p>
               </div>
             </div>
@@ -382,7 +395,7 @@ export default async function Challenge() {
               교육생 <span className="text-primary-600">포트폴리오</span>
             </h2>
             <p className="max-w-2xl mx-auto text-xl text-center text-gray-600 mb-12">
-              단 3시간만에 직접 만든 실제 교육생들의 웹사이트입니다
+              평균 2시간 20분동안 직접 만든 실제 교육생들의 웹사이트입니다
             </p>
 
             <PortfolioGallery />
@@ -473,12 +486,12 @@ export default async function Challenge() {
             <div className="mb-6 flex justify-center items-center">
               <div className="inline-flex items-center bg-white px-6 py-3 rounded-xl shadow-sm">
                 <span className="text-2xl font-bold text-primary-600">
-                  15만원
+                  149,000원
                 </span>
               </div>
             </div>
             <p className="mb-10 text-xl leading-relaxed text-gray-600">
-              단 15만원으로 웹사이트를 만들 수 있는 기회
+              단 149,000원으로 웹사이트를 만들 수 있는 기회
               <br className="hidden sm:block" />
               지금이 유일합니다.
             </p>

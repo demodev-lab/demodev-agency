@@ -150,7 +150,7 @@ export default async function Workshop() {
                   4주 완성 과정
                 </h3>
                 <p className="text-lg leading-relaxed text-gray-600">
-                  매주 토요일 3시간씩
+                  매주 토요일 4시간씩
                   <br className="hidden lg:block" />
                   체계적인 커리큘럼으로 진행됩니다.
                 </p>
