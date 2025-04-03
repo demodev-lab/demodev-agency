@@ -11,22 +11,22 @@ import {
 const reviews = [
   {
     id: 1,
-    image: '/review1.png',
+    image: '/review/1.png',
     alt: '교육생 후기 메시지 1',
   },
   {
     id: 2,
-    image: '/review2.png',
+    image: '/review/2.png',
     alt: '교육생 후기 메시지 2',
   },
   {
     id: 3,
-    image: '/review3.png',
+    image: '/review/3.png',
     alt: '교육생 후기 메시지 3',
   },
   {
     id: 4,
-    image: '/review4.webp',
+    image: '/review/4.webp',
     alt: '교육생 후기 메시지 4',
   },
 ] as const;

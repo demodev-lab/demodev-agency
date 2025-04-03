@@ -25,28 +25,28 @@ interface Position {
 // 포트폴리오 아이템을 컴포넌트 외부로 이동하여 재렌더링 방지
 const portfolioItems: readonly PortfolioItem[] = [
   {
-    imageSrc: '/landing1.webp',
+    imageSrc: '/landing/1.webp',
     title: '비즈니스 컨설팅 웹사이트',
     description:
       '코딩 경험이 없는 교육생이 만든 첫 번째 웹사이트입니다. 프로페셔널한 디자인과 반응형 레이아웃으로 구성되었습니다.',
     alt: '교육생 포트폴리오 - 비즈니스 컨설팅 웹사이트',
   },
   {
-    imageSrc: '/landing2.webp',
+    imageSrc: '/landing/2.webp',
     title: '온라인 코스 플랫폼',
     description:
       '디자인 전공자가 처음으로 코딩에 도전해 만든 교육 플랫폼입니다. 직관적인 UI와 모던한 디자인이 특징입니다.',
     alt: '교육생 포트폴리오 - 온라인 코스 플랫폼',
   },
   {
-    imageSrc: '/landing3.webp',
+    imageSrc: '/landing/3.webp',
     title: '제품 소개 웹사이트',
     description:
       '마케팅 담당자가 제품 홍보를 위해 직접 만든 웹사이트입니다. 세련된 디자인과 명확한 CTA 구성이 돋보입니다.',
     alt: '교육생 포트폴리오 - 제품 소개 웹사이트',
   },
   {
-    imageSrc: '/landing4.webp',
+    imageSrc: '/landing/4.webp',
     title: '크리에이티브 스튜디오',
     description:
       '디자인 에이전시 대표가 자신의 비즈니스를 위해 제작한 웹사이트입니다. 창의적인 레이아웃과 인터랙티브한 요소가 특징입니다.',

@@ -157,12 +157,12 @@ export default async function Challenge() {
               <span className="text-primary-600">쉽게 배우세요</span>
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-                <div className="p-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-stretch">
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col">
+                <div className="p-8 flex flex-col flex-grow">
                   <div className="relative w-32 h-16 mb-6 mx-auto">
                     <Image
-                      src="/logo-v0.png"
+                      src="/logo/v0.png"
                       alt="v0 로고"
                       fill
                       className="object-contain"
@@ -176,10 +176,10 @@ export default async function Challenge() {
                     <br className="hidden lg:block" />
                     프롬프트만 입력하면 멋진 웹사이트를 자동 생성해줍니다.
                   </p>
-                  <ul className="space-y-3">
+                  <ul className="space-y-3 mt-auto">
                     <li className="flex items-start">
                       <svg
-                        className="h-6 w-6 text-green-500 mr-2"
+                        className="h-6 w-6 text-green-500 mr-2 flex-shrink-0"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -195,7 +195,7 @@ export default async function Challenge() {
                     </li>
                     <li className="flex items-start">
                       <svg
-                        className="h-6 w-6 text-green-500 mr-2"
+                        className="h-6 w-6 text-green-500 mr-2 flex-shrink-0"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -211,7 +211,7 @@ export default async function Challenge() {
                     </li>
                     <li className="flex items-start">
                       <svg
-                        className="h-6 w-6 text-green-500 mr-2"
+                        className="h-6 w-6 text-green-500 mr-2 flex-shrink-0"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -229,11 +229,11 @@ export default async function Challenge() {
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-                <div className="p-8">
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col">
+                <div className="p-8 flex flex-col flex-grow">
                   <div className="relative w-32 h-16 mb-6 mx-auto">
                     <Image
-                      src="/logo-cursor.png"
+                      src="/logo/cursor.png"
                       alt="Cursor 로고"
                       fill
                       className="object-contain"
@@ -248,10 +248,10 @@ export default async function Challenge() {
                     <br className="hidden lg:block" />
                     한국어로 명령하면 코드가 완성됩니다.
                   </p>
-                  <ul className="space-y-3">
+                  <ul className="space-y-3 mt-auto">
                     <li className="flex items-start">
                       <svg
-                        className="h-6 w-6 text-green-500 mr-2"
+                        className="h-6 w-6 text-green-500 mr-2 flex-shrink-0"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -267,7 +267,7 @@ export default async function Challenge() {
                     </li>
                     <li className="flex items-start">
                       <svg
-                        className="h-6 w-6 text-green-500 mr-2"
+                        className="h-6 w-6 text-green-500 mr-2 flex-shrink-0"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -283,7 +283,7 @@ export default async function Challenge() {
                     </li>
                     <li className="flex items-start">
                       <svg
-                        className="h-6 w-6 text-green-500 mr-2"
+                        className="h-6 w-6 text-green-500 mr-2 flex-shrink-0"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -296,6 +296,77 @@ export default async function Challenge() {
                         />
                       </svg>
                       <span>코드 오류도 AI가 자동으로 해결해줍니다</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col">
+                <div className="p-8 flex flex-col flex-grow">
+                  <div className="relative w-32 h-16 mb-6 mx-auto">
+                    <Image
+                      src="/logo/make.png"
+                      alt="Make 로고"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <h3 className="text-2xl font-bold text-center mb-4">
+                    자동화 도구
+                  </h3>
+                  <p className="text-gray-600 mb-6 text-center">
+                    코드 없이도 웹사이트의 기능을 자동화할 수 있는 도구.
+                    <br className="hidden lg:block" />
+                    드래그 앤 드롭으로 자동화 워크플로우를 만듭니다.
+                  </p>
+                  <ul className="space-y-3 mt-auto">
+                    <li className="flex items-start">
+                      <svg
+                        className="h-6 w-6 text-green-500 mr-2 flex-shrink-0"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <span>드래그 앤 드롭으로 자동화를 구축합니다</span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg
+                        className="h-6 w-6 text-green-500 mr-2 flex-shrink-0"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <span>수천 개의 앱을 연동할 수 있습니다</span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg
+                        className="h-6 w-6 text-green-500 mr-2 flex-shrink-0"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <span>반복 작업을 자동으로 처리해줍니다</span>
                     </li>
                   </ul>
                 </div>
