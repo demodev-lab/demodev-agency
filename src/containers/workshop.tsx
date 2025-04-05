@@ -7,7 +7,7 @@ import {
   CalendarIcon,
   CheckCircleIcon,
   CreditCardIcon,
-  ShieldCheckIcon,
+  UserGroupIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import FaqItem from '@/components/FaqItem';
@@ -20,12 +20,11 @@ export default async function Workshop() {
     },
     {
       question: '코딩을 몰라도 정말 결제 모듈까지 만들 수 있나요?',
-      answer:
-        '네, 현재까지 많은 수강생들이 성공적으로 결제 모듈을 구현했습니다.',
+      answer: '네, 완성하실 때까지 AS 교육 들어갑니다.',
     },
     {
       question: '수업시간은 얼마나 걸리나요?',
-      answer: '매주 토요일 오후 2시부터 5시까지, 총 4주 동안 진행됩니다.',
+      answer: '토요일 오후 7시부터 10시까지, 2주 동안 진행합니다.',
     },
     {
       question: '실제 결제까지 테스트 가능한가요?',
@@ -35,7 +34,7 @@ export default async function Workshop() {
     {
       question: '수업 일자는 언제인가요?',
       answer:
-        '매주 토요일 오후 2시에 진행됩니다. 날짜는 아래 신청 폼을 통해서 선택해주세요.',
+        '첫째주, 셋째주 토요일 오후 7시에 진행됩니다. 날짜는 아래 신청 폼을 통해서 선택해주세요.',
     },
   ];
 
@@ -110,7 +109,7 @@ export default async function Workshop() {
               <p className="mt-8 mb-12 text-xl leading-8 text-gray-600">
                 코딩 경험이 없어도 괜찮습니다.
                 <br className="hidden sm:block" />
-                4주 동안{' '}
+                쉽게{' '}
                 <span className="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-blue-600">
                   결제 기능까지
                 </span>{' '}
@@ -147,12 +146,14 @@ export default async function Workshop() {
                   <CalendarIcon className="w-8 h-8 text-primary-600" />
                 </div>
                 <h3 className="mb-4 text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
-                  4주 완성 과정
+                  4단계 완성 과정
                 </h3>
                 <p className="text-lg leading-relaxed text-gray-600">
-                  매주 토요일 3시간씩
+                  <span className="font-semibold text-primary-600">
+                    단계별 체계적인 커리큘럼
+                  </span>
                   <br className="hidden lg:block" />
-                  체계적인 커리큘럼으로 진행됩니다.
+                  으로 진행됩니다.
                 </p>
               </div>
 
@@ -164,7 +165,7 @@ export default async function Workshop() {
                   실제 결제 기능
                 </h3>
                 <p className="text-lg leading-relaxed text-gray-600">
-                  포트원 서비스를 활용해
+                  레몬스퀴즈 서비스를 활용해
                   <br className="hidden lg:block" />
                   <span className="font-semibold text-primary-600">
                     실제 결제
@@ -175,13 +176,18 @@ export default async function Workshop() {
 
               <div className="p-8 transition-all duration-300 bg-gray-50 rounded-2xl hover:shadow-xl border border-gray-100 group">
                 <div className="flex items-center justify-center w-16 h-16 mb-8 rounded-xl bg-gradient-to-br from-primary-100 to-primary-200 group-hover:from-primary-200 group-hover:to-primary-300 transition-all duration-300">
-                  <ShieldCheckIcon className="w-8 h-8 text-primary-600" />
+                  <UserGroupIcon className="w-8 h-8 text-primary-600" />
                 </div>
                 <h3 className="mb-4 text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
-                  보안 인증
+                  개인 맞춤형 교육
                 </h3>
                 <p className="text-lg leading-relaxed text-gray-600">
-                  결제 관련 보안 설정과 인증 방식까지 배웁니다.
+                  개인별 판매 상품에
+                  <br className="hidden lg:block" />
+                  <span className="font-semibold text-primary-600">
+                    적합한 결제방식
+                  </span>
+                  으로 진행됩니다.
                 </p>
               </div>
             </div>
@@ -192,7 +198,7 @@ export default async function Workshop() {
         <div className="py-20 bg-gray-50">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              4주 커리큘럼
+              4단계 커리큘럼
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -204,7 +210,7 @@ export default async function Workshop() {
                   <div className="p-8">
                     <div className="flex items-center mb-6">
                       <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary-100 text-primary-600 font-bold text-xl mr-4">
-                        {week.week}주차
+                        {week.week}단계
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900">
                         {week.title}
@@ -269,12 +275,12 @@ export default async function Workshop() {
                     3
                   </span>
                   <h3 className="text-xl font-bold text-gray-900">
-                    백엔드 기술 학습 희망자
+                    실전 코딩 학습 희망자
                   </h3>
                 </div>
                 <p className="text-gray-600">
-                  사용자 인증, 결제 처리 등 백엔드 핵심 기술을 배우고 싶은 개발
-                  입문자에게 추천합니다.
+                  기술적인 접근보다 빠르게 실용적인 코딩을 하고 싶은 분에게
+                  적합합니다.
                 </p>
               </div>
             </div>
@@ -377,20 +383,22 @@ export default async function Workshop() {
             <div className="mb-6 flex justify-center items-center">
               <div className="inline-flex items-center bg-white px-6 py-3 rounded-xl shadow-sm">
                 <span className="text-xl font-bold line-through text-gray-400 mr-3">
-                  100만원
+                  99만원
                 </span>
                 <div className="bg-red-100 text-red-600 font-bold px-3 py-1 rounded-md mr-3">
-                  25% 할인
+                  50만원 할인
                 </div>
                 <span className="text-2xl font-bold text-primary-600">
-                  75만원
+                  49만원
                 </span>
               </div>
             </div>
             <p className="mb-10 text-xl leading-relaxed text-gray-600">
               특별 할인가로 결제 시스템 구현 방법을 배울 수 있는 기회
               <br className="hidden sm:block" />
-              <span className="font-semibold text-primary-600">선착순 4명</span>
+              <span className="font-semibold text-primary-600">
+                한정 인원만
+              </span>
               만 모집합니다.
             </p>
 
