@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, FormEvent, useRef } from 'react';
 import Link from 'next/link';
 import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/20/solid';
+import { ArrowPathIcon } from '@heroicons/react/24/outline';
 import createNotionPage from '@/libs/notion';
 import Modal from 'react-modal';
 
@@ -28,49 +29,62 @@ const customStyles = {
 export default function ContactSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalMessage, setModalMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
-    // Modal root element 설정
     Modal.setAppElement(document.body);
+    setIsMounted(true);
   }, []);
 
-  const handleSubmit = async (formData: FormData) => {
-    const name = formData.get('name') as string;
-    const email = formData.get('email') as string;
-    const content = formData.get('content') as string;
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (isSubmitting) {
+      return;
+    }
 
     try {
+      setIsSubmitting(true);
+
+      const formData = new FormData(e.currentTarget);
+      const name = formData.get('name') as string;
+      const email = formData.get('email') as string;
+      const content = formData.get('content') as string;
+
       await createNotionPage(name, email, content);
       setModalMessage('문의가 성공적으로 접수되었습니다.');
       setIsModalOpen(true);
-      // 폼 초기화
-      const form = document.querySelector('form') as HTMLFormElement;
-      form?.reset();
+      formRef.current?.reset();
     } catch (err) {
       setModalMessage('문의 접수 중 오류가 발생했습니다.');
       setIsModalOpen(true);
       console.error(err);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
     <div id="contact" className="w-full py-20 bg-white">
-      <Modal
-        isOpen={isModalOpen}
-        onRequestClose={() => setIsModalOpen(false)}
-        style={customStyles}
-        contentLabel="문의 결과"
-      >
-        <div className="text-center">
-          <h2 className="mb-4 text-xl font-bold">{modalMessage}</h2>
-          <button
-            onClick={() => setIsModalOpen(false)}
-            className="px-4 py-2 text-white rounded bg-primary-600 hover:bg-primary-700"
-          >
-            확인
-          </button>
-        </div>
-      </Modal>
+      {isMounted && (
+        <Modal
+          isOpen={isModalOpen}
+          onRequestClose={() => setIsModalOpen(false)}
+          style={customStyles}
+          contentLabel="문의 결과"
+        >
+          <div className="text-center">
+            <h2 className="mb-4 text-xl font-bold">{modalMessage}</h2>
+            <button
+              onClick={() => setIsModalOpen(false)}
+              className="px-4 py-2 text-white rounded bg-primary-600 hover:bg-primary-700"
+            >
+              확인
+            </button>
+          </div>
+        </Modal>
+      )}
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           <div className="flex flex-col justify-between">
@@ -109,7 +123,7 @@ export default function ContactSection() {
             </div>
           </div>
 
-          <form action={handleSubmit} className="space-y-6">
+          <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="form-label">이름</label>
               <input
@@ -118,6 +132,7 @@ export default function ContactSection() {
                 placeholder="홍길동"
                 className="form-input"
                 required
+                disabled={isSubmitting}
               />
             </div>
             <div>
@@ -128,6 +143,7 @@ export default function ContactSection() {
                 placeholder="example@email.com"
                 className="form-input"
                 required
+                disabled={isSubmitting}
               />
             </div>
             <div>
@@ -138,9 +154,25 @@ export default function ContactSection() {
                 rows={4}
                 className="form-input"
                 required
+                disabled={isSubmitting}
               ></textarea>
             </div>
-            <button className="w-full btn-primary">문의하기</button>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className={`w-full btn-primary flex items-center justify-center gap-2 ${
+                isSubmitting ? 'opacity-75 cursor-not-allowed' : ''
+              }`}
+            >
+              {isSubmitting ? (
+                <>
+                  <ArrowPathIcon className="w-5 h-5 animate-spin" />
+                  <span>처리중...</span>
+                </>
+              ) : (
+                '문의하기'
+              )}
+            </button>
           </form>
         </div>
       </div>

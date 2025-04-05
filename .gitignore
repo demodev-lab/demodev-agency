@@ -53,3 +53,6 @@ next-env.d.ts
 
 # Git related
 *.patch
+
+# docs
+docs/

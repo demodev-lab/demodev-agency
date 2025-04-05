@@ -7,41 +7,18 @@ import {
   AcademicCapIcon,
   RocketLaunchIcon,
   SparklesIcon,
-  QuestionMarkCircleIcon,
   ChatBubbleBottomCenterIcon,
+  DocumentTextIcon,
+  CheckIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import Image from 'next/image';
-import FaqItem from '@/components/FaqItem';
-import PortfolioGallery from '@/components/PortfolioGallery';
-import ReviewCarousel from '@/components/ReviewCarousel';
+import FaqSection from '@/components/faq-section';
+import PortfolioGallery from '@/components/portfolio-gallery';
+import { challengeFaqs } from '@/constants/faq';
+import ReviewCarousel from '@/components/review-carousel';
 
 export default async function Challenge() {
-  const faqs = [
-    {
-      question: '교육 장소는 어디인가요?',
-      answer: '서울 강남구 개포동역 인근에서 진행합니다.',
-    },
-    {
-      question: '코딩을 몰라도 정말 웹사이트를 만들 수 있나요?',
-      answer: '네, 현재까지 많은 수강생들이 100% 성공했습니다.',
-    },
-    {
-      question: '수업시간은 얼마나 걸리나요?',
-      answer:
-        '웹사이트 완성까지 책임지고 완성시켜드립니다. 평균 3시간 잡고 진행하는데 연장 수업 가능합니다.',
-    },
-    {
-      question: '배포까지 가능한가요?',
-      answer: '네, 가능합니다. 배포까지 단 3시간이면 충분히 가능합니다.',
-    },
-    {
-      question: '수업 일자는 언제인가요?',
-      answer:
-        '매주 토요일 오후 2시에 진행됩니다. 날짜는 구글 폼을 통해서 선택해주세요.',
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-white overflow-hidden">
       <main>
@@ -61,7 +38,7 @@ export default async function Challenge() {
                 </div>
               </div>
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-                <span className="block mb-3">v0와 Cursor로</span>
+                <span className="block mb-3">v0와 Cursor, Make로</span>
                 <span className="block mb-3">
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-blue-600">
                     나만의 웹사이트
@@ -105,18 +82,18 @@ export default async function Challenge() {
               </span>
               이 있어요
             </h2>
-            <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
               <div className="p-8 transition-all duration-300 bg-gray-50 rounded-2xl hover:shadow-xl border border-gray-100 group">
                 <div className="flex items-center justify-center w-16 h-16 mb-8 rounded-xl bg-gradient-to-br from-primary-100 to-primary-200 group-hover:from-primary-200 group-hover:to-primary-300 transition-all duration-300">
                   <AcademicCapIcon className="w-8 h-8 text-primary-600" />
                 </div>
                 <h3 className="mb-4 text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
-                  오프라인 맞춤형 교육
+                  실전 중심 오프라인 교육
                 </h3>
                 <p className="text-lg leading-relaxed text-gray-600">
-                  오프라인 교육으로
+                  기획부터 배포까지 실제 웹사이트를 만들어보며
                   <br className="hidden lg:block" />
-                  개인의 속도에 맞춰 진행됩니다.
+                  AI 도구 활용법을 익힙니다.
                 </p>
               </div>
 
@@ -139,10 +116,24 @@ export default async function Challenge() {
                   <RocketLaunchIcon className="w-8 h-8 text-primary-600" />
                 </div>
                 <h3 className="mb-4 text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
-                  책임 케어
+                  실용적인 자동화
                 </h3>
                 <p className="text-lg leading-relaxed text-gray-600">
-                  웹사이트 완성까지 교육이 이어집니다.
+                  웹사이트 제작뿐만 아니라
+                  <br className="hidden lg:block" />
+                  사용자 관리와 메일 발송까지 자동화합니다.
+                </p>
+              </div>
+
+              <div className="p-8 transition-all duration-300 bg-gray-50 rounded-2xl hover:shadow-xl border border-gray-100 group">
+                <div className="flex items-center justify-center w-16 h-16 mb-8 rounded-xl bg-gradient-to-br from-primary-100 to-primary-200 group-hover:from-primary-200 group-hover:to-primary-300 transition-all duration-300">
+                  <DocumentTextIcon className="w-8 h-8 text-primary-600" />
+                </div>
+                <h3 className="mb-4 text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
+                  강의 자료 평생 제공
+                </h3>
+                <p className="text-lg leading-relaxed text-gray-600">
+                  강의 자료는 평생 제공되며 계속해서 업데이트 됩니다.
                 </p>
               </div>
             </div>
@@ -157,12 +148,12 @@ export default async function Challenge() {
               <span className="text-primary-600">쉽게 배우세요</span>
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-                <div className="p-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-stretch">
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col">
+                <div className="p-8 flex flex-col flex-grow">
                   <div className="relative w-32 h-16 mb-6 mx-auto">
                     <Image
-                      src="/v0-logo.png"
+                      src="/logo/v0.png"
                       alt="v0 로고"
                       fill
                       className="object-contain"
@@ -176,64 +167,28 @@ export default async function Challenge() {
                     <br className="hidden lg:block" />
                     프롬프트만 입력하면 멋진 웹사이트를 자동 생성해줍니다.
                   </p>
-                  <ul className="space-y-3">
+                  <ul className="space-y-3 mt-auto">
                     <li className="flex items-start">
-                      <svg
-                        className="h-6 w-6 text-green-500 mr-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
+                      <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
                       <span>원하는 디자인을 텍스트로 설명하기만 하세요</span>
                     </li>
                     <li className="flex items-start">
-                      <svg
-                        className="h-6 w-6 text-green-500 mr-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
+                      <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
                       <span>AI가 실시간으로 웹사이트를 디자인합니다</span>
                     </li>
                     <li className="flex items-start">
-                      <svg
-                        className="h-6 w-6 text-green-500 mr-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
+                      <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
                       <span>코드를 자동 생성하여 시간을 절약해줍니다</span>
                     </li>
                   </ul>
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-                <div className="p-8">
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col">
+                <div className="p-8 flex flex-col flex-grow">
                   <div className="relative w-32 h-16 mb-6 mx-auto">
                     <Image
-                      src="/cursor-logo.png"
+                      src="/logo/cursor.png"
                       alt="Cursor 로고"
                       fill
                       className="object-contain"
@@ -243,59 +198,58 @@ export default async function Challenge() {
                     AI 코딩 도우미
                   </h3>
                   <p className="text-gray-600 mb-6 text-center">
-                    프로그래밍 지식이 없어도 AI가 코드를 작성해주는 혁신적인
-                    IDE.
+                    프로그래밍 지식이 없어도 AI가 코드를 대신 작성해주는 코딩
+                    도구.
                     <br className="hidden lg:block" />
                     한국어로 명령하면 코드가 완성됩니다.
                   </p>
-                  <ul className="space-y-3">
+                  <ul className="space-y-3 mt-auto">
                     <li className="flex items-start">
-                      <svg
-                        className="h-6 w-6 text-green-500 mr-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
+                      <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
                       <span>한국어로 코드 작성 명령을 내릴 수 있습니다</span>
                     </li>
                     <li className="flex items-start">
-                      <svg
-                        className="h-6 w-6 text-green-500 mr-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
+                      <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
                       <span>AI가 자동으로 코드를 작성하고 수정합니다</span>
                     </li>
                     <li className="flex items-start">
-                      <svg
-                        className="h-6 w-6 text-green-500 mr-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
+                      <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
                       <span>코드 오류도 AI가 자동으로 해결해줍니다</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col">
+                <div className="p-8 flex flex-col flex-grow">
+                  <div className="relative w-32 h-16 mb-6 mx-auto">
+                    <Image
+                      src="/logo/make.png"
+                      alt="Make 로고"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <h3 className="text-2xl font-bold text-center mb-4">
+                    자동화 도구
+                  </h3>
+                  <p className="text-gray-600 mb-6 text-center">
+                    코드 없이도 웹사이트의 기능을 자동화할 수 있는 도구.
+                    <br className="hidden lg:block" />
+                    드래그 앤 드롭으로 자동화 워크플로우를 만듭니다.
+                  </p>
+                  <ul className="space-y-3 mt-auto">
+                    <li className="flex items-start">
+                      <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
+                      <span>드래그 앤 드롭으로 자동화를 구축합니다</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
+                      <span>수천 개의 앱을 연동할 수 있습니다</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
+                      <span>반복 작업을 자동으로 처리해줍니다</span>
                     </li>
                   </ul>
                 </div>
@@ -311,7 +265,7 @@ export default async function Challenge() {
               교육생 <span className="text-primary-600">포트폴리오</span>
             </h2>
             <p className="max-w-2xl mx-auto text-xl text-center text-gray-600 mb-12">
-              단 3시간만에 직접 만든 실제 교육생들의 웹사이트입니다
+              평균 2시간 20분동안 직접 만든 실제 교육생들의 웹사이트입니다
             </p>
 
             <PortfolioGallery />
@@ -365,33 +319,7 @@ export default async function Challenge() {
         </div>
 
         {/* FAQ Section */}
-        <div className="py-20 bg-white">
-          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <div className="flex justify-center gap-8 mb-6">
-                <div className="flex items-center justify-center">
-                  <QuestionMarkCircleIcon className="w-8 h-8 text-primary-500" />
-                </div>
-              </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4 sm:text-4xl">
-                자주 묻는 질문
-              </h2>
-              <p className="max-w-2xl mx-auto text-xl text-gray-600 mb-12">
-                궁금한 점이 있으신가요? 아래에서 답을 찾아보세요.
-              </p>
-            </div>
-
-            <div className="max-w-3xl mx-auto space-y-4">
-              {faqs.map((faq, index) => (
-                <FaqItem
-                  key={index}
-                  question={faq.question}
-                  answer={faq.answer}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
+        <FaqSection faqs={challengeFaqs} />
 
         {/* CTA Section */}
         <div className="py-20 bg-gradient-to-r from-primary-50 to-blue-50">
@@ -402,12 +330,12 @@ export default async function Challenge() {
             <div className="mb-6 flex justify-center items-center">
               <div className="inline-flex items-center bg-white px-6 py-3 rounded-xl shadow-sm">
                 <span className="text-2xl font-bold text-primary-600">
-                  10만원
+                  149,000원
                 </span>
               </div>
             </div>
             <p className="mb-10 text-xl leading-relaxed text-gray-600">
-              단 10만원으로 웹사이트를 만들 수 있는 기회
+              단 149,000원으로 웹사이트를 만들 수 있는 기회
               <br className="hidden sm:block" />
               지금이 유일합니다.
             </p>
