@@ -93,7 +93,7 @@ export default async function Workshop() {
 
               <div className="flex justify-center gap-4">
                 <Link
-                  href="https://forms.gle/FEFBzqkmK2uipF2C6"
+                  href="https://forms.gle/qq5DnX55xiaQKQN37"
                   className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white rounded-lg shadow-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all duration-300 transform hover:scale-105"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -461,7 +461,7 @@ export default async function Workshop() {
             </div> */}
             <div className="mt-8 flex justify-center">
               <Link
-                href="https://forms.gle/FEFBzqkmK2uipF2C6"
+                href="https://forms.gle/qq5DnX55xiaQKQN37"
                 className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white rounded-lg shadow-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all duration-300 transform hover:scale-105"
                 target="_blank"
                 rel="noopener noreferrer"
