@@ -348,7 +348,7 @@ export default async function Workshop() {
               <span className="font-semibold text-primary-600">
                 한정 인원만
               </span>
-              만 모집합니다.
+              모집합니다.
             </p>
 
             {/* 결제 폼
