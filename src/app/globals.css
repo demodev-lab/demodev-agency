@@ -83,13 +83,13 @@
     @apply space-y-2;
   }
   .footer-links a {
-    @apply text-gray-400 hover:text-white;
+    @apply text-gray-400 hover:text-white cursor-pointer;
   }
   .footer-info {
     @apply space-y-2;
   }
   .footer-info li {
-    @apply flex items-center gap-2 text-gray-400;
+    @apply flex items-center gap-2 text-gray-400 hover:text-white;
   }
 
   /* Infinite Scroll Animation */

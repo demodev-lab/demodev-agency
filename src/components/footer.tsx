@@ -47,15 +47,22 @@ export default function Footer() {
             <h3 className="footer-heading">연락처</h3>
             <ul className="footer-info">
               <li>
-                <PhoneIcon className="w-4 h-4 text-gray-400" />
-                010-4718-8591
+                <a href="tel:010-4718-8591" className="flex items-center gap-2">
+                  <PhoneIcon className="w-4 h-4" />
+                  010-4718-8591
+                </a>
               </li>
               <li>
-                <EnvelopeIcon className="w-4 h-4 text-gray-400" />
-                sunghyun4718@gmail.com
+                <a
+                  href="mailto:demo.dev.connect@gmail.com"
+                  className="flex items-center gap-2"
+                >
+                  <EnvelopeIcon className="w-4 h-4 " />
+                  demo.dev.connect@gmail.com
+                </a>
               </li>
               <li>
-                <MapPinIcon className="w-4 h-4 text-gray-400" />
+                <MapPinIcon className="w-4 h-4" />
                 서울특별시 강남구 선릉로 8
               </li>
             </ul>

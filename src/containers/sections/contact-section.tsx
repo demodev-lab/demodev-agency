@@ -112,12 +112,12 @@ export default function ContactSection() {
                 <span className="text-sm sm:text-base">010-4718-8591</span>
               </Link>
               <Link
-                href="mailto:sunghyun4718@gmail.com"
+                href="mailto:demo.dev.connect@gmail.com"
                 className="flex items-center justify-center gap-3 px-4 py-2 btn-secondary-lg"
               >
                 <EnvelopeIcon className="w-4 h-4" />
                 <span className="text-sm sm:text-base truncate">
-                  sunghyun4718@gmail.com
+                  demo.dev.connect@gmail.com
                 </span>
               </Link>
             </div>
