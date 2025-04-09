@@ -1,6 +1,6 @@
 ---
-description:
-globs:
+description: 
+globs: 
 alwaysApply: true
 ---
 # Conventions
@@ -70,16 +70,13 @@ pnpm을 사용합니다.
 
 ### Component Convention
 
-- `PascalCase` 로 작성합니다.
+- 컴포넌트 명은 `PascalCase` 로 작성합니다.
+  - 모든 파일명은 `kebab-case`로 작성합니다.
 - Component는 재사용 가능하도록 설계해야 합니다.
 
 ### Directory Convention
 
 nextjs에서는 여러 디렉토리 구조를 사용할 수 있지만, `app` 외부에 프로젝트 파일 저장하는 방법을 사용합니다.
-
-- Next.js 폴더/파일 구조 잡기
-- NextJS 14 Folder Structure
-- Project structure and organization
 
 #### src/app
 
@@ -125,26 +122,12 @@ nextjs에서는 여러 디렉토리 구조를 사용할 수 있지만, `app` 외
 
 - 각종 타입 스크립트의 정의가 들어가는 곳
 
-### Testing Environment
-
-- Next.js/Testing
-
-#### Jest
-
-- Setting ui Jest with Next.js
-
-```bash
-pnpm install -D jest jest-environment-jsdom @testing-library/react @testing-library/dom @testing-library/jest-dom ts-node
-
-pnpm create jest@latest
-```
-
 ## Module Convention
 
 ### TailwindCSS
 
 - 모든 스타일은 TailwindCSS를 사용해야 합니다.
-- TailwindCSS v4 버전을 사용합니다.
+- [TailwindCSS v4](https://tailwindcss.com/blog/tailwindcss-v4/) 버전을 사용합니다.
   - 그러므로 `tailwind.config.js`, `tailwind.config.ts` 파일은 사용하지 않고 `globals.css` 파일만을 사용합니다.
 
 ### ShadCN Component
@@ -159,6 +142,13 @@ pnpm create jest@latest
 - 아이콘 임포트 방법: `import { IconName } from '@heroicons/react/24/outline';`
 - 예시: `import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';`
 
+### Jotai
+
+- 전역 상태관리는 Jotai를 사용해야 합니다.
+
+### React Query
+
+- 데이터 패칭은 React Query를 사용해야 합니다.
 ## Cursor Convention
 
 ### Code Writing
