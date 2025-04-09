@@ -1,3 +1,5 @@
+"use server";
+
 export default async function TestimonialSection() {
   return (
     <div className="w-full py-20 bg-gray-50">
@@ -24,7 +26,7 @@ export default async function TestimonialSection() {
               &quot;예약 시스템 도입 후 업무 효율이 200% 향상되었습니다.
               고객들도 편리하게 이용하고 있어 매우 만족스럽습니다.&quot;
             </p>
-            <div className="flex text-yellow-400">{'★'.repeat(5)}</div>
+            <div className="flex text-yellow-400">{"★".repeat(5)}</div>
           </div>
 
           <div className="p-8 bg-white rounded-lg">
@@ -44,7 +46,7 @@ export default async function TestimonialSection() {
               결과물도 기대 이상이었습니다. 특히 소통이 원활했던 점이
               인상적이었습니다.&quot;
             </p>
-            <div className="flex text-yellow-400">{'★'.repeat(5)}</div>
+            <div className="flex text-yellow-400">{"★".repeat(5)}</div>
           </div>
 
           <div className="p-8 bg-white rounded-lg">
@@ -63,7 +65,7 @@ export default async function TestimonialSection() {
               &quot;사용자 경험을 최우선으로 고려한 디자인과 안정적인 개발로
               서비스 런칭 후 사용자 유입이 꾸준히 증가하고 있습니다.&quot;
             </p>
-            <div className="flex text-yellow-400">{'★'.repeat(5)}</div>
+            <div className="flex text-yellow-400">{"★".repeat(5)}</div>
           </div>
         </div>
       </div>

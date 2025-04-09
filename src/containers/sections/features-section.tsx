@@ -1,9 +1,11 @@
+"use server";
+
 import {
   ClockIcon,
   RocketLaunchIcon,
   CurrencyDollarIcon,
   ReceiptPercentIcon,
-} from '@heroicons/react/24/outline';
+} from "@heroicons/react/24/outline";
 
 export default async function FeatureSection() {
   return (
