@@ -1,6 +1,6 @@
-'use server';
+"use server";
 
-import Challenge from '@/containers/challenge';
+import Challenge from "@/containers/challenge";
 
 export default async function ChallengePage() {
   return <Challenge />;

@@ -1,5 +1,7 @@
-import Workshop from '@/containers/workshop';
+"use server";
 
-export default function Page() {
+import Workshop from "@/containers/workshop";
+
+export default async function WorkshopPage() {
   return <Workshop />;
 }
