@@ -248,6 +248,14 @@ pnpm create jest@latest
 - 아이콘 임포트 방법: `import { IconName } from '@heroicons/react/24/outline';`
 - 예시: `import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';`
 
+### Jotai
+
+- 전역 상태관리는 Jotai를 사용해야 합니다.
+
+### React Query
+
+- 데이터 패칭은 React Query를 사용해야 합니다.
+
 ## Cursor Convention
 
 ### Code Writing
