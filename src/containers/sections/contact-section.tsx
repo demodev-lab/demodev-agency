@@ -4,7 +4,7 @@ import { useState, useEffect, FormEvent, useRef } from "react";
 import Link from "next/link";
 import { PhoneIcon, EnvelopeIcon } from "@heroicons/react/20/solid";
 import { ArrowPathIcon } from "@heroicons/react/24/outline";
-import createNotionPage from "@/libs/notion";
+import createNotionPage from "@/actions/notion";
 import Modal from "react-modal";
 
 const customStyles = {
