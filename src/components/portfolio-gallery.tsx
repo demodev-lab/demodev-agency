@@ -8,8 +8,8 @@ import {
   PlusIcon,
   MinusIcon,
 } from "@heroicons/react/24/outline";
-import GACtaButton from "@/components/analytics/ga-cta-button";
 import Link from "next/link";
+import GACtaButton from "@/components/analytics/ga-cta-button";
 import { GA_CTA_EVENTS } from "@/constants/ga";
 
 interface PortfolioItem {

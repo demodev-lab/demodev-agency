@@ -17,10 +17,14 @@ import FaqSection from "@/components/faq-section";
 import PortfolioGallery from "@/components/portfolio-gallery";
 import { challengeFaqs } from "@/constants/faq";
 import ReviewCarousel from "@/components/review-carousel";
+import GAPageView from "@/components/analytics/ga-page-view";
+import GACtaButton from "@/components/analytics/ga-cta-button";
+import { GA_CTA_EVENTS } from "@/constants/ga";
 
 export default async function Challenge() {
   return (
     <div className="min-h-screen bg-white overflow-hidden">
+      <GAPageView />
       <main>
         {/* Hero Section */}
         <div className="relative py-24 overflow-hidden bg-gradient-to-b from-gray-50 to-white">
@@ -61,11 +65,15 @@ export default async function Challenge() {
               <div className="flex justify-center gap-4">
                 <Link
                   href="https://forms.gle/i1XmuRoUQuTMAVBJ9"
-                  className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white rounded-lg shadow-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all duration-300 transform hover:scale-105"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  신청하기 <ArrowRightIcon className="w-5 h-5 ml-2" />
+                  <GACtaButton
+                    className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white rounded-lg shadow-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all duration-300 transform hover:scale-105"
+                    eventLabel={GA_CTA_EVENTS.onClickTopChallengeCTA}
+                  >
+                    신청하기 <ArrowRightIcon className="w-5 h-5 ml-2" />
+                  </GACtaButton>
                 </Link>
               </div>
             </div>
@@ -338,11 +346,15 @@ export default async function Challenge() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
                 href="https://forms.gle/i1XmuRoUQuTMAVBJ9"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white rounded-lg shadow-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all duration-300 transform hover:scale-105"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                신청하기 <ArrowRightIcon className="w-5 h-5 ml-2" />
+                <GACtaButton
+                  className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white rounded-lg shadow-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all duration-300 transform hover:scale-105"
+                  eventLabel={GA_CTA_EVENTS.onClickBottomChallengeCTA}
+                >
+                  신청하기 <ArrowRightIcon className="w-5 h-5 ml-2" />
+                </GACtaButton>
               </Link>
             </div>
           </div>
