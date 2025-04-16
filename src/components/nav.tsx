@@ -6,6 +6,8 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import GACtaButton from "@/components/analytics/ga-cta-button";
+import { GA_CTA_EVENTS } from "@/constants/ga";
 
 export default function Nav() {
   const pathname = usePathname();
@@ -25,39 +27,47 @@ export default function Nav() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex justify-between items-center">
         <div className="flex items-center gap-16">
           <div className="h-16 flex items-center">
-            <Link href="/">
-              <div className="flex items-center gap-2">
-                <Image
-                  src="/demodev.png"
-                  alt="DemoDev 텍스트"
-                  width={100}
-                  height={24}
-                  className="object-contain"
-                />
-              </div>
-            </Link>
+            <GACtaButton eventLabel={GA_CTA_EVENTS.onClickNavHome}>
+              <Link href="/">
+                <div className="flex items-center gap-2">
+                  <Image
+                    src="/demodev.png"
+                    alt="DemoDev 텍스트"
+                    width={100}
+                    height={24}
+                    className="object-contain"
+                  />
+                </div>
+              </Link>
+            </GACtaButton>
           </div>
 
           {/* 데스크톱 메뉴 */}
           <div className="hidden md:flex gap-8">
-            <Link
-              href="/"
-              className={`nav-link ${pathname === "/" ? "text-primary-700 font-bold" : "text-gray-500"}`}
-            >
-              홈
-            </Link>
-            <Link
-              href="/challenge"
-              className={`nav-link ${pathname === "/challenge" ? "text-primary-700 font-bold" : "text-gray-500"}`}
-            >
-              원데이 클래스
-            </Link>
-            <Link
-              href="/workshop"
-              className={`nav-link ${pathname === "/workshop" ? "text-primary-700 font-bold" : "text-gray-500"}`}
-            >
-              결제모듈 워크샵
-            </Link>
+            <GACtaButton eventLabel={GA_CTA_EVENTS.onClickNavHome}>
+              <Link
+                href="/"
+                className={`nav-link ${pathname === "/" ? "text-primary-700 font-bold" : "text-gray-500"}`}
+              >
+                홈
+              </Link>
+            </GACtaButton>
+            <GACtaButton eventLabel={GA_CTA_EVENTS.onClickNavChallenge}>
+              <Link
+                href="/challenge"
+                className={`nav-link ${pathname === "/challenge" ? "text-primary-700 font-bold" : "text-gray-500"}`}
+              >
+                원데이 클래스
+              </Link>
+            </GACtaButton>
+            <GACtaButton eventLabel={GA_CTA_EVENTS.onClickNavWorkshop}>
+              <Link
+                href="/workshop"
+                className={`nav-link ${pathname === "/workshop" ? "text-primary-700 font-bold" : "text-gray-500"}`}
+              >
+                결제모듈 워크샵
+              </Link>
+            </GACtaButton>
           </div>
         </div>
 
@@ -112,7 +122,9 @@ export default function Nav() {
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
-                홈
+                <GACtaButton eventLabel={GA_CTA_EVENTS.onClickNavHome}>
+                  홈
+                </GACtaButton>
               </Link>
               <Link
                 href="/challenge"
@@ -123,7 +135,9 @@ export default function Nav() {
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
-                원데이 클래스
+                <GACtaButton eventLabel={GA_CTA_EVENTS.onClickNavChallenge}>
+                  원데이 클래스
+                </GACtaButton>
               </Link>
               <Link
                 href="/workshop"
@@ -134,7 +148,9 @@ export default function Nav() {
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
-                결제모듈 워크샵
+                <GACtaButton eventLabel={GA_CTA_EVENTS.onClickNavWorkshop}>
+                  결제모듈 워크샵
+                </GACtaButton>
               </Link>
             </motion.div>
           </motion.div>
