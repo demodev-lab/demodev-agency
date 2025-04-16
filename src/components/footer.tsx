@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/solid';
+import Image from "next/image";
+import { PhoneIcon, EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/solid";
 
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -35,10 +35,10 @@ export default function Footer() {
             <h3 className="footer-heading">바로가기</h3>
             <ul className="footer-links">
               <li>
-                <a onClick={() => scrollToSection('portfolio')}>포트폴리오</a>
+                <a onClick={() => scrollToSection("portfolio")}>포트폴리오</a>
               </li>
               <li>
-                <a onClick={() => scrollToSection('contact')}>문의하기</a>
+                <a onClick={() => scrollToSection("contact")}>문의하기</a>
               </li>
             </ul>
           </div>

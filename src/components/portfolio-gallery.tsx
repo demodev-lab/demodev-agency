@@ -1,14 +1,16 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect, memo } from 'react';
-import Image from 'next/image';
+import React, { useState, useEffect, memo } from "react";
+import Image from "next/image";
 import {
   ArrowRightIcon,
   XMarkIcon,
   PlusIcon,
   MinusIcon,
-} from '@heroicons/react/24/outline';
-import Link from 'next/link';
+} from "@heroicons/react/24/outline";
+import GACtaButton from "@/components/analytics/ga-cta-button";
+import Link from "next/link";
+import { GA_CTA_EVENTS } from "@/constants/ga";
 
 interface PortfolioItem {
   imageSrc: string;
@@ -25,32 +27,32 @@ interface Position {
 // 포트폴리오 아이템을 컴포넌트 외부로 이동하여 재렌더링 방지
 const portfolioItems: readonly PortfolioItem[] = [
   {
-    imageSrc: '/landing/1.webp',
-    title: '비즈니스 컨설팅 웹사이트',
+    imageSrc: "/landing/1.webp",
+    title: "비즈니스 컨설팅 웹사이트",
     description:
-      '코딩 경험이 없는 교육생이 만든 첫 번째 웹사이트입니다. 프로페셔널한 디자인과 반응형 레이아웃으로 구성되었습니다.',
-    alt: '교육생 포트폴리오 - 비즈니스 컨설팅 웹사이트',
+      "코딩 경험이 없는 교육생이 만든 첫 번째 웹사이트입니다. 프로페셔널한 디자인과 반응형 레이아웃으로 구성되었습니다.",
+    alt: "교육생 포트폴리오 - 비즈니스 컨설팅 웹사이트",
   },
   {
-    imageSrc: '/landing/2.webp',
-    title: '온라인 코스 플랫폼',
+    imageSrc: "/landing/2.webp",
+    title: "온라인 코스 플랫폼",
     description:
-      '디자인 전공자가 처음으로 코딩에 도전해 만든 교육 플랫폼입니다. 직관적인 UI와 모던한 디자인이 특징입니다.',
-    alt: '교육생 포트폴리오 - 온라인 코스 플랫폼',
+      "디자인 전공자가 처음으로 코딩에 도전해 만든 교육 플랫폼입니다. 직관적인 UI와 모던한 디자인이 특징입니다.",
+    alt: "교육생 포트폴리오 - 온라인 코스 플랫폼",
   },
   {
-    imageSrc: '/landing/3.webp',
-    title: '제품 소개 웹사이트',
+    imageSrc: "/landing/3.webp",
+    title: "제품 소개 웹사이트",
     description:
-      '마케팅 담당자가 제품 홍보를 위해 직접 만든 웹사이트입니다. 세련된 디자인과 명확한 CTA 구성이 돋보입니다.',
-    alt: '교육생 포트폴리오 - 제품 소개 웹사이트',
+      "마케팅 담당자가 제품 홍보를 위해 직접 만든 웹사이트입니다. 세련된 디자인과 명확한 CTA 구성이 돋보입니다.",
+    alt: "교육생 포트폴리오 - 제품 소개 웹사이트",
   },
   {
-    imageSrc: '/landing/4.webp',
-    title: '크리에이티브 스튜디오',
+    imageSrc: "/landing/4.webp",
+    title: "크리에이티브 스튜디오",
     description:
-      '디자인 에이전시 대표가 자신의 비즈니스를 위해 제작한 웹사이트입니다. 창의적인 레이아웃과 인터랙티브한 요소가 특징입니다.',
-    alt: '교육생 포트폴리오 - 크리에이티브 스튜디오',
+      "디자인 에이전시 대표가 자신의 비즈니스를 위해 제작한 웹사이트입니다. 창의적인 레이아웃과 인터랙티브한 요소가 특징입니다.",
+    alt: "교육생 포트폴리오 - 크리에이티브 스튜디오",
   },
 ] as const;
 
@@ -85,7 +87,7 @@ const PortfolioItemComponent = memo(
   ),
 );
 
-PortfolioItemComponent.displayName = 'PortfolioItemComponent';
+PortfolioItemComponent.displayName = "PortfolioItemComponent";
 
 // 이미지 모달 컴포넌트를 메모이제이션
 const ImageModal = memo(
@@ -194,21 +196,21 @@ const ImageModal = memo(
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
           style={{
-            cursor: isDragging ? 'grabbing' : 'grab',
-            minHeight: zoom > 1 ? '60vh' : 'auto',
-            maxHeight: '70vh',
+            cursor: isDragging ? "grabbing" : "grab",
+            minHeight: zoom > 1 ? "60vh" : "auto",
+            maxHeight: "70vh",
           }}
         >
           <div
             className="transition-transform duration-100 ease-out"
             style={{
               transform: `translate(${position.x}px, ${position.y}px) scale(${zoom})`,
-              transformOrigin: 'center center',
-              maxWidth: '100%',
-              maxHeight: '100%',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
+              transformOrigin: "center center",
+              maxWidth: "100%",
+              maxHeight: "100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
             <Image
@@ -227,7 +229,7 @@ const ImageModal = memo(
   ),
 );
 
-ImageModal.displayName = 'ImageModal';
+ImageModal.displayName = "ImageModal";
 
 export default function PortfolioGallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -247,18 +249,18 @@ export default function PortfolioGallery() {
       setPosition({ x: 0, y: 0 });
 
       // 모달이 열릴 때 body에 overflow: hidden 추가하여 배경 스크롤 방지
-      document.body.style.overflow = 'hidden';
-      document.body.style.touchAction = 'none';
+      document.body.style.overflow = "hidden";
+      document.body.style.touchAction = "none";
     } else {
       // 모달이 닫힐 때 원래대로 복원
-      document.body.style.overflow = '';
-      document.body.style.touchAction = '';
+      document.body.style.overflow = "";
+      document.body.style.touchAction = "";
     }
 
     // 컴포넌트 언마운트 시 스타일 초기화
     return () => {
-      document.body.style.overflow = '';
-      document.body.style.touchAction = '';
+      document.body.style.overflow = "";
+      document.body.style.touchAction = "";
     };
   }, [selectedImage]);
 
@@ -347,16 +349,20 @@ export default function PortfolioGallery() {
 
       <div className="mt-12 text-center">
         <p className="text-lg text-gray-700 mb-6">
-          이 모든 웹사이트는 코딩 경험이 없는 교육생들이{' '}
+          이 모든 웹사이트는 코딩 경험이 없는 교육생들이{" "}
           <strong>단 한 번의 수업</strong>으로 만든 결과물입니다
         </p>
         <Link
           href="https://forms.gle/wEK2zqgnSS4GgzVG7"
-          className="inline-flex items-center px-6 py-3 text-base font-medium text-white rounded-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all duration-300"
           target="_blank"
           rel="noopener noreferrer"
         >
-          나도 만들어보기 <ArrowRightIcon className="w-5 h-5 ml-2" />
+          <GACtaButton
+            className="inline-flex items-center px-6 py-3 text-base font-medium text-white rounded-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all duration-300"
+            eventLabel={GA_CTA_EVENTS.onClickMiddleChallengeCTA}
+          >
+            나도 만들어보기 <ArrowRightIcon className="w-5 h-5 ml-2" />
+          </GACtaButton>
         </Link>
       </div>
 

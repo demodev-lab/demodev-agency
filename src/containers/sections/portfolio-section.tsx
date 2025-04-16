@@ -1,35 +1,35 @@
-'use server';
+"use server";
 
-import PortfolioCard from '@/components/portfolio-card';
+import PortfolioCard from "@/components/portfolio-card";
 
 const PORTFOLIO_ITEMS = [
   {
-    title: 'Easerve',
-    description: '1인샵 사장님을 위한 예약 서비스 디자인 및 개발',
-    imageSrc: '/portfolio/easerve.png',
-    imageAlt: 'Easerve 프로젝트',
-    technologies: ['Next.js', 'Supabase', 'Figma'],
+    title: "Easerve",
+    description: "1인샵 사장님을 위한 예약 서비스 디자인 및 개발",
+    imageSrc: "/portfolio/easerve.png",
+    imageAlt: "Easerve 프로젝트",
+    technologies: ["Next.js", "Supabase", "Figma"],
   },
   {
-    title: '알바들 모여라',
-    description: '프리터족을 위한 알바생 커뮤니티 디자인 및 개발',
-    imageSrc: '/portfolio/almo.png',
-    imageAlt: '알바들 모여라 프로젝트',
-    technologies: ['Next.js', 'Flutter', 'Supabase', 'Figma'],
+    title: "알바들 모여라",
+    description: "프리터족을 위한 알바생 커뮤니티 디자인 및 개발",
+    imageSrc: "/portfolio/almo.png",
+    imageAlt: "알바들 모여라 프로젝트",
+    technologies: ["Next.js", "Flutter", "Supabase", "Figma"],
   },
   {
-    title: 'JAB TRAINING',
-    description: '복싱장 예약 어플리케이션 디자인 및 개발',
-    imageSrc: '/portfolio/jab-training.png',
-    imageAlt: 'JAB TRAINING 프로젝트',
-    technologies: ['Next.js', 'Flutter', 'Supabase', 'Figma'],
+    title: "JAB TRAINING",
+    description: "복싱장 예약 어플리케이션 디자인 및 개발",
+    imageSrc: "/portfolio/jab-training.png",
+    imageAlt: "JAB TRAINING 프로젝트",
+    technologies: ["Next.js", "Flutter", "Supabase", "Figma"],
   },
   {
-    title: '첫눈',
-    description: 'BLE를 통한 오프라인 정보 교환 서비스 디자인 및 개발',
-    imageSrc: '/portfolio/first-snow.png',
-    imageAlt: '첫눈 프로젝트',
-    technologies: ['Next.js', 'Flutter', 'Supabase', 'Figma'],
+    title: "첫눈",
+    description: "BLE를 통한 오프라인 정보 교환 서비스 디자인 및 개발",
+    imageSrc: "/portfolio/first-snow.png",
+    imageAlt: "첫눈 프로젝트",
+    technologies: ["Next.js", "Flutter", "Supabase", "Figma"],
   },
 ];
 

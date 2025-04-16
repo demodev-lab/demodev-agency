@@ -1,4 +1,6 @@
-import Image from 'next/image';
+"use server";
+
+import Image from "next/image";
 
 export default async function ScrollContainerSection() {
   return (

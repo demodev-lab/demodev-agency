@@ -1,6 +1,6 @@
-'use server';
+"use server";
 
-import Footer from '@/components/footer';
+import Footer from "@/components/footer";
 import {
   ArrowRightIcon,
   UserGroupIcon,
@@ -10,13 +10,13 @@ import {
   ChatBubbleBottomCenterIcon,
   DocumentTextIcon,
   CheckIcon,
-} from '@heroicons/react/24/outline';
-import Link from 'next/link';
-import Image from 'next/image';
-import FaqSection from '@/components/faq-section';
-import PortfolioGallery from '@/components/portfolio-gallery';
-import { challengeFaqs } from '@/constants/faq';
-import ReviewCarousel from '@/components/review-carousel';
+} from "@heroicons/react/24/outline";
+import Link from "next/link";
+import Image from "next/image";
+import FaqSection from "@/components/faq-section";
+import PortfolioGallery from "@/components/portfolio-gallery";
+import { challengeFaqs } from "@/constants/faq";
+import ReviewCarousel from "@/components/review-carousel";
 
 export default async function Challenge() {
   return (
@@ -51,7 +51,7 @@ export default async function Challenge() {
               <p className="mt-8 mb-12 text-xl leading-8 text-gray-600">
                 코딩 경험이 없어도 괜찮습니다.
                 <br className="hidden sm:block" />
-                웹사이트 완성까지{' '}
+                웹사이트 완성까지{" "}
                 <span className="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-blue-600">
                   책임 케어
                 </span>
@@ -76,7 +76,7 @@ export default async function Challenge() {
         <div className="py-24 bg-white">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12 sm:text-4xl">
-              이런{' '}
+              이런{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-blue-600">
                 특별한 혜택
               </span>
@@ -105,8 +105,8 @@ export default async function Challenge() {
                   한정된 인원
                 </h3>
                 <p className="text-lg leading-relaxed text-gray-600">
-                  책임감 있는 케어를 위해{' '}
-                  <span className="font-semibold text-primary-600">소수만</span>{' '}
+                  책임감 있는 케어를 위해{" "}
+                  <span className="font-semibold text-primary-600">소수만</span>{" "}
                   모집
                 </p>
               </div>
@@ -144,7 +144,7 @@ export default async function Challenge() {
         <div className="py-20 bg-gray-50">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              혁신적인 도구로{' '}
+              혁신적인 도구로{" "}
               <span className="text-primary-600">쉽게 배우세요</span>
             </h2>
 
@@ -159,9 +159,7 @@ export default async function Challenge() {
                       className="object-contain"
                     />
                   </div>
-                  <h3 className="text-2xl font-bold text-center mb-4">
-                    AI 웹 디자인 도구
-                  </h3>
+                  <h3 className="text-2xl font-bold text-center mb-4">v0</h3>
                   <p className="text-gray-600 mb-6 text-center">
                     디자인 경험 없이도 AI가 도와주는 웹 디자인 도구.
                     <br className="hidden lg:block" />
@@ -195,7 +193,7 @@ export default async function Challenge() {
                     />
                   </div>
                   <h3 className="text-2xl font-bold text-center mb-4">
-                    AI 코딩 도우미
+                    Cursor
                   </h3>
                   <p className="text-gray-600 mb-6 text-center">
                     프로그래밍 지식이 없어도 AI가 코드를 대신 작성해주는 코딩
@@ -230,9 +228,7 @@ export default async function Challenge() {
                       className="object-contain"
                     />
                   </div>
-                  <h3 className="text-2xl font-bold text-center mb-4">
-                    자동화 도구
-                  </h3>
+                  <h3 className="text-2xl font-bold text-center mb-4">Make</h3>
                   <p className="text-gray-600 mb-6 text-center">
                     코드 없이도 웹사이트의 기능을 자동화할 수 있는 도구.
                     <br className="hidden lg:block" />

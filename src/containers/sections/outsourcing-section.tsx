@@ -1,3 +1,5 @@
+"use server";
+
 export default async function OutsourcingSection() {
   return (
     <div className="w-full py-20 bg-gray-50">
@@ -5,7 +7,7 @@ export default async function OutsourcingSection() {
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-2xl font-semibold leading-tight sm:text-3xl md:text-4xl lg:text-5xl">
             <div className="inline-block sm:block">
-              많은 개발사는{' '}
+              많은 개발사는{" "}
               <span className="inline-block px-2 py-1 text-white rounded-md bg-primary-700">
                 외부 하청에 일을 넘깁니다
               </span>

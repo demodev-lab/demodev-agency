@@ -1,34 +1,34 @@
-'use client';
+"use client";
 
-import { useState, useEffect, FormEvent, useRef } from 'react';
-import Link from 'next/link';
-import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/20/solid';
-import { ArrowPathIcon } from '@heroicons/react/24/outline';
-import createNotionPage from '@/libs/notion';
-import Modal from 'react-modal';
+import { useState, useEffect, FormEvent, useRef } from "react";
+import Link from "next/link";
+import { PhoneIcon, EnvelopeIcon } from "@heroicons/react/20/solid";
+import { ArrowPathIcon } from "@heroicons/react/24/outline";
+import createNotionPage from "@/actions/notion";
+import Modal from "react-modal";
 
 const customStyles = {
   content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-    borderRadius: '0.5rem',
-    padding: '2rem',
-    maxWidth: '400px',
-    width: '90%',
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+    borderRadius: "0.5rem",
+    padding: "2rem",
+    maxWidth: "400px",
+    width: "90%",
   },
   overlay: {
-    backgroundColor: 'rgba(0, 0, 0, 0.75)',
+    backgroundColor: "rgba(0, 0, 0, 0.75)",
     zIndex: 1000,
   },
 };
 
 export default function ContactSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalMessage, setModalMessage] = useState('');
+  const [modalMessage, setModalMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
@@ -48,16 +48,16 @@ export default function ContactSection() {
       setIsSubmitting(true);
 
       const formData = new FormData(e.currentTarget);
-      const name = formData.get('name') as string;
-      const email = formData.get('email') as string;
-      const content = formData.get('content') as string;
+      const name = formData.get("name") as string;
+      const email = formData.get("email") as string;
+      const content = formData.get("content") as string;
 
       await createNotionPage(name, email, content);
-      setModalMessage('문의가 성공적으로 접수되었습니다.');
+      setModalMessage("문의가 성공적으로 접수되었습니다.");
       setIsModalOpen(true);
       formRef.current?.reset();
     } catch (err) {
-      setModalMessage('문의 접수 중 오류가 발생했습니다.');
+      setModalMessage("문의 접수 중 오류가 발생했습니다.");
       setIsModalOpen(true);
       console.error(err);
     } finally {
@@ -90,7 +90,7 @@ export default function ContactSection() {
           <div className="flex flex-col justify-between">
             <div>
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
-                <span className="text-primary-600">자신있는 프로젝트만</span>{' '}
+                <span className="text-primary-600">자신있는 프로젝트만</span>{" "}
                 진행합니다
               </h2>
               <p className="mb-12 text-lg text-gray-600">
@@ -99,7 +99,7 @@ export default function ContactSection() {
                 <br className="hidden md:block" />
                 <span className="inline-block mt-2 font-semibold text-primary-600">
                   2025년 딱 1개만 더
-                </span>{' '}
+                </span>{" "}
                 추가 진행 합니다.
               </p>
             </div>
@@ -161,7 +161,7 @@ export default function ContactSection() {
               type="submit"
               disabled={isSubmitting}
               className={`w-full btn-primary flex items-center justify-center gap-2 ${
-                isSubmitting ? 'opacity-75 cursor-not-allowed' : ''
+                isSubmitting ? "opacity-75 cursor-not-allowed" : ""
               }`}
             >
               {isSubmitting ? (
@@ -170,7 +170,7 @@ export default function ContactSection() {
                   <span>처리중...</span>
                 </>
               ) : (
-                '문의하기'
+                "문의하기"
               )}
             </button>
           </form>
