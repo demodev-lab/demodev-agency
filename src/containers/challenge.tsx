@@ -29,7 +29,7 @@ export default async function Challenge() {
         {/* Hero Section */}
         <div className="relative py-24 overflow-hidden bg-gradient-to-b from-gray-50 to-white">
           {/* 백그라운드 패턴 */}
-          <div className="absolute inset-0 z-0 opacity-10">
+          <div className="absolute inset-0 z-0">
             <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-primary-300 blur-3xl"></div>
             <div className="absolute top-1/2 -left-24 w-80 h-80 rounded-full bg-blue-300 blur-3xl"></div>
           </div>
