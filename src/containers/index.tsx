@@ -11,17 +11,21 @@ import ScrollContainerSection from "@/containers/sections/scroll-container-secti
 import Footer from "@/components/footer";
 import PopupNoticeWrapper from "@/containers/popup-notice-wrapper";
 import GAPageView from "@/components/analytics/ga-page-view";
+import EducationSection from "@/containers/sections/education-section";
+import AnimationInitialize from "@/components/animation-initialize";
 
 export default async function Index() {
   return (
     <div className="flex flex-col w-full min-h-screen overflow-x-hidden">
       <GAPageView />
+      <AnimationInitialize />
       <PopupNoticeWrapper />
       <HeroSection />
+      <FeatureSection />
       <OutsourcingSection />
       <GuaranteeSection />
-      <FeatureSection />
       <ScrollContainerSection />
+      <EducationSection />
       <PortfolioSection />
       <TestimonialSection />
       <ContactSection />

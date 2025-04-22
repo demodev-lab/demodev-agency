@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default async function ScrollContainerSection() {
   return (
-    <div className="w-full pb-20 bg-gray-50">
+    <div className="w-full py-20 bg-gray-50">
       <div className="mx-auto max-w-7xl bg-gray-50">
         <div className="mb-16 text-center">
           <p className="section-title">Our Experience</p>
