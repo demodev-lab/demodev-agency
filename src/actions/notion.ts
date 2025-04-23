@@ -1,3 +1,5 @@
+"use server";
+
 import { notion } from "@/libs/notion";
 
 // 노션 페이지 생성 함수
