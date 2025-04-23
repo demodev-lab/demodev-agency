@@ -19,19 +19,19 @@ interface PortfolioItem {
 const portfolioItems: readonly PortfolioItem[] = [
   {
     imageSrc: "/landing/1.png",
-    title: "컨설팅 웹사이트",
-    description:
-      "기획자 수강생분이 자신의 비즈니스를 위해 제작한 웹사이트입니다. 인터랙티브한 애니메이션이 특징입니다.",
-    alt: "교육생 포트폴리오 - 비즈니스 컨설팅 웹사이트",
-    link: "https://yeonbonglab.vercel.app/",
-  },
-  {
-    imageSrc: "/landing/2.png",
     title: "유통 플랫폼",
     description:
       "개발을 아예 모르는 분이 자신의 비즈니스를 위해 제작한 웹사이트입니다. 모던한 디자인과 3D 애니메이션이 특징입니다.",
     alt: "교육생 포트폴리오 - 유통 플랫폼",
     link: "https://urbane-gp.vercel.app/",
+  },
+  {
+    imageSrc: "/landing/2.png",
+    title: "세탁 프랜차이즈 웹사이트",
+    description:
+      "개발을 처음 해보시는 분이 자신의 비즈니스를 위해 제작한 웹사이트입니다. 독특한 컬러감과 모던한 디자인이 특징입니다.",
+    alt: "교육생 포트폴리오 - 세탁 프랜차이즈 웹사이트",
+    link: "https://laundrytown.vercel.app/",
   },
   {
     imageSrc: "/landing/3.png",
@@ -43,11 +43,11 @@ const portfolioItems: readonly PortfolioItem[] = [
   },
   {
     imageSrc: "/landing/4.png",
-    title: "세탁 프랜차이즈 웹사이트",
+    title: "컨설팅 웹사이트",
     description:
-      "개발을 처음 해보시는 분이 자신의 비즈니스를 위해 제작한 웹사이트입니다. 독특한 컬러감과 모던한 디자인이 특징입니다.",
-    alt: "교육생 포트폴리오 - 세탁 프랜차이즈 웹사이트",
-    link: "https://laundrytown.vercel.app/",
+      "기획자 수강생분이 자신의 비즈니스를 위해 제작한 웹사이트입니다. 인터랙티브한 애니메이션이 특징입니다.",
+    alt: "교육생 포트폴리오 - 비즈니스 컨설팅 웹사이트",
+    link: "https://yeonbonglab.vercel.app/",
   },
 ] as const;
 

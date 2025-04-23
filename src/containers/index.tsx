@@ -16,7 +16,7 @@ import AnimationInitialize from "@/components/animation-initialize";
 
 export default async function Index() {
   return (
-    <div className="flex flex-col w-full min-h-screen overflow-x-hidden">
+    <main className="flex flex-col w-full min-h-screen overflow-hidden bg-white">
       <GAPageView />
       <AnimationInitialize />
       <PopupNoticeWrapper />
@@ -30,6 +30,6 @@ export default async function Index() {
       <TestimonialSection />
       <ContactSection />
       <Footer />
-    </div>
+    </main>
   );
 }

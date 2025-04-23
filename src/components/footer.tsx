@@ -76,7 +76,7 @@ export default function Footer() {
             <p>사업자 등록 번호: 259-52-00902</p>
             <p>주소: 서울특별시 강남구 선릉로 8</p>
             <p className="text-gray-500 mt-4">
-              © 2025 Company. All rights reserved.
+              © {new Date().getFullYear()} DemoDev. All rights reserved.
             </p>
           </div>
           <div className="flex gap-4 mt-6 md:mt-0">
