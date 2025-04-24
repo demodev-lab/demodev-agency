@@ -9,7 +9,6 @@ import TestimonialSection from "@/containers/sections/testimonials-section";
 import ContactSection from "@/containers/sections/contact-section";
 import ScrollContainerSection from "@/containers/sections/scroll-container-section";
 import Footer from "@/components/footer";
-import PopupNoticeWrapper from "@/containers/popup-notice-wrapper";
 import GAPageView from "@/components/analytics/ga-page-view";
 import EducationSection from "@/containers/sections/education-section";
 import AnimationInitialize from "@/components/animation-initialize";
@@ -19,7 +18,6 @@ export default async function Index() {
     <main className="flex flex-col w-full min-h-screen overflow-hidden bg-white">
       <GAPageView />
       <AnimationInitialize />
-      <PopupNoticeWrapper />
       <HeroSection />
       <FeatureSection />
       <OutsourcingSection />
