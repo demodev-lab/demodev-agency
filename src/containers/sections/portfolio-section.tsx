@@ -12,6 +12,13 @@ const PORTFOLIO_ITEMS = [
     technologies: ["Next.js", "Supabase", "Figma"],
   },
   {
+    title: "급진적 과부하",
+    description: "온라인 PT 서비스 디자인 및 개발",
+    imageSrc: "/portfolio/radical-overload.png",
+    imageAlt: "급진적 과부하 프로젝트",
+    technologies: ["Ruby on Rails", "Figma"],
+  },
+  {
     title: "알바들 모여라",
     description: "프리터족을 위한 알바생 커뮤니티 디자인 및 개발",
     imageSrc: "/portfolio/almo.png",
@@ -24,6 +31,13 @@ const PORTFOLIO_ITEMS = [
     imageSrc: "/portfolio/jab-training.png",
     imageAlt: "JAB TRAINING 프로젝트",
     technologies: ["Next.js", "Flutter", "Supabase", "Figma"],
+  },
+  {
+    title: "ROBO",
+    description: "의류 쇼핑몰 사내 ERP 디자인 및 개발",
+    imageSrc: "/portfolio/robo.png",
+    imageAlt: "ROBO 프로젝트",
+    technologies: ["Next.js", "Ruby on Rails", "Figma"],
   },
   {
     title: "첫눈",
