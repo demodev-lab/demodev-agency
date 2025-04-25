@@ -57,9 +57,10 @@ export default function ContactSection() {
       const formData = new FormData(e.currentTarget);
       const name = formData.get("name") as string;
       const email = formData.get("email") as string;
+      const phone = formData.get("phone") as string;
       const content = formData.get("content") as string;
 
-      await createNotionPage(name, email, content);
+      await createNotionPage(name, email, phone, content);
       setModalMessage("문의가 성공적으로 접수되었습니다.");
       setIsModalOpen(true);
       formRef.current?.reset();
@@ -158,6 +159,20 @@ export default function ContactSection() {
                     name="email"
                     type="email"
                     placeholder="example@email.com"
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                    required
+                    disabled={isSubmitting}
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    전화번호
+                  </label>
+                  <input
+                    name="phone"
+                    type="tel"
+                    placeholder="010-1234-5678"
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                     required
                     disabled={isSubmitting}

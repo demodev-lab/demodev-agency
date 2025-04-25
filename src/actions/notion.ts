@@ -6,6 +6,7 @@ import { notion } from "@/libs/notion";
 export default async function createNotionPage(
   name: string,
   email: string,
+  phone: string,
   content: string,
 ) {
   try {
@@ -26,6 +27,9 @@ export default async function createNotionPage(
         },
         Email: {
           email: email,
+        },
+        Phone: {
+          phone_number: phone,
         },
         Content: {
           rich_text: [
