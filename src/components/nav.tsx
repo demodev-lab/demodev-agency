@@ -63,7 +63,7 @@ export default function Nav() {
                 <div className="flex items-center gap-2">
                   <Image
                     src="/demodev.png"
-                    alt="DemoDev 텍스트"
+                    alt="DemoDev"
                     width={100}
                     height={24}
                     className={`object-contain ${isHomePage && !isScrolled ? "filter brightness-0 invert" : ""}`}

@@ -1,0 +1,10 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://demodev.io/sitemap.xml
+
+# 차단할 경로 예시
+# Disallow: /private/
+# Disallow: /admin/
