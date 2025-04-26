@@ -39,7 +39,7 @@ export default function HeroSection() {
           >
             <div className="bg-white/90 backdrop-blur-sm text-primary-700 font-medium px-4 py-2 rounded-full inline-flex items-center mb-6 border border-white/20 ">
               <span className="animate-pulse mr-2 h-2 w-2 rounded-full bg-primary-500"></span>
-              새로운 웹 솔루션을 만나보세요
+              AI를 가장 잘 활용하는 개발사
             </div>
 
             <h1 className="mb-6 text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
