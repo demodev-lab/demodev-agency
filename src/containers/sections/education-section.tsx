@@ -5,7 +5,6 @@ import {
   ArrowRightIcon,
   CheckIcon,
   AcademicCapIcon,
-  CreditCardIcon,
   SparklesIcon,
 } from "@heroicons/react/24/outline";
 
@@ -102,7 +101,7 @@ export default async function EducationSection() {
             </div>
           </div>
 
-          <div
+          {/* <div
             className={
               "bg-white rounded-2xl shadow-xl hover-card animate-on-scroll delay relative overflow-hidden group transform transition-all duration-500 scale-105 ring-4 ring-blue-400/20"
             }
@@ -154,7 +153,7 @@ export default async function EducationSection() {
                 </Link>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

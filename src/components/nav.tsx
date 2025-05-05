@@ -91,14 +91,14 @@ export default function Nav() {
                 원데이 클래스
               </Link>
             </GACtaButton>
-            <GACtaButton eventLabel={GA_CTA_EVENTS.onClickNavWorkshop}>
+            {/* <GACtaButton eventLabel={GA_CTA_EVENTS.onClickNavWorkshop}>
               <Link
                 href="/workshop"
                 className={`nav-link ${pathname === "/workshop" ? activeTextColorClass : textColorClass}`}
               >
                 결제모듈 워크샵
               </Link>
-            </GACtaButton>
+            </GACtaButton> */}
           </div>
         </div>
 
@@ -174,7 +174,7 @@ export default function Nav() {
                   원데이 클래스
                 </GACtaButton>
               </Link>
-              <Link
+              {/* <Link
                 href="/workshop"
                 className={`px-4 py-2 rounded-lg ${
                   pathname === "/workshop"
@@ -186,7 +186,7 @@ export default function Nav() {
                 <GACtaButton eventLabel={GA_CTA_EVENTS.onClickNavWorkshop}>
                   결제모듈 워크샵
                 </GACtaButton>
-              </Link>
+              </Link> */}
             </motion.div>
           </motion.div>
         )}
