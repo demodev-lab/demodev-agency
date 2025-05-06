@@ -10,7 +10,6 @@ import ContactSection from "@/containers/sections/contact-section";
 import ScrollContainerSection from "@/containers/sections/scroll-container-section";
 import Footer from "@/components/footer";
 import GAPageView from "@/components/analytics/ga-page-view";
-import EducationSection from "@/containers/sections/education-section";
 import AnimationInitialize from "@/components/animation-initialize";
 
 export default async function Index() {
@@ -23,7 +22,7 @@ export default async function Index() {
       <OutsourcingSection />
       <GuaranteeSection />
       <ScrollContainerSection />
-      <EducationSection />
+      {/* <EducationSection /> */}
       <PortfolioSection />
       <TestimonialSection />
       <ContactSection />
