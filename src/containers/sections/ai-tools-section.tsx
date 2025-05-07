@@ -17,9 +17,12 @@ export default async function AIToolsSection() {
           </span>
           <h2 className="mb-6 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
             <span className="relative inline-block">
-              AI를 가장 잘{" "}
+              AI를 가장
+              <span className="sm:hidden">
+                <br />
+              </span>{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-blue-600">
-                활용하는 개발사
+                잘 활용하는 개발사
               </span>
               <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-primary-400 to-blue-400"></span>
             </span>

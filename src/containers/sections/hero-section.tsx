@@ -37,20 +37,14 @@ export default function HeroSection() {
           <div
             className={`transition-all duration-1000 ${isVisible ? "opacity-100 transform translate-y-0" : "opacity-0 transform translate-y-10"}`}
           >
-            <div className="bg-white/90 backdrop-blur-sm text-primary-700 font-medium px-4 py-2 rounded-full inline-flex items-center mb-6 border border-white/20 ">
-              <span className="animate-pulse mr-2 h-2 w-2 rounded-full bg-primary-500"></span>
-              AI를 가장 잘 활용하는 개발사
-            </div>
-
-            <h1 className="mb-6 text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="mb-6 text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl text-center sm:text-left">
               <div className="mb-4">
                 퀄리티에 대한{" "}
                 <span className="gradient-text bg-gradient-to-r from-primary-400 to-blue-400">
                   확신
                 </span>
-                ,
               </div>
-              <div className="flex flex-col sm:flex-row items-center">
+              <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start">
                 불만족시{" "}
                 <span className="mt-2 sm:mt-0 sm:ml-3 px-4 py-2 text-white rounded-lg bg-gradient-to-r from-primary-600 to-primary-500 shadow-lg shadow-primary-500/30">
                   100% 환불 보장
