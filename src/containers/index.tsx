@@ -6,6 +6,7 @@ import GPTCalculatorSection from "./sections/gpt-calculator-section";
 import GuaranteeSection from "./sections/guarantee-section";
 import FeatureSection from "./sections/features-section";
 import AIToolsSection from "./sections/ai-tools-section";
+import YouTubeSection from "./sections/youtube-section";
 import PortfolioSection from "@/containers/sections/portfolio-section";
 import TestimonialSection from "@/containers/sections/testimonials-section";
 import ContactSection from "@/containers/sections/contact-section";
@@ -23,6 +24,7 @@ export default async function Index() {
       <AIToolsSection />
       <GPTCalculatorSection />
       <FeatureSection />
+      <YouTubeSection />
       <OutsourcingSection />
       <GuaranteeSection />
       <ScrollContainerSection />
