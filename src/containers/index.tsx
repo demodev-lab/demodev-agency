@@ -2,6 +2,7 @@
 
 import HeroSection from "@/containers/sections/hero-section";
 import OutsourcingSection from "./sections/outsourcing-section";
+import GPTCalculatorSection from "./sections/gpt-calculator-section";
 import GuaranteeSection from "./sections/guarantee-section";
 import FeatureSection from "./sections/features-section";
 import AIToolsSection from "./sections/ai-tools-section";
@@ -20,6 +21,7 @@ export default async function Index() {
       <AnimationInitialize />
       <HeroSection />
       <AIToolsSection />
+      <GPTCalculatorSection />
       <FeatureSection />
       <OutsourcingSection />
       <GuaranteeSection />
