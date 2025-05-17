@@ -83,14 +83,14 @@ export default function Nav() {
                 홈
               </Link>
             </GACtaButton>
-            {/* <GACtaButton eventLabel={GA_CTA_EVENTS.onClickNavChallenge}>
+            <GACtaButton eventLabel={GA_CTA_EVENTS.onClickNavChallenge}>
               <Link
                 href="/challenge"
                 className={`nav-link ${pathname === "/challenge" ? activeTextColorClass : textColorClass}`}
               >
-                원데이 클래스
+                환급 챌린지
               </Link>
-            </GACtaButton> */}
+            </GACtaButton>
             {/* <GACtaButton eventLabel={GA_CTA_EVENTS.onClickNavWorkshop}>
               <Link
                 href="/workshop"
@@ -161,7 +161,7 @@ export default function Nav() {
                   홈
                 </GACtaButton>
               </Link>
-              {/* <Link
+              <Link
                 href="/challenge"
                 className={`px-4 py-2 rounded-lg ${
                   pathname === "/challenge"
@@ -173,7 +173,7 @@ export default function Nav() {
                 <GACtaButton eventLabel={GA_CTA_EVENTS.onClickNavChallenge}>
                   원데이 클래스
                 </GACtaButton>
-              </Link> */}
+              </Link>
               {/* <Link
                 href="/workshop"
                 className={`px-4 py-2 rounded-lg ${

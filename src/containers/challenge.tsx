@@ -53,10 +53,10 @@ export default async function Challenge() {
 
             <p className="mt-8 mb-12 text-xl leading-8 text-gray-600 animate-on-scroll delay">
               코딩 경험이 없어도 괜찮습니다.
-              <br className="hidden sm:block" />
+              <br className="block sm:hidden" />
               웹사이트 완성까지{" "}
-              <span className="font-semibold text-primary-400">책임 케어</span>
-              로 도와드립니다.
+              <span className="font-semibold text-primary-400">무료</span>로
+              도와드립니다.
             </p>
 
             <div className="flex justify-center gap-4 animate-on-scroll delay">
@@ -69,7 +69,8 @@ export default async function Challenge() {
                   className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white rounded-full shadow-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl button-3d"
                   eventLabel={GA_CTA_EVENTS.onClickTopChallengeCTA}
                 >
-                  신청하기 <ArrowRightIcon className="w-5 h-5 ml-2" />
+                  환급 챌린지 신청하기{" "}
+                  <ArrowRightIcon className="w-5 h-5 ml-2" />
                 </GACtaButton>
               </Link>
             </div>
@@ -81,7 +82,8 @@ export default async function Challenge() {
       <div className="py-24 bg-white">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12 sm:text-4xl animate-on-scroll">
-            이런 <span className="gradient-text">특별한 혜택</span>이 있어요
+            챌린지 완주시 <br className="block md:hidden" />
+            <span className="gradient-text">특별한 혜택</span>이 있어요
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div className="p-8 transition-all duration-300 rounded-2xl hover-card animate-on-scroll delay glass-effect bg-gradient-to-br from-gray-50 to-white border border-gray-100">
@@ -89,12 +91,13 @@ export default async function Challenge() {
                 <AcademicCapIcon className="w-8 h-8 text-primary-600" />
               </div>
               <h3 className="mb-4 text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
-                실전 중심 오프라인 교육
+                오프라인 1:1 컨설팅
               </h3>
               <p className="text-lg leading-relaxed text-gray-600">
-                기획부터 배포까지 실제 웹사이트를 만들어보며
-                <br className="hidden lg:block" />
-                AI 도구 활용법을 익힙니다.
+                <span className="font-semibold text-primary-600">
+                  MVP 개발 로드맵
+                </span>{" "}
+                제공
               </p>
             </div>
 
@@ -103,12 +106,14 @@ export default async function Challenge() {
                 <UserGroupIcon className="w-8 h-8 text-primary-600" />
               </div>
               <h3 className="mb-4 text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
-                한정된 인원
+                0원 무료 교육
               </h3>
               <p className="text-lg leading-relaxed text-gray-600">
-                책임감 있는 케어를 위해{" "}
-                <span className="font-semibold text-primary-600">소수만</span>{" "}
-                모집
+                챌린지 완주시{" "}
+                <span className="font-semibold text-primary-600">
+                  전액 현금 환급
+                </span>{" "}
+                보장
               </p>
             </div>
 
@@ -117,12 +122,14 @@ export default async function Challenge() {
                 <RocketLaunchIcon className="w-8 h-8 text-primary-600" />
               </div>
               <h3 className="mb-4 text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
-                실용적인 자동화
+                Make 자동화 강의자료
               </h3>
               <p className="text-lg leading-relaxed text-gray-600">
-                웹사이트 제작뿐만 아니라
-                <br className="hidden lg:block" />
-                사용자 관리와 메일 발송까지 자동화합니다.
+                자동화를 위한{" "}
+                <span className="font-semibold text-primary-600">
+                  보너스 강의 자료
+                </span>{" "}
+                제공
               </p>
             </div>
 
@@ -131,10 +138,13 @@ export default async function Challenge() {
                 <DocumentTextIcon className="w-8 h-8 text-primary-600" />
               </div>
               <h3 className="mb-4 text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
-                강의 자료 평생 제공
+                녹화본 제공
               </h3>
               <p className="text-lg leading-relaxed text-gray-600">
-                강의 자료는 평생 제공되며 계속해서 업데이트 됩니다.
+                <span className="font-semibold text-primary-600">
+                  강의 녹화본
+                </span>{" "}
+                무료 제공
               </p>
             </div>
           </div>
@@ -145,12 +155,12 @@ export default async function Challenge() {
       <div className="py-20 bg-gray-50">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-6 animate-on-scroll">
-            혁신적인 도구로{" "}
-            <span className="text-primary-600">쉽게 배우세요</span>
+            챌린지에서{" "}
+            <span className="text-primary-600">전부 배울 수 있어요</span>
           </h2>
           <p className="max-w-2xl mx-auto text-xl text-center text-gray-600 mb-12 animate-on-scroll delay">
-            코딩 경험 없이도 최신 AI 도구로 전문가 수준의 웹사이트를 만들 수
-            있습니다
+            코딩 경험 없이도 <br className="block md:hidden" />
+            전문가 수준의 웹사이트를 만들 수 있습니다
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
@@ -338,18 +348,18 @@ export default async function Challenge() {
                     149,000원
                   </span>
                   <div className="bg-red-100 text-red-600 font-bold px-3 py-1 rounded-md mr-3">
-                    33% 할인
+                    100% 할인
                   </div>
                   <span className="text-2xl font-bold text-primary-600">
-                    99,000원
+                    0원
                   </span>
                 </div>
               </div>
               <p className="mb-10 text-xl leading-relaxed text-gray-600">
-                특별 할인가로 웹사이트를 만들 수 있는 기회
+                0원으로 웹사이트를 만들 수 있는 기회
                 <br className="hidden sm:block" />
                 <span className="font-semibold text-primary-600">
-                  한정 인원만
+                  한정 인원만{" "}
                 </span>
                 모집합니다.
               </p>
