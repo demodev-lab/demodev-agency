@@ -91,7 +91,7 @@ export default function PortfolioGallery() {
           <strong>단 한 번의 수업</strong>으로 만든 결과물입니다
         </p>
         <Link
-          href="https://forms.gle/wEK2zqgnSS4GgzVG7"
+          href="https://bit.ly/3GY2DRf"
           target="_blank"
           rel="noopener noreferrer"
         >

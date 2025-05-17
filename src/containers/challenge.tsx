@@ -61,7 +61,7 @@ export default async function Challenge() {
 
             <div className="flex justify-center gap-4 animate-on-scroll delay">
               <Link
-                href="https://forms.gle/i1XmuRoUQuTMAVBJ9"
+                href="https://bit.ly/3GY2DRf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -365,7 +365,7 @@ export default async function Challenge() {
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link
-                  href="https://forms.gle/i1XmuRoUQuTMAVBJ9"
+                  href="https://bit.ly/3GY2DRf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
