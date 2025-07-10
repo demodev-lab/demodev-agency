@@ -54,16 +54,16 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:demo.dev.connect@gmail.com"
+                  href="mailto:contact@demodev.io"
                   className="flex items-center gap-2"
                 >
                   <EnvelopeIcon className="w-4 h-4 " />
-                  demo.dev.connect@gmail.com
+                  contact@demodev.io
                 </a>
               </li>
               <li>
                 <MapPinIcon className="w-4 h-4" />
-                서울특별시 강남구 선릉로 8
+                서울 서초구 강남대로 527 13층
               </li>
             </ul>
           </div>
@@ -74,7 +74,7 @@ export default function Footer() {
             <p>상호명: 대모산개발단</p>
             <p>대표자: 고성현</p>
             <p>사업자 등록 번호: 259-52-00902</p>
-            <p>주소: 서울특별시 강남구 선릉로 8</p>
+            <p>주소: 서울 서초구 강남대로 527 13층</p>
             <p className="text-gray-500 mt-4">
               © {new Date().getFullYear()} DemoDev. All rights reserved.
             </p>
