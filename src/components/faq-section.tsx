@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { QuestionMarkCircleIcon } from '@heroicons/react/24/outline';
-import FaqItem from '@/components/faq-item';
-import { useState } from 'react';
+import { QuestionMarkCircleIcon } from "@heroicons/react/24/outline";
+import FaqItem from "@/components/faq-item";
+import { useState } from "react";
 
 interface FaqType {
   question: string;
@@ -33,7 +33,8 @@ export default function FaqSection({ faqs }: FaqSectionProps) {
             자주 묻는 질문
           </h2>
           <p className="max-w-2xl mx-auto text-xl text-gray-600 mb-12">
-            궁금한 점이 있으신가요? 아래에서 답을 찾아보세요.
+            <span className="block sm:inline">궁금한 점이 있으신가요?</span>
+            <span className="block sm:inline"> 아래에서 답을 찾아보세요.</span>
           </p>
         </div>
 

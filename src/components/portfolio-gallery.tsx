@@ -87,7 +87,8 @@ export default function PortfolioGallery() {
 
       <div className="mt-12 text-center">
         <p className="text-lg text-gray-700 mb-6">
-          이 모든 웹사이트는 코딩 경험이 없는 교육생들이{" "}
+          이 모든 웹사이트는 코딩 경험이 없는 교육생들이
+          <br className="block sm:hidden" />
           <strong>단 한 번의 수업</strong>으로 만든 결과물입니다
         </p>
         <Link

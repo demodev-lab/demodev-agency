@@ -29,7 +29,10 @@ export default function OutsourcingSection() {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            외부 하청으로 인한 문제점으로 고객들은 다양한 어려움을 겪고 있습니다
+            외부 하청으로 인한 문제점으로 고객들은
+            <span className="block sm:inline">
+              다양한 어려움을 겪고 있습니다
+            </span>
           </p>
         </div>
 
@@ -101,7 +104,11 @@ export default function OutsourcingSection() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      완성된 결과물이 쓸 수 없는 상태였습니다
+                      <span className="block sm:inline">
+                        완성된 결과물이
+                        <br className="block sm:hidden" />쓸 수 없는
+                        상태였습니다
+                      </span>
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
                       &ldquo;몇 개월을 기다려 개발이 끝났다고 들었지만, 결과물은
@@ -126,7 +133,11 @@ export default function OutsourcingSection() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      생각지 못한 비용이 눈덩이처럼 불어났어요
+                      <span className="block sm:inline">
+                        생각지 못한 비용이 눈덩이처럼
+                        <br className="block sm:hidden" />
+                        불어났어요
+                      </span>
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
                       &ldquo;계약 당시엔 기본 포함이라고 했던 기능들이 없다고
@@ -160,12 +171,27 @@ export default function OutsourcingSection() {
                     우리의 솔루션
                   </div>
                   <h3 className="text-3xl font-bold mb-6">
-                    DemoDev는 자체 인력으로만 개발합니다
+                    DemoDev는&nbsp;
+                    <br className="block sm:hidden" />
+                    자체 인력으로만 개발합니다
                   </h3>
                   <p className="text-white/90 text-lg leading-relaxed mb-8">
-                    모든 과정을 직접 관리하고 소통하여 이러한 문제들을 원천
-                    차단합니다. 투명한 개발 과정과 정직한 커뮤니케이션으로 고객
-                    만족을 최우선으로 생각합니다.
+                    <span className="sm:hidden">
+                      모든 과정을 직접 관리하고 소통하여
+                      <br />
+                      이러한 문제들을 원천 차단합니다.
+                      <br />
+                      투명한 개발 과정과 정직한 커뮤니케이션으로
+                      <br />
+                      고객 만족을 최우선으로 생각합니다.
+                    </span>
+                    <span className="hidden sm:inline">
+                      모든 과정을 직접 관리하고 소통하여 이러한 문제들을 원천
+                      차단합니다.
+                      <br />
+                      투명한 개발 과정과 정직한 커뮤니케이션으로 고객 만족을
+                      최우선으로 생각합니다.
+                    </span>
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm">

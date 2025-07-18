@@ -66,8 +66,9 @@ export default function PortfolioSection() {
             최근 진행한 프로젝트
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-gray-600">
-            다양한 기술 스택을 활용하여 고객의 니즈에 맞는 최적의 솔루션을
-            제공합니다
+            다양한 기술 스택을 활용하여 고객의 니즈에 맞는
+            <br className="block sm:hidden" />
+            최적의 솔루션을 제공합니다
           </p>
         </div>
 

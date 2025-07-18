@@ -33,13 +33,14 @@ export default async function YouTubeSection() {
             </h3>
 
             <p className="text-gray-600 mb-8 text-center">
-              단순한 개발사가 아닌, AI 코딩 교육자로서 최신 기술과 노하우를
-              공유합니다.
+              단순한 개발사가 아닌, AI 코딩 교육자로서
+              <br className="sm:hidden" />
+              최신 기술과 노하우를 공유합니다.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div>
-                <ul className="space-y-4">
+                <ul className="space-y-4 mx-auto w-fit md:mx-0">
                   <li className="flex items-start">
                     <CheckCircleIcon className="w-6 h-6 mr-3 text-primary-600 flex-shrink-0" />
                     <span className="text-gray-700">
@@ -55,7 +56,7 @@ export default async function YouTubeSection() {
                 </ul>
               </div>
               <div>
-                <ul className="space-y-4">
+                <ul className="space-y-4 mx-auto w-fit md:mx-0">
                   <li className="flex items-start">
                     <CheckCircleIcon className="w-6 h-6 mr-3 text-primary-600 flex-shrink-0" />
                     <span className="text-gray-700">

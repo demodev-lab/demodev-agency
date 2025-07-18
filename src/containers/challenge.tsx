@@ -165,103 +165,138 @@ export default async function Challenge() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col hover-card animate-on-scroll delay">
-              <div className="p-8 flex flex-col flex-grow relative">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary-100 rounded-bl-full opacity-20"></div>
+              <div className="p-8 flex flex-col flex-grow relative group transition-all duration-300 cursor-default hover:bg-gradient-to-br hover:from-primary-50 hover:to-white hover:shadow-2xl hover:scale-[1.03]">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary-100 rounded-bl-full opacity-20 group-hover:opacity-40 group-hover:scale-110 transition-all duration-300"></div>
                 <div className="relative w-32 h-16 mb-6 mx-auto">
                   <Image
                     src="/logo/v0.png"
                     alt="v0 로고"
                     fill
-                    className="object-contain"
+                    className="object-contain group-hover:scale-110 group-hover:drop-shadow-lg transition-all duration-300"
                   />
                 </div>
-                <h3 className="text-2xl font-bold text-center mb-4">v0</h3>
-                <p className="text-gray-600 mb-6 text-center">
+                <h3 className="text-2xl font-bold text-center mb-4 transition-colors duration-300 group-hover:text-primary-600">
+                  v0
+                </h3>
+                <p className="text-gray-600 mb-6 text-center transition-colors duration-300 group-hover:text-primary-700">
                   디자인 경험 없이도 AI가 도와주는 웹 디자인 도구.
-                  <br className="hidden lg:block" />
-                  프롬프트만 입력하면 멋진 웹사이트를 자동 생성해줍니다.
+                  <br className="block md:hidden" />
+                  <br className="hidden md:block" />
+                  프롬프트만 입력하면 멋진 웹사이트를
+                  <br className="hidden md:block" />
+                  자동 생성해줍니다.
                 </p>
                 <ul className="space-y-3 mt-auto">
                   <li className="flex items-start">
-                    <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
-                    <span>원하는 디자인을 텍스트로 설명하기만 하세요</span>
+                    <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0 group-hover:scale-110 group-hover:text-primary-500 transition-all duration-300" />
+                    <span className="transition-colors duration-300 group-hover:text-primary-700">
+                      원하는 디자인을 텍스트로 설명하기만 하세요
+                    </span>
                   </li>
                   <li className="flex items-start">
-                    <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
-                    <span>AI가 실시간으로 웹사이트를 디자인합니다</span>
+                    <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0 group-hover:scale-110 group-hover:text-primary-500 transition-all duration-300" />
+                    <span className="transition-colors duration-300 group-hover:text-primary-700">
+                      AI가 실시간으로 웹사이트를 디자인합니다
+                    </span>
                   </li>
                   <li className="flex items-start">
-                    <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
-                    <span>코드를 자동 생성하여 시간을 절약해줍니다</span>
+                    <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0 group-hover:scale-110 group-hover:text-primary-500 transition-all duration-300" />
+                    <span className="transition-colors duration-300 group-hover:text-primary-700">
+                      코드를 자동 생성하여 시간을 절약해줍니다
+                    </span>
                   </li>
                 </ul>
               </div>
             </div>
 
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col hover-card animate-on-scroll delay transform scale-105 z-10">
-              <div className="p-8 flex flex-col flex-grow relative">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-bl-full opacity-20"></div>
+              <div className="p-8 flex flex-col flex-grow relative group transition-all duration-300 cursor-default hover:bg-gradient-to-br hover:from-blue-50 hover:to-white hover:shadow-2xl hover:scale-[1.03]">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-bl-full opacity-20 group-hover:opacity-40 group-hover:scale-110 transition-all duration-300"></div>
                 <div className="relative w-32 h-16 mb-6 mx-auto">
                   <Image
                     src="/logo/cursor.png"
                     alt="Cursor 로고"
                     fill
-                    className="object-contain"
+                    className="object-contain group-hover:scale-110 group-hover:drop-shadow-lg transition-all duration-300"
                   />
                 </div>
-                <h3 className="text-2xl font-bold text-center mb-4">Cursor</h3>
-                <p className="text-gray-600 mb-6 text-center">
-                  프로그래밍 지식이 없어도 AI가 코드를 대신 작성해주는 코딩
-                  도구.
+                <h3 className="text-2xl font-bold text-center mb-4 transition-colors duration-300 group-hover:text-blue-600">
+                  Cursor
+                </h3>
+                <p className="text-gray-600 mb-6 text-center transition-colors duration-300 group-hover:text-blue-700">
+                  프로그래밍 지식이 없어도 AI가 코드를
+                  <br className="block lg:hidden" />
                   <br className="hidden lg:block" />
+                  대신 작성해주는 코딩 도구.
+                  <br className="hidden lg:block" />
+                  <br className="block lg:hidden" />
                   한국어로 명령하면 코드가 완성됩니다.
                 </p>
-                <ul className="space-y-3 mt-auto">
-                  <li className="flex items-start">
-                    <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
-                    <span>한국어로 코드 작성 명령을 내릴 수 있습니다</span>
+                <ul className="space-y-3 mt-auto flex flex-col items-start">
+                  <li className="flex items-start justify-start w-full">
+                    <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0 group-hover:scale-110 group-hover:text-blue-500 transition-all duration-300" />
+                    <span className="transition-colors duration-300 group-hover:text-blue-700 text-left w-full">
+                      한국어로 코드 작성 명령을 내릴 수 있습니다
+                    </span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
-                    <span>AI가 자동으로 코드를 작성하고 수정합니다</span>
+                  <li className="flex items-start justify-start w-full">
+                    <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0 group-hover:scale-110 group-hover:text-blue-500 transition-all duration-300" />
+                    <span className="transition-colors duration-300 group-hover:text-blue-700 text-left w-full">
+                      AI가 자동으로 코드를 작성하고 수정합니다
+                    </span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
-                    <span>코드 오류도 AI가 자동으로 해결해줍니다</span>
+                  <li className="flex items-start justify-start w-full">
+                    <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0 group-hover:scale-110 group-hover:text-blue-500 transition-all duration-300" />
+                    <span className="transition-colors duration-300 group-hover:text-blue-700 text-left w-full">
+                      코드 오류도 AI가 자동으로 해결해줍니다
+                    </span>
                   </li>
                 </ul>
               </div>
             </div>
 
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col hover-card animate-on-scroll delay">
-              <div className="p-8 flex flex-col flex-grow relative">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-purple-100 rounded-bl-full opacity-20"></div>
+              <div className="p-8 flex flex-col flex-grow relative group transition-all duration-300 cursor-pointer hover:cursor-default hover:bg-gradient-to-br hover:from-purple-50 hover:to-white hover:shadow-2xl hover:scale-[1.03]">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-purple-100 rounded-bl-full opacity-20 group-hover:opacity-40 group-hover:scale-110 transition-all duration-300"></div>
                 <div className="relative w-32 h-16 mb-6 mx-auto">
                   <Image
                     src="/logo/make.png"
                     alt="Make 로고"
                     fill
-                    className="object-contain"
+                    className="object-contain group-hover:scale-110 group-hover:drop-shadow-lg transition-all duration-300"
                   />
                 </div>
-                <h3 className="text-2xl font-bold text-center mb-4">Make</h3>
-                <p className="text-gray-600 mb-6 text-center">
-                  코드 없이도 웹사이트의 기능을 자동화할 수 있는 도구.
+                <h3 className="text-2xl font-bold text-center mb-4 transition-colors duration-300 group-hover:text-purple-600">
+                  Make
+                </h3>
+                <p className="text-gray-600 mb-6 text-center transition-colors duration-300 group-hover:text-purple-700">
+                  코드 없이도 웹사이트의 기능을
+                  <br className="hidden md:block" />
+                  자동화할 수 있는 도구.
+                  <br className="block lg:hidden" />
                   <br className="hidden lg:block" />
-                  드래그 앤 드롭으로 자동화 워크플로우를 만듭니다.
+                  드래그 앤 드롭으로
+                  <br className="hidden md:block" />
+                  자동화 워크플로우를 만듭니다.
                 </p>
                 <ul className="space-y-3 mt-auto">
                   <li className="flex items-start">
-                    <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
-                    <span>드래그 앤 드롭으로 자동화를 구축합니다</span>
+                    <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0 group-hover:scale-110 group-hover:text-purple-500 transition-all duration-300" />
+                    <span className="transition-colors duration-300 group-hover:text-purple-700">
+                      드래그 앤 드롭으로 자동화를 구축합니다
+                    </span>
                   </li>
                   <li className="flex items-start">
-                    <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
-                    <span>수천 개의 앱을 연동할 수 있습니다</span>
+                    <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0 group-hover:scale-110 group-hover:text-purple-500 transition-all duration-300" />
+                    <span className="transition-colors duration-300 group-hover:text-purple-700">
+                      수천 개의 앱을 연동할 수 있습니다
+                    </span>
                   </li>
                   <li className="flex items-start">
-                    <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
-                    <span>반복 작업을 자동으로 처리해줍니다</span>
+                    <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0 group-hover:scale-110 group-hover:text-purple-500 transition-all duration-300" />
+                    <span className="transition-colors duration-300 group-hover:text-purple-700">
+                      반복 작업을 자동으로 처리해줍니다
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -343,21 +378,21 @@ export default async function Challenge() {
                 지금 바로 시작하세요
               </h2>
               <div className="mb-6 flex justify-center items-center">
-                <div className="inline-flex items-center bg-white px-6 py-3 rounded-xl shadow-sm border border-gray-100">
-                  <span className="text-xl font-bold line-through text-gray-400 mr-3">
+                <div className="inline-flex items-center bg-white px-6 py-3 rounded-xl shadow-sm border border-gray-100 transition-all duration-300 hover:bg-gradient-to-r hover:from-primary-50 hover:to-blue-50 hover:shadow-2xl hover:border-primary-200 hover:scale-105 group">
+                  <span className="text-xl font-bold line-through text-gray-400 mr-3 group-hover:text-gray-300 transition-colors duration-300">
                     149,000원
                   </span>
-                  <div className="bg-red-100 text-red-600 font-bold px-3 py-1 rounded-md mr-3">
+                  <div className="bg-red-100 text-red-600 font-bold px-3 py-1 rounded-md mr-3 transition-all duration-300 group-hover:bg-red-200 group-hover:text-red-600 group-hover:scale-110">
                     100% 할인
                   </div>
-                  <span className="text-2xl font-bold text-primary-600">
+                  <span className="text-2xl font-bold text-primary-600 transition-colors duration-300 group-hover:text-primary-700">
                     0원
                   </span>
                 </div>
               </div>
               <p className="mb-10 text-xl leading-relaxed text-gray-600">
                 0원으로 웹사이트를 만들 수 있는 기회
-                <br className="hidden sm:block" />
+                <br className="block sm:hidden" />
                 <span className="font-semibold text-primary-600">
                   한정 인원만{" "}
                 </span>
@@ -393,55 +428,63 @@ export default async function Challenge() {
               하신가요?
             </h2>
             <p className="max-w-2xl mx-auto text-xl text-center text-gray-600 mb-8">
-              DemoDev의 전문 개발팀이 고객님의 웹사이트를 직접 제작해드립니다
+              DemoDev의 전문 개발팀이 고객님의 웹사이트를
+              <br className="block sm:hidden" />
+              직접 제작해드립니다
             </p>
           </div>
 
-          <div className="bg-gradient-to-r from-primary-50 to-blue-50 rounded-2xl p-8 md:p-12 shadow-lg animate-on-scroll delay hover-card relative overflow-hidden">
-            <div className="absolute inset-0 z-0">
-              <div className="absolute -top-20 -right-20 w-80 h-80 bg-primary-100 rounded-full blur-3xl opacity-50"></div>
-              <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
+          <div className="bg-gradient-to-r from-primary-50 to-blue-50 rounded-2xl p-6 sm:p-8 md:p-12 shadow-lg animate-on-scroll delay hover-card relative overflow-hidden">
+            <div className="absolute inset-0 z-0 pointer-events-none">
+              <div className="absolute -top-24 -right-24 w-64 h-64 sm:w-80 sm:h-80 bg-primary-100 rounded-full blur-3xl opacity-40"></div>
+              <div className="absolute -bottom-24 -left-24 w-64 h-64 sm:w-80 sm:h-80 bg-blue-100 rounded-full blur-3xl opacity-40"></div>
             </div>
 
             <div className="relative z-10">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
                 전문 외주 개발 서비스
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-sm">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center mr-4">
-                      <LightBulbIcon className="w-6 h-6 text-primary-600" />
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
+                <div className="bg-white/80 backdrop-blur-sm p-5 sm:p-6 rounded-xl shadow-sm flex flex-col items-center text-center hover:shadow-md transition-shadow duration-200">
+                  <div className="flex items-center justify-center mb-3 sm:mb-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary-100 flex items-center justify-center mr-0 sm:mr-4 mb-0 sm:mb-0">
+                      <LightBulbIcon className="w-5 h-5 sm:w-6 sm:h-6 text-primary-600" />
                     </div>
-                    <h4 className="text-lg font-semibold text-gray-900">
-                      기획부터 배포까지
-                    </h4>
                   </div>
-                  <p className="text-gray-600">원스톱 서비스로 편리하게 진행</p>
+                  <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-1">
+                    기획부터 배포까지
+                  </h4>
+                  <p className="text-gray-600 text-sm sm:text-base">
+                    원스톱 서비스로 편리하게 진행
+                  </p>
                 </div>
 
-                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-sm">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
-                      <CodeBracketIcon className="w-6 h-6 text-blue-600" />
+                <div className="bg-white/80 backdrop-blur-sm p-5 sm:p-6 rounded-xl shadow-sm flex flex-col items-center text-center hover:shadow-md transition-shadow duration-200">
+                  <div className="flex items-center justify-center mb-3 sm:mb-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-100 flex items-center justify-center mr-0 sm:mr-4 mb-0 sm:mb-0">
+                      <CodeBracketIcon className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
                     </div>
-                    <h4 className="text-lg font-semibold text-gray-900">
-                      최신 기술 스택
-                    </h4>
                   </div>
-                  <p className="text-gray-600">최신 기술로 품질 보장</p>
+                  <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-1">
+                    최신 기술 스택
+                  </h4>
+                  <p className="text-gray-600 text-sm sm:text-base">
+                    최신 기술로 품질 보장
+                  </p>
                 </div>
 
-                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-sm">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mr-4">
-                      <RocketLaunchIcon className="w-6 h-6 text-green-600" />
+                <div className="bg-white/80 backdrop-blur-sm p-5 sm:p-6 rounded-xl shadow-sm flex flex-col items-center text-center hover:shadow-md transition-shadow duration-200">
+                  <div className="flex items-center justify-center mb-3 sm:mb-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-green-100 flex items-center justify-center mr-0 sm:mr-4 mb-0 sm:mb-0">
+                      <RocketLaunchIcon className="w-5 h-5 sm:w-6 sm:h-6 text-green-600" />
                     </div>
-                    <h4 className="text-lg font-semibold text-gray-900">
-                      빠른 개발 속도
-                    </h4>
                   </div>
-                  <p className="text-gray-600">효율적인 프로젝트 관리</p>
+                  <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-1">
+                    빠른 개발 속도
+                  </h4>
+                  <p className="text-gray-600 text-sm sm:text-base">
+                    효율적인 프로젝트 관리
+                  </p>
                 </div>
               </div>
 
