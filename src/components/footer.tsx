@@ -26,8 +26,11 @@ export default function Footer() {
               />
             </div>
             <p className="text-gray-400">
-              최고의 기술력과 창의력으로 디지털 혁신을 선도하는 웹/앱 개발 전문
-              기업입니다.
+              <span className="block sm:inline">
+                최고의 기술력과 창의력으로 디지털 혁신을 선도하는 웹/앱 개발
+                전문
+              </span>
+              <span className="block sm:inline">기업입니다.</span>
             </p>
           </div>
 
