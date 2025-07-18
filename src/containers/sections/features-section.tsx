@@ -25,7 +25,14 @@ export default async function FeatureSection() {
             </span>
           </h2>
           <p className="max-w-2xl mx-auto text-xl text-gray-600">
-            단순한 개발이 아닌, 비즈니스 성장을 위한 최고의 선택
+            <span className="hidden sm:inline">
+              단순한 개발이 아닌, 비즈니스 성장을 위한 최고의 선택
+            </span>
+            <span className="inline sm:hidden">
+              단순한 개발이 아닌,
+              <br />
+              비즈니스 성장을 위한 최고의 선택
+            </span>
           </p>
         </div>
 

@@ -18,8 +18,9 @@ export default function ScrollContainerSection() {
           </div>
           <h2 className="text-4xl font-bold text-gray-900 mb-4">우리의 경험</h2>
           <p className="max-w-2xl mx-auto text-lg text-gray-600">
-            신뢰할 수 있는 다양한 파트너들과 함께 성공적인 프로젝트를 진행해
-            왔습니다
+            신뢰할 수 있는 다양한 파트너들과 함께
+            <br className="block sm:hidden" />
+            성공적인 프로젝트를 진행해 왔습니다
           </p>
         </div>
 
@@ -60,26 +61,20 @@ export default function ScrollContainerSection() {
         </div>
 
         <div className="mt-20 text-center">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 animate-on-scroll delay">
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-md sm:max-w-2xl md:max-w-4xl mx-auto animate-on-scroll delay">
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center">
               <div className="text-4xl font-bold text-primary-600 mb-2">
                 10+
               </div>
               <div className="text-gray-600">프로젝트 완료</div>
             </div>
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center">
               <div className="text-4xl font-bold text-primary-600 mb-2">
                 10+
               </div>
               <div className="text-gray-600">협력 파트너</div>
             </div>
-            {/* <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="text-4xl font-bold text-primary-600 mb-2">
-                3년+
-              </div>
-              <div className="text-gray-600">업계 경험</div>
-            </div> */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center">
               <div className="text-4xl font-bold text-primary-600 mb-2">
                 100%
               </div>

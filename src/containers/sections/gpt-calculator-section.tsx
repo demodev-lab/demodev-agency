@@ -60,7 +60,9 @@ export default function GPTCalculatorSection() {
                       요구사항 입력
                     </h4>
                     <p className="text-gray-600">
-                      원하는 프로젝트의 요구사항과 기능들을 자연어로 설명하세요
+                      원하는 프로젝트의 요구사항과 기능들을 자연어로
+                      <br className="block sm:hidden" />
+                      설명하세요
                     </p>
                   </div>
                 </div>
@@ -74,7 +76,9 @@ export default function GPTCalculatorSection() {
                       AI 견적 계산
                     </h4>
                     <p className="text-gray-600">
-                      AI가 업계 기준과 경험을 바탕으로 적정 견적을 계산합니다
+                      AI가 업계 기준과 경험을 바탕으로 적정 견적을
+                      <br className="block sm:hidden" />
+                      계산합니다
                     </p>
                   </div>
                 </div>
@@ -88,7 +92,9 @@ export default function GPTCalculatorSection() {
                       상세 비용 분석
                     </h4>
                     <p className="text-gray-600">
-                      항목별 비용 분석과 함께 개발 기간 예상을 확인하세요
+                      항목별 비용 분석과 함께 개발 기간 예상을
+                      <br className="block sm:hidden" />
+                      확인하세요
                     </p>
                   </div>
                 </div>
@@ -99,11 +105,15 @@ export default function GPTCalculatorSection() {
                   href="https://chatgpt.com/g/g-681a1872c1d48191b7819648a9c4e960-demodebeu-ai-gyeonjeog-gpt"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-primary-600 to-primary-500 text-white font-medium shadow-lg shadow-primary-500/20 hover:shadow-xl hover:shadow-primary-500/30 transition-all duration-300 transform hover:-translate-y-1"
+                  className="inline-flex flex-col sm:flex-row items-center justify-center sm:justify-start px-6 py-3 rounded-full bg-gradient-to-r from-primary-600 to-primary-500 text-white font-medium shadow-lg shadow-primary-500/20 hover:shadow-xl hover:shadow-primary-500/30 transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto"
                 >
-                  <CurrencyDollarIcon className="w-5 h-5 mr-2" />
-                  <span>무료로 견적 계산하기</span>
-                  <ArrowRightIcon className="w-4 h-4 ml-2" />
+                  <div className="flex items-center justify-center w-full sm:w-auto">
+                    <CurrencyDollarIcon className="w-5 h-5 mr-2" />
+                    <span className="block w-full text-center sm:text-left mx-auto sm:mx-0">
+                      무료로 견적 계산하기
+                    </span>
+                    <ArrowRightIcon className="w-4 h-4 ml-2" />
+                  </div>
                 </Link>
               </div>
             </div>

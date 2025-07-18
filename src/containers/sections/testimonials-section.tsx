@@ -25,7 +25,9 @@ export default function TestimonialSection() {
             </span>
           </h2>
           <p className="max-w-2xl mx-auto text-xl text-gray-600">
-            우리의 서비스를 이용한 고객들의 진솔한 후기를 만나보세요
+            우리의 서비스를 이용한 고객들의
+            <br className="block sm:hidden" />
+            진솔한 후기를 만나보세요
           </p>
         </div>
 

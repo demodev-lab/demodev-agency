@@ -13,14 +13,18 @@ export default function ContactSection() {
             상담 문의
           </div>
           <h2 className="text-4xl font-bold">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-primary-500">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-primary-500 block sm:inline">
               자신있는 프로젝트만
-            </span>{" "}
-            진행합니다
+            </span>
+            <span className="block sm:inline">진행합니다</span>
           </h2>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-            100% 내부 개발팀의 철저한 품질 관리와 파격적인 환불 보장제도를
-            제공합니다
+            <span className="block sm:inline">
+              100% 내부 개발팀의 철저한 품질 관리와
+            </span>
+            <span className="block sm:inline">
+              파격적인 환불 보장제도를 제공합니다
+            </span>
           </p>
         </div>
 

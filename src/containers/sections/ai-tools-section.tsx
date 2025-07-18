@@ -44,8 +44,10 @@ export default async function AIToolsSection() {
                 AI 코드 어시스턴트
               </h3>
               <p className="text-gray-600 mb-4">
-                Cursor, Windsurf 등 AI 코드 생성 도구를 활용하여 개발 속도를
-                최대 40% 향상시킵니다.
+                Cursor, Windsurf 등 AI 코드 생성 도구를
+                <br className="block sm:hidden" />
+                <br className="hidden sm:block" />
+                활용하여 개발 속도를 최대 40% 향상시킵니다.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center">
@@ -75,8 +77,9 @@ export default async function AIToolsSection() {
                 AI 디자인 통합
               </h3>
               <p className="text-gray-600 mb-4">
-                v0, Lovable 같은 AI 도구로 디자인에서 개발까지 완벽한 통합
-                파이프라인을 구축합니다.
+                v0, Lovable 같은 AI 도구로 디자인에서 개발까지
+                <br />
+                완벽한 통합 파이프라인을 구축합니다.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center">
@@ -106,7 +109,9 @@ export default async function AIToolsSection() {
                 AI 테스트 자동화
               </h3>
               <p className="text-gray-600 mb-4">
-                AI 기반 테스트 생성 및 분석으로 QA 과정을 혁신적으로 개선합니다.
+                AI 기반 테스트 생성 및 분석으로 QA 과정을
+                <br />
+                혁신적으로 개선합니다.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center">

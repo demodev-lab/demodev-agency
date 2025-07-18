@@ -24,11 +24,12 @@ export default function GuaranteeSection() {
             </span>
           </h2>
           <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
-            저희는 아래 약속을 지키지 못할 경우,{" "}
-            <span className="font-bold text-white px-3 py-1.5 bg-gradient-to-r from-primary-600 to-primary-500 rounded-full inline-flex items-center shadow-lg shadow-primary-500/20">
+            저희는 아래 약속을 지키지 못할 경우,
+            <br className="block sm:hidden" />
+            <span className="font-bold text-white px-3 py-1.5 bg-gradient-to-r from-primary-600 to-primary-500 rounded-full inline-flex items-center shadow-lg shadow-primary-500/20 mx-1">
               <CheckBadgeIcon className="w-5 h-5 mr-1" />
               100% 환불
-            </span>{" "}
+            </span>
             을 보장합니다.
           </p>
           <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
@@ -61,7 +62,9 @@ export default function GuaranteeSection() {
                   <span className="font-bold text-primary-600 px-2 py-0.5 bg-primary-50 rounded-md">
                     내부 전문가
                   </span>
-                  가 직접 수행합니다. 외부 하청은 절대 하지 않습니다.
+                  가 직접 수행합니다.
+                  <br className="block sm:hidden" />
+                  외부 하청은 절대 하지 않습니다.
                 </p>
 
                 <div className="w-full h-1 bg-gradient-to-r from-primary-500 to-primary-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-full"></div>
@@ -125,8 +128,10 @@ export default function GuaranteeSection() {
                   <span className="font-bold text-primary-600 px-2 py-0.5 bg-primary-50 rounded-md">
                     기대한 퀄리티
                   </span>
-                  에 미치지 못할 경우, 고객님의 요청에 따라 100% 환불해
-                  드립니다.
+                  에 미치지 못할 경우,
+                  <span className="block sm:inline">
+                    고객님의 요청에 따라 100% 환불해 드립니다.
+                  </span>
                 </p>
 
                 <div className="w-full h-1 bg-gradient-to-r from-primary-500 to-primary-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-full"></div>
@@ -154,11 +159,16 @@ export default function GuaranteeSection() {
                 </h3>
 
                 <p className="text-gray-600 mb-6">
-                  프로젝트 종료 후에도{" "}
-                  <span className="font-bold text-primary-600 px-2 py-0.5 bg-primary-50 rounded-md">
-                    6개월 무상 유지보수
+                  프로젝트 종료 후에도
+                  <span className="block sm:inline">
+                    <span className="font-bold text-primary-600 px-2 py-0.5 bg-primary-50 rounded-md mx-1">
+                      6개월 무상 유지보수
+                    </span>
+                    를 약속드립니다.
                   </span>
-                  를 약속드립니다. 문제가 발생할 경우 신속하게 대응합니다.
+                  <span className="block sm:inline">
+                    문제가 발생할 경우 신속하게 대응합니다.
+                  </span>
                 </p>
 
                 <div className="w-full h-1 bg-gradient-to-r from-primary-500 to-primary-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-full"></div>
