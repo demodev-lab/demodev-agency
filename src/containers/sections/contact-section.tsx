@@ -36,7 +36,7 @@ export default function ContactSection() {
                 상담 문의하기
               </h3>
               <Link
-                href="https://www.pluuug.com/form/kR60s6EO6h?utm_source=company_website&utm_medium=referral&utm_campaign=homepage&utm_content=dev_form"
+                href="https://bit.ly/4fhHApW"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 text-white bg-primary-600 hover:bg-primary-500 rounded-lg font-medium transition-all text-lg"
@@ -70,7 +70,7 @@ export default function ContactSection() {
 
           {/* 이메일 문의 */}
           <Link
-            href="mailto:demo.dev.connect@gmail.com"
+            href="mailto:contact@demodev.io"
             className="pl-2 block text-lg font-medium text-gray-700 hover:text-blue-600 transition-colors break-all"
           >
             <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all">
@@ -82,7 +82,7 @@ export default function ContactSection() {
                   이메일 문의
                 </h4>
               </div>
-              <span>demo.dev.connect@gmail.com</span>
+              <span>contact@demodev.io</span>
             </div>
           </Link>
         </div>
