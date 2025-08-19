@@ -66,7 +66,7 @@ export default function Footer() {
               </li>
               <li>
                 <MapPinIcon className="w-4 h-4" />
-                서울 서초구 강남대로 527 13층
+                서울 서초구 사평대로55길 65-7, 1층
               </li>
             </ul>
           </div>
