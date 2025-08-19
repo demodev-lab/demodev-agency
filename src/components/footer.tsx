@@ -74,10 +74,10 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-800">
           <div className="text-gray-500 text-sm space-y-2">
-            <p>상호명: 대모산개발단</p>
+            <p>상호명: 주식회사 대모산개발단</p>
             <p>대표자: 고성현</p>
-            <p>사업자 등록 번호: 259-52-00902</p>
-            <p>주소: 서울 서초구 강남대로 527 13층</p>
+            <p>사업자 등록 번호: 489-87-03180</p>
+            <p>주소: 서울 서초구 사평대로55길 65-7, 1층</p>
             <p className="text-gray-500 mt-4">
               © {new Date().getFullYear()} DemoDev. All rights reserved.
             </p>
