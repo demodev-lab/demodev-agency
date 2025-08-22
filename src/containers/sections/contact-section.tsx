@@ -64,7 +64,7 @@ export default function ContactSection() {
                   전화 문의
                 </h4>
               </div>
-              <span>010-4718-8591</span>
+              <span>02-544-8591</span>
             </div>
           </Link>
 

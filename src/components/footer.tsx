@@ -52,7 +52,7 @@ export default function Footer() {
               <li>
                 <a href="tel:010-4718-8591" className="flex items-center gap-2">
                   <PhoneIcon className="w-4 h-4" />
-                  010-4718-8591
+                  02-544-8591
                 </a>
               </li>
               <li>
