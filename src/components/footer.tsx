@@ -1,7 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { PhoneIcon, EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/solid";
+import {
+  PhoneIcon,
+  EnvelopeIcon,
+  MapPinIcon,
+  DevicePhoneMobileIcon,
+} from "@heroicons/react/24/solid";
 
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -51,6 +56,12 @@ export default function Footer() {
             <ul className="footer-info">
               <li>
                 <a href="tel:010-4718-8591" className="flex items-center gap-2">
+                  <DevicePhoneMobileIcon className="w-4 h-4" />
+                  010-4718-8591
+                </a>
+              </li>
+              <li>
+                <a href="tel:010-4718-8591" className="flex items-center gap-2">
                   <PhoneIcon className="w-4 h-4" />
                   02-544-8591
                 </a>
@@ -78,6 +89,7 @@ export default function Footer() {
             <p>대표자: 고성현</p>
             <p>사업자 등록 번호: 489-87-03180</p>
             <p>주소: 서울 서초구 사평대로55길 65-7, 1층</p>
+            <p>유선전화: 02-544-8591</p>
             <p className="text-gray-500 mt-4">
               © {new Date().getFullYear()} DemoDev. All rights reserved.
             </p>
