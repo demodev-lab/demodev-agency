@@ -92,7 +92,7 @@ export default function PortfolioGallery() {
           <strong>단 한 번의 수업</strong>으로 만든 결과물입니다
         </p>
         <Link
-          href="https://bit.ly/3GY2DRf"
+          href="https://open.kakao.com/o/gZLCI3lh"
           target="_blank"
           rel="noopener noreferrer"
         >
