@@ -89,10 +89,11 @@ export default function PortfolioGallery() {
         <p className="text-lg text-gray-700 mb-6">
           이 모든 웹사이트는 코딩 경험이 없는 교육생들이
           <br className="block sm:hidden" />
-          <strong>단 한 번의 수업</strong>으로 만든 결과물입니다
+          <span className="font-bold"> 단 한 번의 수업</span>으로 만든
+          결과물입니다
         </p>
         <Link
-          href="https://bit.ly/3GY2DRf"
+          href="https://open.kakao.com/o/gZLCI3lh"
           target="_blank"
           rel="noopener noreferrer"
         >
