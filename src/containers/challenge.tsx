@@ -1,4 +1,4 @@
-"use server";
+"use client";
 
 import Footer from "@/components/footer";
 import {
@@ -23,8 +23,16 @@ import GAPageView from "@/components/analytics/ga-page-view";
 import GACtaButton from "@/components/analytics/ga-cta-button";
 import { GA_CTA_EVENTS } from "@/constants/ga";
 import AnimationInitialize from "@/components/animation-initialize";
+import Toast from "@/components/toast";
+import { useState } from "react";
 
-export default async function Challenge() {
+export default function Challenge() {
+  const [showToast, setShowToast] = useState(false);
+
+  const handleChallengeClick = () => {
+    setShowToast(true);
+    // 실제 신청 로직은 여기에 추가
+  };
   return (
     <main className="min-h-screen bg-white overflow-hidden">
       <GAPageView />
@@ -46,33 +54,29 @@ export default async function Challenge() {
               </div>
             </div>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl animate-on-scroll">
-              <span className="block mb-3">v0와 Cursor, Make로</span>
-              <span className="block mb-3 gradient-text">나만의 웹사이트</span>
-              <span className="block">가져가세요.</span>
+              <span className="block mb-3">대모산개발단</span>
+              <span className="block mb-3 gradient-text">n8n 초보 탈출</span>
+              <span className="block">챌린지</span>
             </h1>
 
             <p className="mt-8 mb-12 text-xl leading-8 text-gray-600 animate-on-scroll delay">
-              코딩 경험이 없어도 괜찮습니다.
+              n8n을 처음 접하는 분들도 괜찮습니다.
               <br className="block sm:hidden" />
-              웹사이트 완성까지{" "}
-              <span className="font-semibold text-primary-400">무료</span>로
-              도와드립니다.
+              자동화 시스템 구축까지{" "}
+              <span className="font-semibold text-primary-400">
+                33,000원
+              </span>{" "}
+              (얼리버드 40% 할인)
             </p>
 
             <div className="flex justify-center gap-4 animate-on-scroll delay">
-              <Link
-                href="https://bit.ly/3GY2DRf"
-                target="_blank"
-                rel="noopener noreferrer"
+              <GACtaButton
+                className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white rounded-full shadow-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl button-3d cursor-pointer"
+                eventLabel={GA_CTA_EVENTS.onClickTopChallengeCTA}
+                onClick={handleChallengeClick}
               >
-                <GACtaButton
-                  className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white rounded-full shadow-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl button-3d"
-                  eventLabel={GA_CTA_EVENTS.onClickTopChallengeCTA}
-                >
-                  환급 챌린지 신청하기{" "}
-                  <ArrowRightIcon className="w-5 h-5 ml-2" />
-                </GACtaButton>
-              </Link>
+                n8n 챌린지 신청하기 <ArrowRightIcon className="w-5 h-5 ml-2" />
+              </GACtaButton>
             </div>
           </div>
         </div>
@@ -155,12 +159,14 @@ export default async function Challenge() {
       <div className="py-20 bg-gray-50">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-6 animate-on-scroll">
-            챌린지에서{" "}
-            <span className="text-primary-600">전부 배울 수 있어요</span>
+            n8n 챌린지에서{" "}
+            <span className="text-primary-600">
+              자동화 노하우를 배울 수 있어요
+            </span>
           </h2>
           <p className="max-w-2xl mx-auto text-xl text-center text-gray-600 mb-12 animate-on-scroll delay">
-            코딩 경험 없이도 <br className="block md:hidden" />
-            전문가 수준의 웹사이트를 만들 수 있습니다
+            n8n 초보여도 괜찮습니다 <br className="block md:hidden" />
+            전문가 수준의 자동화 시스템을 만들 수 있습니다
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
@@ -169,40 +175,40 @@ export default async function Challenge() {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary-100 rounded-bl-full opacity-20 group-hover:opacity-40 group-hover:scale-110 transition-all duration-300"></div>
                 <div className="relative w-32 h-16 mb-6 mx-auto">
                   <Image
-                    src="/logo/v0.png"
-                    alt="v0 로고"
+                    src="/logo/n8n.png"
+                    alt="n8n 로고"
                     fill
                     className="object-contain group-hover:scale-110 group-hover:drop-shadow-lg transition-all duration-300"
                   />
                 </div>
                 <h3 className="text-2xl font-bold text-center mb-4 transition-colors duration-300 group-hover:text-primary-600">
-                  v0
+                  n8n
                 </h3>
                 <p className="text-gray-600 mb-6 text-center transition-colors duration-300 group-hover:text-primary-700">
-                  디자인 경험 없이도 AI가 도와주는 웹 디자인 도구.
+                  코딩 없이도 자동화 워크플로우를 만들 수 있는 노코드 플랫폼.
                   <br className="block md:hidden" />
                   <br className="hidden md:block" />
-                  프롬프트만 입력하면 멋진 웹사이트를
+                  드래그 앵 드롭만으로
                   <br className="hidden md:block" />
-                  자동 생성해줍니다.
+                  복잡한 자동화를 구축할 수 있습니다.
                 </p>
                 <ul className="space-y-3 mt-auto">
                   <li className="flex items-start">
                     <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0 group-hover:scale-110 group-hover:text-primary-500 transition-all duration-300" />
                     <span className="transition-colors duration-300 group-hover:text-primary-700">
-                      원하는 디자인을 텍스트로 설명하기만 하세요
+                      400+ 개의 앱과 서비스를 연결할 수 있습니다
                     </span>
                   </li>
                   <li className="flex items-start">
                     <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0 group-hover:scale-110 group-hover:text-primary-500 transition-all duration-300" />
                     <span className="transition-colors duration-300 group-hover:text-primary-700">
-                      AI가 실시간으로 웹사이트를 디자인합니다
+                      비주얼 인터페이스로 쉽게 워크플로우 생성
                     </span>
                   </li>
                   <li className="flex items-start">
                     <CheckIcon className="h-6 w-6 text-green-500 mr-2 flex-shrink-0 group-hover:scale-110 group-hover:text-primary-500 transition-all duration-300" />
                     <span className="transition-colors duration-300 group-hover:text-primary-700">
-                      코드를 자동 생성하여 시간을 절약해줍니다
+                      복잡한 비즈니스 로직도 코드 없이 구현 가능
                     </span>
                   </li>
                 </ul>
@@ -379,43 +385,315 @@ export default async function Challenge() {
               </h2>
               <div className="mb-6 flex justify-center items-center">
                 <div className="inline-flex items-center bg-white px-6 py-3 rounded-xl shadow-sm border border-gray-100 transition-all duration-300 hover:bg-gradient-to-r hover:from-primary-50 hover:to-blue-50 hover:shadow-2xl hover:border-primary-200 hover:scale-105 group">
-                  <span className="text-xl font-bold line-through text-gray-400 mr-3 group-hover:text-gray-300 transition-colors duration-300">
-                    149,000원
-                  </span>
-                  <div className="bg-red-100 text-red-600 font-bold px-3 py-1 rounded-md mr-3 transition-all duration-300 group-hover:bg-red-200 group-hover:text-red-600 group-hover:scale-110">
-                    100% 할인
-                  </div>
                   <span className="text-2xl font-bold text-primary-600 transition-colors duration-300 group-hover:text-primary-700">
-                    0원
+                    33,000원
                   </span>
+                  <div className="bg-red-100 text-red-600 font-bold px-3 py-1 rounded-md ml-3 transition-all duration-300 group-hover:bg-red-200 group-hover:text-red-600 group-hover:scale-110">
+                    얼리버드 40% 할인
+                  </div>
                 </div>
               </div>
               <p className="mb-10 text-xl leading-relaxed text-gray-600">
-                0원으로 웹사이트를 만들 수 있는 기회
+                n8n 자동화 시스템을 만들 수 있는 기회
                 <br className="block sm:hidden" />
                 <span className="font-semibold text-primary-600">
-                  한정 인원만{" "}
+                  9월 1일 오전 12시 1분 ~ 9월 5일 오후 11시 59분{" "}
                 </span>
-                모집합니다.
+                (D-4) 일정으로 진행됩니다.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link
-                  href="https://bit.ly/3GY2DRf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <GACtaButton
+                  className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white rounded-full shadow-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl button-3d cursor-pointer"
+                  eventLabel={GA_CTA_EVENTS.onClickBottomChallengeCTA}
+                  onClick={handleChallengeClick}
                 >
-                  <GACtaButton
-                    className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white rounded-full shadow-lg bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl button-3d"
-                    eventLabel={GA_CTA_EVENTS.onClickBottomChallengeCTA}
-                  >
-                    신청하기 <ArrowRightIcon className="w-5 h-5 ml-2" />
-                  </GACtaButton>
-                </Link>
+                  n8n 챌린지 신청하기{" "}
+                  <ArrowRightIcon className="w-5 h-5 ml-2" />
+                </GACtaButton>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {/* 상세 정보 섹션 */}
+      <div className="py-20 bg-gray-50">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="text-center mb-12 animate-on-scroll">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 sm:text-4xl">
+              5일간 진행하는
+              <br />
+              <span className="gradient-text">
+                &lsquo;대모산개발단 n8n 초보 탈출 챌린지&rsquo;
+              </span>
+              의<br />
+              참가자를 모집합니다!
+            </h2>
+            <div className="space-y-2 text-lg text-gray-600">
+              <p>🔔 모집 일정 : ~2025.08.31 23시까지</p>
+              <p>🔔 공식 일정 : (자세한 사항은 본문 참조)</p>
+              <p>🔔 얼리버드 40% 할인 | 언제 가격이 올라갈지 몰라요!</p>
+            </div>
+          </div>
+
+          {/* 문제 제시 */}
+          <div className="bg-white rounded-2xl p-8 mb-8 shadow-lg animate-on-scroll delay">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              이런 고민 있으시죠?
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                "n8n 도전하고 싶지만, 뭐부터 해야할지 모르시나요?",
+                "n8n에 관심있는데 계속 미루기만 하나요?",
+                "단순 작업 반복하느라 시간 낭비하고 있지 않으신가요?",
+                "AI 도구들을 연결해서 나만의 시스템을 만들고 싶으신가요?",
+                "본업은 있는데 가볍게 사이드프로젝트를 하고 싶으신가요?",
+              ].map((question, index) => (
+                <div key={index} className="p-4 bg-gray-50 rounded-lg">
+                  <p className="text-gray-700">{question}</p>
+                </div>
+              ))}
+            </div>
+            <div className="text-center mt-8">
+              <h4 className="text-xl font-bold text-primary-600">
+                그동안 미루던 n8n, 지금 바로 시작하세요
+              </h4>
+              <p className="text-gray-600 mt-2">
+                No.1 AI 활용 교육 회사 대모산개발단이 &lsquo;초보자들을 위한
+                챌린지&rsquo;를 엽니다.
+              </p>
+            </div>
+          </div>
+
+          {/* 대모산개발단 소개 */}
+          <div className="bg-white rounded-2xl p-8 mb-8 shadow-lg animate-on-scroll delay">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              🫵🏻 대모산개발단은 이런 곳이에요
+            </h3>
+            <div className="space-y-4 text-gray-600">
+              <p>
+                · 팔로워가 0명에서, 3달만에 구독자 5000명을 달성한 바이브코딩
+                크리에이터입니다.
+              </p>
+              <p>
+                · 영재고, AI 장관상 출신 개발자로 구성된 소프트웨어 개발
+                에이전시도 운영하고 있습니다.
+              </p>
+              <p>
+                · 모두가 각자의 영역에서 &ldquo;소프트웨어 빌더&rdquo;가 될 수
+                있도록 돕습니다.
+              </p>
+            </div>
+            <div className="text-center mt-6">
+              <a
+                href="https://www.youtube.com/@%EB%8C%80%EB%AA%A8%EC%82%B0%EA%B0%9C%EB%B0%9C%EB%8B%A8"
+                className="text-primary-600 hover:text-primary-700 font-semibold"
+              >
+                🔗 대모산개발단 유튜브
+              </a>
+            </div>
+          </div>
+
+          {/* 프로그램 스케줄 */}
+          <div className="bg-white rounded-2xl p-8 mb-8 shadow-lg animate-on-scroll delay">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              📌 프로그램 스케줄
+            </h3>
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+              <p className="text-sm text-yellow-800 font-semibold mb-2">
+                ⚠️ 안내사항
+              </p>
+              <div className="text-sm text-yellow-700 space-y-1">
+                <p>
+                  · 실시간 강의가 아닌 VOD 강의를 통해 원하시는 시간에 수강이
+                  가능합니다.
+                </p>
+                <p>· 각 강의는 당일 자정에 오픈됩니다.</p>
+                <p>
+                  · EX) 9/2(화) 00:00에 &lsquo;[VOD] 이미지 자동화하기&rsquo;가
+                  오픈됩니다!
+                </p>
+              </div>
+            </div>
+
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300">
+                <thead>
+                  <tr className="bg-gray-50">
+                    <th className="border border-gray-300 px-4 py-3 text-left font-semibold">
+                      날짜
+                    </th>
+                    <th className="border border-gray-300 px-4 py-3 text-left font-semibold">
+                      시간
+                    </th>
+                    <th className="border border-gray-300 px-4 py-3 text-left font-semibold">
+                      내용
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    {
+                      date: "8/31 (일)",
+                      time: "8PM",
+                      content: "카카오톡 입장",
+                    },
+                    {
+                      date: "9/1 (월)",
+                      time: "-",
+                      content: "[VOD] n8n 설치와 간단한 gmail 자동화",
+                    },
+                    {
+                      date: "9/2 (화)",
+                      time: "-",
+                      content: "[VOD] 이미지 자동화하기",
+                    },
+                    {
+                      date: "9/3 (수)",
+                      time: "-",
+                      content: "[VOD] 미드저니 클론하기",
+                    },
+                    {
+                      date: "9/4 (목)",
+                      time: "-",
+                      content: "[VOD] 동영상 자동화하기",
+                    },
+                    {
+                      date: "9/5 (금)",
+                      time: "-",
+                      content: "[VOD] n8n 워크플로우 자동화 프로세스 연구하기",
+                    },
+                  ].map((item, index) => (
+                    <tr
+                      key={index}
+                      className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}
+                    >
+                      <td className="border border-gray-300 px-4 py-3">
+                        {item.date}
+                      </td>
+                      <td className="border border-gray-300 px-4 py-3">
+                        {item.time}
+                      </td>
+                      <td className="border border-gray-300 px-4 py-3">
+                        {item.content}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="mt-6 p-4 bg-primary-50 rounded-lg">
+              <p className="text-gray-700 mb-2">
+                Discord 명령어 하나로 AI 이미지와 영상을 자동 생성하는 챌린지
+                형식의 n8n 자동화 부트캠프를 진행합니다.
+              </p>
+              <p className="text-gray-700">
+                본 챌린지는 5일간 진행되며, 참가비는{" "}
+                <span className="font-bold text-primary-600">33,000원</span>
+                (얼리버드 40% 할인)입니다.
+              </p>
+            </div>
+          </div>
+
+          {/* 진행 방식 */}
+          <div className="bg-white rounded-2xl p-8 mb-8 shadow-lg animate-on-scroll delay">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              🏆 진행 방식
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-bold text-lg text-gray-900 mb-2">목표</h4>
+                <p className="text-gray-600">
+                  Discord 기반 AI 콘텐츠 자동 생성 시스템 구축
+                </p>
+              </div>
+              <div>
+                <h4 className="font-bold text-lg text-gray-900 mb-2">특징</h4>
+                <div className="space-y-1 text-gray-600">
+                  <p>· 실전 자동화 워크플로우 중심의 챌린지</p>
+                  <p>· VOD 강의를 통한 단계별 학습</p>
+                  <p>· 계속해서 업데이트 되는 강의자료와 함께 복습 체계화</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 대상 */}
+          <div className="bg-white rounded-2xl p-8 mb-8 shadow-lg animate-on-scroll delay">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              🔭 이런 분들이라면 함께해요!
+            </h3>
+            <div className="space-y-3 text-gray-600">
+              <p>
+                ·{" "}
+                <span className="font-semibold text-primary-600">
+                  콘텐츠 크리에이터 | 마케터 | 디자이너 | AI 자동화에 관심 있는
+                  모든 분
+                </span>
+              </p>
+              <p>· 남을 위한 일이 아니라 나의 일을 시작하고 싶은 사람</p>
+              <p>
+                · AI 이미지·영상 생성을 자동화 시스템으로 구축하고 싶은 사람
+              </p>
+              <p>· n8n을 활용한 실무 자동화 경험을 쌓고 싶은 사람</p>
+            </div>
+          </div>
+
+          {/* 결과물 미리보기 */}
+          <div className="bg-white rounded-2xl p-8 shadow-lg animate-on-scroll delay">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              🔭 어떤 결과물이 나올지 궁금해요
+            </h3>
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-gray-50 rounded-lg p-6 mb-6">
+                <p className="text-gray-700 text-center mb-4">
+                  챌린지를 통해 완성하게 될{" "}
+                  <span className="font-bold text-primary-600">
+                    실제 동작하는 자동화 시스템
+                  </span>
+                  을 미리 확인해보세요!
+                </p>
+              </div>
+
+              <div className="relative rounded-lg overflow-hidden shadow-lg bg-black">
+                <video
+                  controls
+                  className="w-full h-auto max-h-96"
+                  poster="/thumbnail-challenge.png"
+                >
+                  <source src="/videos/DELL_U2721DE.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+
+              <div className="mt-6 p-4 bg-gradient-to-r from-primary-50 to-blue-50 rounded-lg">
+                <h4 className="font-bold text-gray-900 mb-2">
+                  📈 5일 후 당신이 얻게 될 것들:
+                </h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-700">
+                  <div className="flex items-start">
+                    <span className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>Discord 명령어로 AI 이미지 자동 생성</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>n8n 워크플로우 설계 능력</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>API 연동 및 데이터 처리 스킬</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>실무에 바로 적용 가능한 자동화 시스템</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* FAQ Section */}
       <FaqSection faqs={challengeFaqs} />
 
@@ -424,13 +702,13 @@ export default async function Challenge() {
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-on-scroll">
             <h2 className="text-3xl font-bold text-gray-900 mb-4 sm:text-4xl">
-              웹사이트가 <span className="gradient-text">급하게 필요</span>
+              자동화 시스템이 <span className="gradient-text">급하게 필요</span>
               하신가요?
             </h2>
             <p className="max-w-2xl mx-auto text-xl text-center text-gray-600 mb-8">
-              DemoDev의 전문 개발팀이 고객님의 웹사이트를
+              대모산개발단의 전문 자동화 팀이 고객님의 n8n 자동화 시스템을
               <br className="block sm:hidden" />
-              직접 제작해드립니다
+              직접 구축해드립니다
             </p>
           </div>
 
@@ -442,7 +720,7 @@ export default async function Challenge() {
 
             <div className="relative z-10">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
-                전문 외주 개발 서비스
+                전문 n8n 자동화 구축 서비스
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
                 <div className="bg-white/80 backdrop-blur-sm p-5 sm:p-6 rounded-xl shadow-sm flex flex-col items-center text-center hover:shadow-md transition-shadow duration-200">
@@ -452,7 +730,7 @@ export default async function Challenge() {
                     </div>
                   </div>
                   <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-1">
-                    기획부터 배포까지
+                    설계부터 운영까지
                   </h4>
                   <p className="text-gray-600 text-sm sm:text-base">
                     원스톱 서비스로 편리하게 진행
@@ -502,6 +780,15 @@ export default async function Challenge() {
         </div>
       </div>
       <Footer />
+
+      {/* 토스트 컴포넌트 */}
+      <Toast
+        message="심사 중입니다. 빠른 시일 내에 연락드리겠습니다!"
+        type="info"
+        isVisible={showToast}
+        onClose={() => setShowToast(false)}
+        duration={4000}
+      />
     </main>
   );
 }
